@@ -4745,7 +4745,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .label {
   display: inline;
   padding: .2em .6em .3em;
-  font-size: 75%;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1;
   color: #fff;
@@ -4790,6 +4790,7 @@ a.label:focus {
 }
 .label-info {
   background-color: #5bc0de;
+  
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
