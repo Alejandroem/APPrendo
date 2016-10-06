@@ -2310,3 +2310,34 @@ div#bs-example-navbar-collapse-1 {
     font-size: 0.9em;
 }
 }
+.profile {
+    background:#FFF;
+    padding:12em 0;
+}
+
+.panelposition {
+    float:right
+}
+
+.imagenperfil {
+    float:left;
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 400px;
+    height: 400px;
+        
+}
+
+.imagenperfil img{
+    width:100%;
+    height:auto;
+}
+
+.tamanoPanel {
+    margin-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    float:left;
+    width: 700px;
+    height: 700px;
+}
