@@ -1612,6 +1612,7 @@ pre code {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  margin-bottom: 30px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -4745,7 +4746,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .label {
   display: inline;
   padding: .2em .6em .3em;
-  font-size: 75%;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1;
   color: #fff;
@@ -4790,6 +4791,7 @@ a.label:focus {
 }
 .label-info {
   background-color: #5bc0de;
+  
 }
 .label-info[href]:hover,
 .label-info[href]:focus {
