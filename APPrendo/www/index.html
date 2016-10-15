@@ -10,7 +10,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Academic A Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
 <!-- Custom Theme files -->
 <!--theme-style-->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
@@ -22,6 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!---->
 <script src="js/bootstrap.min.js"></script>
+<script src="index.js"></script>
 <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
@@ -52,16 +54,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="login-grids">
 							
 									<div class="login-right">
-										<form action="#" method="post">
+										<form action="#" class="LogIn" method="post">
 											<h3>Signin with your account </h3>
-											<input type="text" value="Enter your mobile number or Email" name=" Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your mobile number or Email';}" required="">	
-											<input type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">	
+											<input id="Email" type="text" value="Enter your mobile number or Email" name=" Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your mobile number or Email';}" required="">	
+											<input id="Password" type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">	
 											<h4><a href="#">Forgot password</a> / <a href="#">Create new password</a></h4>
 											<div class="single-bottom">
 												<input type="checkbox"  id="brand" value="">
 												<label for="brand"><span></span>Remember Me.</label>
 											</div>
 											<input type="submit" value="SIGNIN" >
+                                            <a href="principal.html">Principal</a>
 										</form>
 									</div>
 									
@@ -109,43 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<p class="banner-text1">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
 			</div>
-		</div>
-		<div class="nav-top">
-			<div class="container">
-				<div class="nav1">
-					<div class="navbar1">
-					<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-		 
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav cl-effect-8">
-								<li ><a class="active" href="index.html">Home </a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="gallery.html">Portfolio</a></li>
-								<li><a href="typo.html">Short Codes</a></li>
-								<li><a href="contact.html">Contact</a></li>	
-							</ul>
-						</div><!-- /.navbar-collapse -->
-					</div>
-					<!-- start search-->
-					<ul class="social-ic">
-						<li><a href="#"><i></i></a></li>
-						<li><a href="#"><i class="ic"></i></a></li>
-						<li><a href="#"><i class="ic1"></i></a></li>
-						<li><a href="#"><i class="ic2"></i></a></li>
-					</ul>
-					<div class="clearfix"></div>
-				</div> 
-			</div> 
-		</div> 
+		</div>    
 </div> 
 
 
