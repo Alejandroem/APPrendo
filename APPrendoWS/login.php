@@ -13,7 +13,11 @@ if ($conn->connect_error) {
 	$resultado = $conn->query($query);
 	$row = $resultado->fetch_array(MYSQLI_ASSOC);
 	
-	echo $row['email'];
+	if(!empty($row['email'])){
+        echo "exito";
+    }else{
+        echo "fallo";
+    }
 	
 	
 	$resultado->close();
