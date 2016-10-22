@@ -19,7 +19,8 @@ $(document).ready(function(){
             type:'post',
             success: function(response){
                 //alert (response);
-                if(response == correo){
+                if(response == "exito"){
+                    localStorage.setItem("usuario", correo);
                     window.location.replace("principal.html");
                 }
             }

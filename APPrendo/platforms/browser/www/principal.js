@@ -52,21 +52,7 @@ $(document).ready(function(){
                 
             }
         });
-       
-  $.ajax({
-            url: 'http://localhost/perfil.php',
-            data: {usuario:usuario},
-            type:'post',
-            success: function(response){
-                var perfil = JSON.parse(response);
-                //{"idUsuario":"1","nombre":"admin","apellido":"admin","correo":"admin","password":"admin","carnet":"admin","imagen":"admin"}
-               
-                $("#NombreUsuario").text(perfil.carnet);
-                
-                $("#imagenPerfil").attr("src", perfil.imagen);
-                
-                
-                
-            }
-        });
+        
+       return false;
+
 });

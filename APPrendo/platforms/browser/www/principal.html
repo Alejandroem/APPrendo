@@ -24,13 +24,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/bootstrap.min.js"></script>
 <script src="js/w3data.js"></script>
 <script src="js/SideNav.js"></script>
+    <script src="principal.js"></script>
 <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <!--SideNav-->
-<div w3-include-html="SideNav.html"></div>
+<div  id="sidenav"></div>
 
     
  <div class="header">
@@ -56,7 +57,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="gallery-top">
 			<h2>Leccion Actual</h2>
-			
 		</div>
            
             <div style="width:70%; float:left; margin-right:-10%">
@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc.jpg" alt=" " /></div>
                              <div class="progress">
-                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+                        <div id="barra1" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
                       </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc2.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra2" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -100,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc3.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra3" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -117,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc4.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra4" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc5.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra5" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -150,7 +150,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc6.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra6" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -167,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc7.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra7" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -183,7 +183,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc8.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra8" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -199,7 +199,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc8.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">40% Complete</span></div>
+            <div id="barra9" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">40% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -215,7 +215,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="ed-gal-effect slow-zoom horizontal">
                             <div class="img-box"><img src="images/pc1.jpg" alt=" " /></div>
                              <div class="progress">
-            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+            <div id="barra10" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
           </div>
                                 <div class="ed-text-box">
                                     <div class="ed-gal-text">
@@ -232,7 +232,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>   
             <div  class="tamanioExperiencia">
                 <div>
-                <img src="images/profileImage.png" alt="" >
+                <img id="experiencia" src="images/profileeimage.png" alt="" >
                 </div>
             </div>
         

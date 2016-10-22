@@ -14,7 +14,7 @@ $(document).ready(function(){
         //alert(contrasena);
         //alert("llamando a ws");
         $.ajax({
-            url: 'http://localhost:8081/login.php',
+            url: 'http://192.168.1.9/login.php',
             data: {email:correo, password:contrasena},
             type:'post',
             success: function(response){
