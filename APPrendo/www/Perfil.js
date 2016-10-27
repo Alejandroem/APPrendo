@@ -34,7 +34,9 @@ $(document).ready(function(){
     localStorage.setItem("usuario","admin");
     var txusuario = localStorage.getItem("usuario");
     $.ajax({
+
             url: 'http://localhost:8081/perfil.php',
+
             data: {usuario:txusuario},
             type:'post',
             success: function(response){

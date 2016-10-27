@@ -4,7 +4,9 @@ $(document).ready(function(){
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
         $.ajax({
+
             url: 'http://localhost:8081/obtenerAvance.php',
+
             data: {user:usuario},
             type:'post',
             success: function(response){
@@ -54,7 +56,9 @@ $(document).ready(function(){
         });
        
   $.ajax({
+
             url: 'http://localhost:8081/perfil.php',
+
             data: {usuario:usuario},
             type:'post',
             success: function(response){

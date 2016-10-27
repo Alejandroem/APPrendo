@@ -1,0 +1,298 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Academic A Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Academic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!---->
+<script src="js/bootstrap.min.js"></script>
+<link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    		<style>
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+		</style>
+</head>
+<body>
+    
+
+    
+
+    
+ <div class="header">
+	<div class="container">
+		<div class="head-top">
+			<div class="logo">
+				<img src="images/bo.png" alt="" title="Academic" onclick="openNav()">
+                
+			
+			</div>
+            <div class="tamanioImagen">
+                <img id="imagenPerfil" src="images/profileImage.png" alt="" >
+                <br>
+                <br>
+                     
+              <div id="Usuario" class="usuario" >
+                <span id="NombreUsuario" class="label label-info">Nombre Usuario</span>
+			 </div>
+            </div>
+             
+	</div>
+		
+		
+</div> 
+	<!--gallery-->
+<div id="gallery" class="gallery">
+	<div class="container">
+        
+		<div class="gallery-top">
+			<h2>Titulo Leccion X</h2>
+			
+		</div>
+           <div id="mySidenav" class="sidenav" style="width: 200px; margin-top: 100px;" >
+ 
+  <a href="#">Contenido</a>
+  <a href="Juego1.html">Juego 1</a>
+  <a href="#">Juego 2</a>
+  <a href="#">Problema 1</a>
+  <a href="#">Examen</a>
+  <a href="#">Caso de Estudio</a>
+</div>
+        
+        <div class="container" style="margin-left: 20%; margin-right: 20%;">
+            <div id="contenidoleccion" >
+		<script>
+			var texto;
+			var score;
+			var botones = [];
+			var nivel=0;
+			var oraciones=["SQL puede manipular informacion de una DB",
+							"Una tabla esta formada por filas y columnas",
+							"SQL significa lenguaje estructurado de consultas",
+							"SQL puede colocar permisos en tablas procesos y vistas",
+							"La informacion de un RDBMS se guarda en objetos llamados tablas"];
+			var palabras = [];
+			var avance=0;
+            var rect;
+			function startGame() {
+				botones = [];
+				palabras = [];
+				palabras = oraciones[nivel].split(' ');
+				var pos = 10;
+				var i;
+				var tPalabras = [];
+				for(i =0;i<palabras.length;i++){
+					tPalabras.push(palabras[i]);
+				}
+				
+				tPalabras = shuffle(tPalabras);
+				for(i=0; i<tPalabras.length;i++){
+					botones.push(new component(30, 30, "blue", pos, 230));
+					botones[i].palabra = tPalabras[i];	
+					pos+=40;
+				}
+				
+				
+				
+				texto = new component("30px", "Consolas", "black", 50,50, "text");
+				score = new component("30px", "Consolas", "black", 50,150, "text");
+				score.text=avance;
+				texto.text ="";
+				myGameArea.start();
+			}
+			function shuffle(array) {
+			  var currentIndex = array.length, temporaryValue, randomIndex;
+
+			  // While there remain elements to shuffle...
+			  while (0 !== currentIndex) {
+
+				// Pick a remaining element...
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex -= 1;
+
+				// And swap it with the current element.
+				temporaryValue = array[currentIndex];
+				array[currentIndex] = array[randomIndex];
+				array[randomIndex] = temporaryValue;
+			  }
+
+			  return array;
+			}
+			var myGameArea = {
+				canvas : document.createElement("canvas"),
+				start : function() {
+					this.canvas.width = 480;
+					this.canvas.height = 270;
+					this.context = this.canvas.getContext("2d");
+                    var contenido = document.getElementById("contenidoleccion");
+				    contenido.insertBefore(this.canvas,contenido.childNodes[0]);
+                    rect = contenido.getBoundingClientRect();
+                    alert(rect.top+" "+rect.left);
+					this.interval = setInterval(updateGameArea, 20);
+					/*
+					window.addEventListener('mousedown', function (e) {
+						myGameArea.x = e.pageX;
+						myGameArea.y = e.pageY;
+					})*//*
+					window.addEventListener('mouseup', function (e) {
+						myGameArea.x = false;
+						myGameArea.y = false;
+					})*/
+					window.addEventListener('click', function(e){
+						//alert(e.pageX+ " "+e.pageY);
+						myGameArea.x = e.pageX-rect.left;
+						myGameArea.y = e.pageY-rect.top;
+					})
+					/*
+					window.addEventListener('touchstart', function (e) {
+						myGameArea.x = e.pageX;
+						myGameArea.y = e.pageY;
+					})
+					window.addEventListener('touchend', function (e) {
+						myGameArea.x = false;
+						myGameArea.y = false;
+					})*/
+				},
+				clear : function(){
+					this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+				}
+			}
+			function component(width, height, color, x, y, type) {
+				this.palabra ="";
+				this.type = type;
+				this.width = width;
+				this.height = height;
+				this.speedX = 0;
+				this.speedY = 0;
+				this.x = x;
+				this.y = y;
+				this.update = function() {
+					ctx = myGameArea.context;
+					if (this.type == "text") {
+						ctx.font = this.width + " " + this.height;
+						ctx.fillStyle = color;
+						ctx.fillText(this.text, this.x, this.y);
+					} else {
+						ctx.fillStyle = color;
+						ctx.fillRect(this.x, this.y, this.width, this.height);
+					}
+				}
+				this.clicked = function() {
+					var myleft = this.x;
+					var myright = this.x + (this.width);
+					var mytop = this.y;
+					var mybottom = this.y + (this.height);
+					var clicked = true;
+					if ((mybottom < myGameArea.y) || (mytop > myGameArea.y) || (myright < myGameArea.x) || (myleft > myGameArea.x)) {
+						clicked = false;
+					}
+					return clicked;
+				}
+			}
+			function updateGameArea() {
+				myGameArea.clear();
+				
+				if (myGameArea.x && myGameArea.y) {
+					var i;
+					for(i=0; i<botones.length;i++){
+						if(botones[i].clicked())
+						{
+							texto.text = botones[i].palabra;
+							if(botones[i].palabra==palabras[avance]){
+								avance++;
+							}else{
+								avance=0;	
+							}
+							score.text =avance +" " +botones[i].palabra+" "+palabras[avance];
+							
+						}
+					}
+					myGameArea.x =false;
+					myGameArea.y = false;
+					
+					
+				}
+				
+				var i;
+				for(i=0; i<botones.length;i++){
+					botones[i].update();
+				}
+				
+				score.update();
+				texto.update();
+				
+				if(avance==palabras.length){
+					alert("ganaste");
+					avance = 0;
+					nivel++;
+					startGame();
+				}
+			}
+			startGame();
+			
+		</script>
+		</div>
+        </div>
+            
+        <div class="progress" style="margin-left: 100px; ">
+        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+      </div> 
+        
+        
+    </div>
+</div>
+
+    <!-- Include jQuery & Filterizr -->
+    
+    <script src="js/jquery.filterizr.js"></script>
+    <script src="js/controls.js"></script>
+
+    <!-- Kick off Filterizr -->
+    <script type="text/javascript">
+        $(function() {
+            //Initialize filterizr with default options
+            $('.filtr-container').filterizr();
+        });
+    </script>
+	<!--//gallery-->
+	
+	
+
+	
+    
+<!---->
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		
+		
+
+			<p class="copy-right">© 2016 Academic. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+	
+		
+	</div>
+</div>
+<!--//footer-->
+
+
+
+</body>
+</html>
