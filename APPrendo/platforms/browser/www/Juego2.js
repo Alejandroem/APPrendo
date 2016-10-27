@@ -1,6 +1,8 @@
-
 $(document).ready(function(){
-    $("#sidenav").load("SideNav.html");
+    
+    $("#sidenav").load("SideNavLeccion.html");
+    
+    
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
        
@@ -20,4 +22,6 @@ $(document).ready(function(){
                 
             }
         });
+    
+    
 });

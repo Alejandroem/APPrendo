@@ -22,11 +22,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!---->
 <script src="js/bootstrap.min.js"></script>
-<script src="leccion.js"></script>
 <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    
+
     
 
     
@@ -39,12 +40,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			</div>
             <div class="tamanioImagen">
-                <img src="images/profileImage.png" alt="" >
+                <img id="imagenPerfil" src="images/profileImage.png" alt="" >
                 <br>
                 <br>
                      
               <div id="Usuario" class="usuario" >
-                <span class="label label-info">Nombre Usuario</span>
+                <span id="NombreUsuario" class="label label-info">Nombre Usuario</span>
 			 </div>
             </div>
              
@@ -63,25 +64,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            <div id="mySidenav" class="sidenav" style="width: 200px; margin-top: 100px;" >
  
   <a href="#">Contenido</a>
-  <a href="#">Juego 1</a>
+  <a href="Juego1.html">Juego 1</a>
   <a href="#">Juego 2</a>
   <a href="#">Problema 1</a>
   <a href="#">Examen</a>
   <a href="#">Caso de Estudio</a>
 </div>
         
-        <div class="container" style="margin-left: 100px; margin-right: 100px;">
-        <div class="col-md-4 content-mid-1">
-							<div class="port effect-1">
-								<div class="image-box">
-									<img src="images/a1.jpg" alt="" class="img-responsive">
-								</div>
-								<div class="text-desc text-ed">
-									<h6>Curso 3</h6>
-									<p>Proximamente</p>	
-								</div>
-							</div>
-						</div>
+        <div id="contenidoleccion" class="container" style="margin-left: 100px; margin-right: 100px;">
+        
         </div>
             
         <div class="progress" style="margin-left: 100px; ">
@@ -105,6 +96,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
 	<!--//gallery-->
+	
+	
+
 	
     
 <!---->
