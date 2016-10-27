@@ -12,7 +12,7 @@ $(document).ready(function(){
     var usuario = localStorage.getItem("usuario");
        
   $.ajax({
-            url: 'http://192.168.1.46/perfil.php',
+            url: 'http://localhost:8081/perfil.php',
             data: {usuario:usuario},
             type:'post',
             success: function(response){
