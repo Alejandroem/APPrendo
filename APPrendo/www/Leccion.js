@@ -1,9 +1,13 @@
 
 $(document).ready(function(){
     
-    $("#sidenav").load("SideNav.html");
+    $("#sidenav").load("SideNavLeccion.html");
     
-    
+    $('.animacionQueEsSQLTitulo').textillate({ 
+  in: { effect: 'splat' },
+  out: { effect: 'foldUnfold', sync: true },
+        loop: false
+});
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
        
