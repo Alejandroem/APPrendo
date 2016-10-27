@@ -1,9 +1,40 @@
 $(document).ready(function(){
+     $('#guardarDatos').on('submit', function () {
+        if($("#inputPassword").val()==""){
+            $.ajax({
+                url: 'http://192.168.1.46/actualizarPerfil.php',
+                data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val()},
+                type:'post',
+                success: function(response){
+                }
+            });     
+        }else{
+            if($("#inputPassword").val()==$("#inputPasswordConfirm").val()){
+                $.ajax({
+                    url: 'http://192.168.1.46/actualizarPerfil.php',
+                    data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val(),password:$("#inputPassword").val()},
+                    type:'post',
+                    success: function(response){
+                    }
+                });
+            }
+            else{
+                alert("Los passwords no coinciden");
+            }
+        }
+         
+         
+         
+        window.location.replace("perfil.html");
+        return false;
+     });
+    
+    
     $("#sidenav").load("SideNav.html");
     localStorage.setItem("usuario","admin");
     var txusuario = localStorage.getItem("usuario");
     $.ajax({
-            url: 'http://192.168.1.9/perfil.php',
+            url: 'http://192.168.1.46/perfil.php',
             data: {usuario:txusuario},
             type:'post',
             success: function(response){
@@ -15,6 +46,8 @@ $(document).ready(function(){
                 $("#inputApellido").val(perfil.apellido);
                 $("#inputEmail").val(perfil.correo);
                 $("#imagenPerfil").attr("src", perfil.imagen);
+                
+                
                 
             }
         });

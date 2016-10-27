@@ -2,7 +2,7 @@ $(document).ready(function(){
      $('#guardarDatos').on('submit', function () {
         if($("#inputPassword").val()==""){
             $.ajax({
-                url: 'http://localhost/actualizarPerfil.php',
+                url: 'http://192.168.1.46/actualizarPerfil.php',
                 data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val()},
                 type:'post',
                 success: function(response){
@@ -11,7 +11,7 @@ $(document).ready(function(){
         }else{
             if($("#inputPassword").val()==$("#inputPasswordConfirm").val()){
                 $.ajax({
-                    url: 'http://localhost/actualizarPerfil.php',
+                    url: 'http://192.168.1.46/actualizarPerfil.php',
                     data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val(),password:$("#inputPassword").val()},
                     type:'post',
                     success: function(response){
@@ -34,7 +34,7 @@ $(document).ready(function(){
     localStorage.setItem("usuario","admin");
     var txusuario = localStorage.getItem("usuario");
     $.ajax({
-            url: 'http://localhost/perfil.php',
+            url: 'http://192.168.1.46/perfil.php',
             data: {usuario:txusuario},
             type:'post',
             success: function(response){
