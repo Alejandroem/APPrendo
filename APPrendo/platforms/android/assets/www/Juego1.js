@@ -1,11 +1,14 @@
 
 $(document).ready(function(){
+    
     $("#sidenav").load("SideNav.html");
+    
+    
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
        
   $.ajax({
-            url: 'http://localhost:8081/perfil.php',
+            url: 'http://192.168.1.46/perfil.php',
             data: {usuario:usuario},
             type:'post',
             success: function(response){
@@ -20,4 +23,6 @@ $(document).ready(function(){
                 
             }
         });
+    
+    
 });

@@ -22,15 +22,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!---->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/w3data.js"></script>
 <script src="js/SideNav.js"></script>
-<script src="principal.js"></script>
+    <script src="principal.js"></script>
 <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <!--SideNav-->
-<div id="sidenav"></div>
+<div  id="sidenav"></div>
 
     
  <div class="header">
@@ -40,11 +41,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<img src="images/bo.png" alt="" title="Academic" onclick="openNav()">
 			</div>
             <div class="tamanioImagen">
-                <img src="images/profileImage.png" alt="" >
+                <img id="imagenPerfil" src="images/profileImage.png" alt="" >
                 <br>
                 <br>
               <div id="Usuario" class="usuario" >
-                <span class="label label-info">Nombre Usuario</span>
+                <span id="NombreUsuario" class="label label-info">Nombre Usuario</span>
 			 </div>
             </div>
 	</div>
@@ -266,5 +267,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!--//footer-->
 
+<script>w3IncludeHTML();</script>
 </body>
 </html>
