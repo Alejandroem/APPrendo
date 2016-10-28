@@ -1,14 +1,18 @@
 
 $(document).ready(function(){
     
-    $("#sidenav").load("SideNav.html");
+    $("#sidenav").load("SideNavLeccion.html");
     
-    
+    $('.animacionQueEsSQLTitulo').textillate({ 
+  in: { effect: 'splat' },
+  out: { effect: 'foldUnfold', sync: true },
+        loop: false
+});
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
        
   $.ajax({
-            url: 'http://192.168.1.46/perfil.php',
+            url: 'http://192.168.43.144:8081/perfil.php',
             data: {usuario:usuario},
             type:'post',
             success: function(response){

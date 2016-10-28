@@ -22,13 +22,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!---->
 <script src="js/bootstrap.min.js"></script>
-<script src="leccion.js"></script>
+<script src="js/SideNav.js"></script>    
+<script src="Leccion.js"></script> 
+<script src="jquery.textillate.js"></script>    
+<script src="jquery.lettering.js"></script>  
+     <link rel="stylesheet" href="animate.css" />
+<!--<link href="animate.css" rel="stylesheet" type="text/css" media="all" />	-->
 <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
     
 
+    
+<div  id="sidenav"></div>
     
  <div class="header">
 	<div class="container">
@@ -39,12 +46,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			</div>
             <div class="tamanioImagen">
-                <img src="images/profileImage.png" alt="" >
+                <img id="imagenPerfil" src="images/profileImage.png" alt="" >
                 <br>
                 <br>
                      
               <div id="Usuario" class="usuario" >
-                <span class="label label-info">Nombre Usuario</span>
+                <span id="NombreUsuario" class="label label-info">Nombre Usuario</span>
 			 </div>
             </div>
              
@@ -57,35 +64,51 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
         
 		<div class="gallery-top">
-			<h2>Titulo Leccion X</h2>
-			
+			<h2>Introduccion</h2>	
 		</div>
-           <div id="mySidenav" class="sidenav" style="width: 200px; margin-top: 100px;" >
+       <div id="contenidoleccion" class="container" style="margin-left: 100px; margin-right: 100px;">
+            <div id="queEsSQL" style="margin-bottom: 1%;">
+            <div id="tituloQueEs"  class="bgClip" style="margin-bottom: 1%;">    
+            <h1 id="animacionQueEsSQLTitulo">Que es SQL?</h1>
+                </div>    
+            <ul  class="especial">
+  <li>SQL significa Lenguaje Estructurado de Consultas por sus siglas en ingles</li>
+  <li>SQL permite acceder y manipular bases de datos</li>
+  <li>SQL es un estandar ANSI</li>
+</ul>   
+        </div>
+            <div id="quePermiteHacer" style="margin-bottom: 1%;">
+            <div id="tituloQuePermiteHacer"  class="bgClip" style="margin-bottom: 1%;">    
+                <h1 class="animacionQuePermiteHacer">Que puede hacer SQL?</h1>
+                </div>
+            <ul class="especial">
+  <li>Puede ejecutar consultas a una base de datos</li>
+  <li>Puede devolver informacion de una base de datos</li>
+  <li>Puede insertar registros en una base de datos</li>
+  <li>Puede actualizar registros en una base de datos</li>
+  <li>Puede eliminar registros en una base de datos</li>
+  <li>Puede crear nuevas bases de datos</li>
+  <li>Puede crear nuevas tablas en una base de datos</li>
+  <li>Puede crear procedimientos almacenados en una base de datos</li>
+  <li>Puede crear vistas en una base de datos</li>
+  <li>Puede colocar permisos en tablas, procedimientos y vistas</li>
  
-  <a href="#">Contenido</a>
-  <a href="#">Juego 1</a>
-  <a href="#">Juego 2</a>
-  <a href="#">Problema 1</a>
-  <a href="#">Examen</a>
-  <a href="#">Caso de Estudio</a>
-</div>
-        
-        <div class="container" style="margin-left: 100px; margin-right: 100px;">
-        <div class="col-md-4 content-mid-1">
-							<div class="port effect-1">
-								<div class="image-box">
-									<img src="images/a1.jpg" alt="" class="img-responsive">
-								</div>
-								<div class="text-desc text-ed">
-									<h6>Curso 3</h6>
-									<p>Proximamente</p>	
-								</div>
-							</div>
-						</div>
+</ul>   
+        </div>
+           <div id="queEsRDBMS" style="margin-bottom: 10%;">
+                  <div id="tituloQueRDBMS"  class="bgClip" style="margin-bottom: 1%;">    
+            <h1 class="animacionQueRDBMS">Que es RDBMS?</h1>
+                      </div>
+            <ul class="especial">
+  <li>RDBMS significa Sistema de Gestion de Bases de Datos Relacionales por sus siglas en ingles</li>
+  <li>La informacion en un RDBMS es almacenada en objetos llamados tablas</li>
+  <li>Una tabla es una coleccion de datos relacionados y esta formada por filas y columnas</li>
+</ul>   
+        </div>
         </div>
             
-        <div class="progress" style="margin-left: 100px; ">
-        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
+           <div class="progress" style="margin-left: 100px; margin-right: 100px; ">
+        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%"><span class="sr-only">60% Complete</span></div>
       </div> 
         
         
@@ -105,6 +128,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
 	<!--//gallery-->
+	
+	
+
 	
     
 <!---->
