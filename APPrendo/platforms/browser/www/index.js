@@ -9,7 +9,7 @@ $(document).ready(function(){
         // guardo el valor del input con el id password
         var contrasena =$("#Password").val();
         //
-        //http://localhost/login.php?email=email
+        //http://192.168.43.144/login.php?email=email
         //alert (correo);
         //alert(contrasena);
         //alert("llamando a ws");
