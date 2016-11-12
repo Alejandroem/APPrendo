@@ -20,36 +20,36 @@ $(document).ready(function(){
                 var promedioExperiencia = experiencia/2;
                 switch (promedioExperiencia) {
     case 0:
-        $("#experiencia").attr("src","images/profileImage.png");
+        $("#experiencia").attr("src","images/badge.png");
         break;
     case 10:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 20:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 30:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 40:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 50:
-         $("#experiencia").attr("src","images/abono.jpeg");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 60:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
     case 70:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 80:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 90:
-         $("#experiencia").attr("src","images/profileImage.png");
+         $("#experiencia").attr("src","images/badge.png");
         break;
     case 100:
-        $("#experiencia").attr("src","images/profileImage.png");
+        $("#experiencia").attr("src","images/badge.png");
 }
                 
             }

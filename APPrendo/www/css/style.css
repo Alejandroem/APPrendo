@@ -898,6 +898,7 @@ background:#E8E8E8;
 
 .img-box {
   position: relative;
+    
 }
 
 .ed-text-box {
@@ -2485,4 +2486,9 @@ div#bs-example-navbar-collapse-1 {
 
 .enlace {
     color: white;
+}
+
+a {
+    color: white;
+    font-size: 20px;
 }
