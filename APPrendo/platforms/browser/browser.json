@@ -9,11 +9,15 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.APPrendo"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "com.APPrendo"
         }
     },
     "dependent_plugins": {},
     "modules": [],
     "plugin_metadata": {
-        "cordova-plugin-whitelist": "1.3.0"
+        "cordova-plugin-whitelist": "1.3.0",
+        "cordova-plugin-wkwebview-engine": "1.1.0"
     }
 }

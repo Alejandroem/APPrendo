@@ -26,7 +26,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="Leccion.js"></script> 
 <script src="jquery.textillate.js"></script>    
 <script src="jquery.lettering.js"></script>  
-     <link rel="stylesheet" href="animate.css" />
+   <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="css/hover.css">
 <!--<link href="animate.css" rel="stylesheet" type="text/css" media="all" />	-->
 <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -41,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="head-top">
 			<div class="logo">
-				<img src="images/bo.png" alt="" title="Academic" onclick="openNav()">
+				<img src="images/buho.png" alt="" title="Academic" onclick="openNav()">
                 
 			
 			</div>
@@ -62,25 +63,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--gallery-->
 <div id="gallery" class="gallery">
 	<div class="container">
-        
-		<div class="gallery-top">
+       <!-- style="margin-left: 100px; margin-right: 100px;"-->
+       <div id="contenidoleccion" class="container">
+            <div id="introduccion"> 
+        <div class="gallery-top">
 			<h2>Introduccion</h2>	
 		</div>
-       <div id="contenidoleccion" class="container" style="margin-left: 100px; margin-right: 100px;">
-            <div id="queEsSQL" style="margin-bottom: 1%;">
+           <div id="queEsSQL" style="margin-bottom: 6%;" class="grow">
+                <div class="animated infinite bounce">
             <div id="tituloQueEs"  class="bgClip" style="margin-bottom: 1%;">    
             <h1 id="animacionQueEsSQLTitulo">Que es SQL?</h1>
                 </div>    
+                    </div>  
             <ul  class="especial">
   <li>SQL significa Lenguaje Estructurado de Consultas por sus siglas en ingles</li>
   <li>SQL permite acceder y manipular bases de datos</li>
   <li>SQL es un estandar ANSI</li>
 </ul>   
         </div>
-            <div id="quePermiteHacer" style="margin-bottom: 1%;">
+            <div id="quePermiteHacer" style="margin-bottom: 6%;" class="grow">
+                <div class="animated infinite flash">
             <div id="tituloQuePermiteHacer"  class="bgClip" style="margin-bottom: 1%;">    
                 <h1 class="animacionQuePermiteHacer">Que puede hacer SQL?</h1>
                 </div>
+                    </div> 
             <ul class="especial">
   <li>Puede ejecutar consultas a una base de datos</li>
   <li>Puede devolver informacion de una base de datos</li>
@@ -95,10 +101,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  
 </ul>   
         </div>
-           <div id="queEsRDBMS" style="margin-bottom: 10%;">
+           <div id="queEsRDBMS" style="margin-bottom: 10%;" class="grow">
+               <div class="animated infinite flipInX">
                   <div id="tituloQueRDBMS"  class="bgClip" style="margin-bottom: 1%;">    
             <h1 class="animacionQueRDBMS">Que es RDBMS?</h1>
                       </div>
+               </div> 
             <ul class="especial">
   <li>RDBMS significa Sistema de Gestion de Bases de Datos Relacionales por sus siglas en ingles</li>
   <li>La informacion en un RDBMS es almacenada en objetos llamados tablas</li>
@@ -106,7 +114,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </ul>   
         </div>
         </div>
-            
+           <div id="disenio">
+           <div class="gallery-top">
+			<h2>Diseño</h2>	
+               </div>
+                 <div id="objetivos" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+               <div class="animated infinite flipInX">
+                  <div id="tituloObjetivos"  class="bgClip" style="margin-bottom: 1%;">    
+            <h1>Objetivos</h1>
+                      </div>
+               </div> 
+            <ul class="especial">
+                <li>Elimina la redundancia de los datos: <span id='secondText'>El mismo dato no debe ser almacenado en más de un lugar</span></li>
+    <ol>Elimina desperdicio de espacio de almacenamiento</ol>  
+    <ol>Evita inconsistencias en los datos</ol>                
+  <li>Asegura la integridad de los datos</li>
+  <li>Asegura la precisión de los datos</li>
+</ul>   
+                     <br>
+                     <br>
+                     <div style="padding-left: 80%">
+          <a href="#" id="tema2" class="linksSiguiente">>></a>       
+        </div> 
+        </div>        
+                     <div id="paso1" style="margin-bottom: 10%;" class="hvr-backward">
+               <div class="animated infinite flipInX">
+                  <div id="tituloObjetivos"  class="bgClip" style="margin-bottom: 1%;">    
+                      <h1>paso1: <span style="font-size:24px;">Definir el proposito de la base de datos</span></h1>
+                   
+                      </div>
+               </div> 
+            <ul class="especial">
+                <li>Elimina la redundancia de los datos: <span id='secondText'>El mismo dato no debe ser almacenado en más de un lugar</span></li>
+    <ol>Elimina desperdicio de espacio de almacenamiento</ol>  
+    <ol>Evita inconsistencias en los datos</ol>                
+  <li>Asegura la integridad de los datos</li>
+  <li>Asegura la precisión de los datos</li>
+</ul>   
+                     <br>
+                     <br>
+                       <div id="controles">
+                           <div style="padding-left: 10%">
+                             <a href="#"   id="tema3Anterior" class="linksAnterior"><<</a>
+                            </div>
+                           <div style="padding-left: 60%">
+                               <a href="#" id="tema3Siguiente" class="linksSiguiente">>></a>                    
+                            </div>
+                      </div>
+               
+        </div>
+		</div>
+           </div>
+            </div>
+        
            <div class="progress" style="margin-left: 100px; margin-right: 100px; ">
         <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%"><span class="sr-only">60% Complete</span></div>
       </div> 

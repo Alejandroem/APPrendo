@@ -8,7 +8,7 @@ $(document).ready(function(){
     var usuario = localStorage.getItem("usuario");
        
   $.ajax({
-            url: 'http://192.168.43.144:8081/perfil.php',
+            url: 'http://192.168.1.15:8081/perfil.php',
             data: {usuario:usuario},
             type:'post',
             success: function(response){
