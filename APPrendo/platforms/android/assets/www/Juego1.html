@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Academic A Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Juego 1</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -28,8 +28,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     		<style>
 canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
+    border:1px solid ##086A87;
+    background-color: #CEECF5;
 }
 		</style>
 </head>
@@ -43,7 +43,7 @@ canvas {
 	<div class="container">
 		<div class="head-top">
 			<div class="logo">
-				<img src="images/bo.png" alt="" title="Academic" onclick="openNav()">
+				<img src="images/buho.png" alt="" title="Academic" onclick="openNav()">
                 
 			
 			</div>
@@ -72,7 +72,7 @@ canvas {
        
         
         <div class="container" >
-            <div id="contenidoleccion" >
+            <div id="contenidoleccion" style="width: 100%;">
 		<script>
 			var texto;
 			var score;
@@ -91,22 +91,27 @@ canvas {
 				palabras = [];
 				palabras = oraciones[nivel].split(' ');
 				var pos = 10;
+                var posY = 200;
 				var i;
 				var tPalabras = [];
 				for(i =0;i<palabras.length;i++){
 					tPalabras.push(palabras[i]);
 				}
-				
+				var tamanioX = document.getElementById("contenidoleccion").offsetWidth / 8;
 				tPalabras = shuffle(tPalabras);
 				for(i=0; i<tPalabras.length;i++){
-					botones.push(new component(30, 30, "blue", pos, 230));
+                    if(i == 7){
+                        pos = 10;
+                        posY += 60;
+                    }
+					botones.push(new component(tamanioX, 30, "#0B6138", pos, posY));
 					botones[i].palabra = tPalabras[i];	
-					pos+=40;
+					pos+=tamanioX + tamanioX * 0.03;
 				}
 				
 				
-				
-				texto = new component("30px", "Consolas", "black", 50,50, "text");
+				var posTexto = document.getElementById("contenidoleccion").offsetWidth/3;
+				texto = new component("30px", "Consolas", "#0B3B2E", posTexto,50, "text");
 				score = new component("30px", "Consolas", "black", 50,150, "text");
 				score.text=avance;
 				texto.text ="";
@@ -133,8 +138,8 @@ canvas {
 			var myGameArea = {
 				canvas : document.createElement("canvas"),
 				start : function() {
-					this.canvas.width = 300;
-					this.canvas.height = 270;
+					this.canvas.width = document.getElementById("contenidoleccion").offsetWidth * 0.98;
+					this.canvas.height = 300;
 					this.context = this.canvas.getContext("2d");
                     var contenido = document.getElementById("contenidoleccion");
 				    contenido.insertBefore(this.canvas,contenido.childNodes[0]);
@@ -285,7 +290,7 @@ canvas {
 	</div>
 </div>
 <!--//footer-->
-
+</div>
 
 
 </body>

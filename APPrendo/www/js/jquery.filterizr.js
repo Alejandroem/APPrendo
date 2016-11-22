@@ -575,6 +575,7 @@
                     if (x > rowWidth) {
                         x 	 = 0;
                         left = 0;
+                        left = 0;
                         top  += array[0].outerHeight();
                         rows++;
                     }
