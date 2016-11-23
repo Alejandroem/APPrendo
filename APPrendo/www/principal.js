@@ -1,9 +1,10 @@
 $(document).ready(function(){
     $("#sidenav").load("SideNav.html");
     $("#introduccion").on('click',function(){
-       localStorage.setItem("leccion","introduccion");
-      
-       
+       localStorage.setItem("leccion","introduccion");   
+    });
+     $("#disenio").on('click',function(){
+       localStorage.setItem("leccion","disenio");   
     });
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
