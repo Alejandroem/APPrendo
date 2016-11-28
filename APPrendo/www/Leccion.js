@@ -1,8 +1,9 @@
 
 $(document).ready(function(){
     $("#introduccion").hide();
-    $("#paso1").hide();
+    $("#paso2").show();
     $("#objetivos").hide();
+     $("#paso1").hide();
     $("#sidenav").load("SideNavLeccion.html");
     if(localStorage.getItem("leccion")=="introduccion"){
         $("#introduccion").show();
@@ -11,13 +12,20 @@ $(document).ready(function(){
     if(localStorage.getItem("leccion")=="disenio"){
         $("#introduccion").hide
         $("#objetivos").show();
-        $("#tema2").on('click',function(){
+        $("#tema2").on('click',function(){ //de objetivos a paso1
             $("#objetivos").hide();
+            $("#paso2").hide();
             $("#paso1").show();
         });
-        $("#tema1Anterior").on('click',function(){
+        $("#tema1Anterior").on('click',function(){//de paso1 a objetivos
             $("#objetivos").show();
             $("#paso1").hide();
+            $("#paso2").hide();
+        });
+        $("#tema3Siguiente").on('click',function(){
+              $("#objetivos").hide();
+            $("#paso1").hide();
+            $("#paso2").show();
         });
         localStorage.clear();
     }

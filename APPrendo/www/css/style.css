@@ -2558,6 +2558,7 @@ input[type=checkbox]:checked + label {
     font-family: Monoton;
     font-size: 28px;
     text-shadow: 0 0 3px ##0B615E;
+   
 }
 
 @-webkit-keyframes neon1 {
@@ -2630,4 +2631,88 @@ a {
 
 .links {
    width:80%;
+}
+
+#imagenPaso1 {
+    
+}
+
+
+
+.textoImagen {
+   display: block; 
+   font-size: 15px;
+    color: #17402D;
+    margin-bottom:2%;
+}
+
+.recopilarDatos {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+
+#contenidoPaso2 {
+    /* To correctly align image, regardless of content height: */
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: center;
+    /* The width of the container also implies margin around the images. */
+    width: 120px;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+}
+
+
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  opacity: 0;
+}
+
+#imagenTabla:hover span.text-content {
+  opacity: 1;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 150px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
