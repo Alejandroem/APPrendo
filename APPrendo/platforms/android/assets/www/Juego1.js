@@ -2,8 +2,13 @@
 $(document).ready(function(){
     
     $("#sidenav").load("SideNavLeccion.html");
-    
-    
+    localStorage.setItem("leccion","introdusccion");  
+    var leccion = localStorage.getItem("leccion");
+    if(leccion=="introduccion"){
+        startGame();
+    }else{
+        startDisenoTablas();
+    }
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
        
