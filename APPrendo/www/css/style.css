@@ -2485,6 +2485,13 @@ input[type=checkbox]:checked + label {
     
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 20px 0;
+  color: #04B4AE;
+    font-size: 18px;
+}
+
 .linksSiguiente{
     float:left;
     padding: 10px 50px 10px 50px;

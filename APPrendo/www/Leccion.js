@@ -274,12 +274,62 @@ function cargaContenido(){
         $("#introConsultas").show();
         $("#irSelectEspecifico").on('click',function(){
             $("#introConsultas").hide();
-            $("#irSelectEspecifico").show();
+            $("#seleccionarDatosEspecificos").show();
+            $("#seleccionarDatosUnicos").hide();
+            $("#multiplesCondiciones").hide();
+            $("#in").hide();
+        });
+        $("#regresarIntroConsulta").on('click',function(){
+            $("#introConsultas").show();
+            $("#seleccionarDatosEspecificos").hide();
+            $("#seleccionarDatosUnicos").hide();
+            $("#multiplesCondiciones").hide();
+            $("#in").hide();
+        });
+        $("#irSelectDistinct").on('click',function(){
+            $("#introConsultas").hide();
+            $("#seleccionarDatosEspecificos").hide();
+            $("#seleccionarDatosUnicos").show();
+            $("#multiplesCondiciones").hide();
+            $("#in").hide();
+        });
+        $("#regresarSelectEspecifico").on('click',function(){
+            $("#introConsultas").hide();
+            $("#seleccionarDatosEspecificos").show();
+            $("#seleccionarDatosUnicos").hide();
+            $("#multiplesCondiciones").hide();
+            $("#in").hide();
+        });
+        $("#irMultiplesCondiciones").on('click',function(){
+            $("#introConsultas").hide();
+            $("#seleccionarDatosEspecificos").hide();
+            $("#seleccionarDatosUnicos").hide();
+            $("#multiplesCondiciones").show();
+            $("#in").hide();
+        });
+        $("#regresarSelectUnico").on('click',function(){
+            $("#introConsultas").hide();
+            $("#seleccionarDatosEspecificos").hide();
+            $("#seleccionarDatosUnicos").show();
+            $("#multiplesCondiciones").hide();
+            $("#in").hide();
+        });
+        $("#irIn").on('click',function(){
+            $("#introConsultas").hide();
+            $("#seleccionarDatosEspecificos").hide();
+            $("#seleccionarDatosUnicos").hide();
+            $("#multiplesCondiciones").hide();
+            $("#in").show();
         });
     }
 }
 
 $(document).ready(function(){
+    $(".tabla").html("<table><tbody><tr><th>ID</th><th>Name</th><th>City</th><th>Country</th></tr><tr><td>1<br><br></td><td>Alfreds Futterkiste</td><td>Berlin</td><td>Germany</td></tr><tr><td>2</td><td>Emparedados y helados</td><td>México D.F.</td><td>Mexico</td></tr><tr><td>3</td><td>Taquería</td><td>México D.F.</td><td>Mexico</td></tr><tr><td>4<br><br></td><td>Around the Horn</td><td>London</td><td>UK</td></tr><tr><td>5</td><td>Berglunds snabbköp</td><td>Luleå</td><td>Sweden</td></tr></tbody></table>");
+    $("#in").hide();
+    $("#multiplesCondiciones").hide();
+    $("#seleccionarDatosUnicos").hide();
+    $("#seleccionarDatosEspecificos").hide();
     $("#tituloConsultas").hide();
     $("#introConsultas").hide();
     $("#seleccionarDatos").hide();
