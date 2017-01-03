@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     $("#sidenav").load("SideNavLeccion.html");
-    localStorage.setItem("leccion","ddl");  
+    //localStorage.setItem("leccion","ddl");  
     var leccion = localStorage.getItem("leccion");
     if(leccion=="introduccion"){
         startIntroduccionCompletar();

@@ -7,7 +7,7 @@ $(document).ready(function(){
     $("#sidenav").load("SideNavLeccion.html");
     if(localStorage.getItem("leccion")=="introduccion"){
         $("#introduccion").show();
-        localStorage.clear();
+       // localStorage.clear();
     }
     if(localStorage.getItem("leccion")=="disenio"){
         $("#introduccion").hide
@@ -27,7 +27,7 @@ $(document).ready(function(){
             $("#paso1").hide();
             $("#paso2").show();
         });
-        localStorage.clear();
+        //localStorage.clear();
     }
 
     /* if(localStorage.getItem("tema")=="tema2"){
