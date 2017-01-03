@@ -9,7 +9,8 @@ $(document).ready(function(){
     }else if(leccion=="disenio"){
         startDisenoTablas();
     }else if(leccion=="ddl"){
-        startDDL();
+        startAdivinaDDL();
+        //startDDL();
     }
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");

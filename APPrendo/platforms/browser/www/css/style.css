@@ -2485,6 +2485,13 @@ input[type=checkbox]:checked + label {
     
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 20px 0;
+  color: #04B4AE;
+    font-size: 18px;
+}
+
 .linksSiguiente{
     float:left;
     padding: 10px 50px 10px 50px;
@@ -2644,6 +2651,7 @@ a {
    font-size: 15px;
     color: #17402D;
     margin-bottom:2%;
+    font-weight: bold;
 }
 
 .recopilarDatos {
@@ -2715,4 +2723,10 @@ span.text-content {
   -moz-transition: opacity 500ms;
   -o-transition: opacity 500ms;
   transition: opacity 500ms;
+}
+
+.contenidoRelaciones {
+    color: #3CC9BB;
+    font-size: 26px;
+    text-align: justify;
 }

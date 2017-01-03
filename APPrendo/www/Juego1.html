@@ -26,6 +26,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="juegos/Introduccion-plabras.js"></script>
         <script src="juegos/Diseno-tablas.js"></script>
         <script src="juegos/DDL-texto.js"></script>
+        <script src="juegos/DMLDDL-Adivinar.js"></script>
 
         <script src="js/bootstrap.min.js"></script>
         <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
@@ -51,6 +52,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 background-color: #CEECF5;
             }
         </style>
+
     </head>
     <body>
 
@@ -165,6 +167,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
 
                             </div>
+                            <div id="adivina-DDL" sytle="width:100%;" hidden>
+                                <label id="palabra" style="font-size:400%" for="male"></label>
+                                <br>Escribe una letra y presiona enter(Espacios en blanco guion medio '-':<br>
+                                <input id="letra" type="text" maxlength="1" size="1" name="bla">
+                                <br>
+                                Intentos restantes: 
+                                <label id="intentos" style="font-size:400%" for="male"></label>
+                                <br>
+                                Letras incorrectas:
+                                <br>
+                                <label id="incorrectas" style="font-size:400%" for="male"></label>
+                            </div>
                             <div id="DDL-texto" style="width:100%;" hidden>
                                 <div class ="row">
                                     <div class="col-md-offset-4 col-md-6">
@@ -199,6 +213,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
 
                             </div>
+
+
+
                         </div>
                     </div>
 

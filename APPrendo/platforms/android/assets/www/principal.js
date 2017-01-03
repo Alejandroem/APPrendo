@@ -6,6 +6,15 @@ $(document).ready(function(){
      $("#disenio").on('click',function(){
        localStorage.setItem("leccion","disenio");   
     });
+      $("#ddl").on('click',function(){
+       localStorage.setItem("leccion","ddl");   
+    });
+     $("#dml").on('click',function(){
+       localStorage.setItem("leccion","dml");   
+    });
+      $("#consultas").on('click',function(){
+       localStorage.setItem("leccion","consultas");   
+    });
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
         $.ajax({
