@@ -1,6 +1,7 @@
 function cargaContenido(){
     if(localStorage.getItem("leccion")=="introduccion"){
         $("#introduccion").show();
+
     }
     if(localStorage.getItem("leccion")=="disenio"){
         $("#objetivos").show();
@@ -208,6 +209,7 @@ function cargaContenido(){
             $("#DropTable").show();
             $("#DropDB").hide();
         });
+
     }
     if(localStorage.getItem("leccion")=="dml"){
         $("#tituloDML").show();
