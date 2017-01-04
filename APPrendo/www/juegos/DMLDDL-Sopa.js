@@ -2,12 +2,12 @@ var nivel = ["create","alter","drop","table","database","unique","column","prima
 function startDDLSopa(){
     // start a word find game
     var gamePuzzle = wordfindgame.create(nivel, '#puzzle', '#words');
-    $('#solve').click( function() {
+    /*$('#solve').click( function() {
         wordfindgame.solve(gamePuzzle, words);
-    });
+    });*/
     //alert(nextlevel);
     $("#puzzle").mouseup(function() {
-        
+
         if(nextlevel ==true){
             nextlevel = false;
             alert("Ganaste!!! :D");
