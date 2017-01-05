@@ -30,6 +30,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="juegos/Diseno-Relaciones.js"></script>
         <script src="juegos/DDL-texto.js"></script>
 
+        <script type="text/javascript" src="js/wordfind.js"></script> 
+        <script type="text/javascript" src="js/wordfindgame.js"></script> 
+
+        <script src="juegos/DMLDDL-Sopa.js"></script>
+
+        <link rel="stylesheet" href="css/dml-style-typing.css">
+        <script src="juegos/DML-EscribePalabras.js"></script>
+
+
         <script src="Juego2.js"></script>
         <link rel="stylesheet" href="animate.css">
         <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
@@ -42,10 +51,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link rel="stylesheet" href="css/show-hint.css" />
 <script src="js/show-hint.js"></script>
 <script src="js/sql-hint.js"></script>-->
-        
+
         <link rel="stylesheet" type="text/css" href="css/puzzlestyle.css">
-        
-        
+
+
         <style type="text/css">
             .CodeMirror {
                 border: 1px solid #eee;
@@ -185,34 +194,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </div>
-                            <div id="DDL-sopa">
-                                <div id='puzzle'></div>
-                                <div id='words'></div>
-                                <div><button id='solve'>Solve Puzzle</button></div>
-
-                                
-                                <script type="text/javascript" src="js/wordfind.js"></script> 
-                                <script type="text/javascript" src="js/wordfindgame.js"></script> 
-                                <script>
-
-                                    var words = ['cows', 'tracks'];
-
-                                    // start a word find game
-                                    var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
-
-                                    $('#solve').click( function() {
-                                        wordfindgame.solve(gamePuzzle, words);
-                                    });
-
-                                    // create just a puzzle, without filling in the blanks and print to console
-                                    var puzzle = wordfind.newPuzzle(
-                                        words, 
-                                        {height: 18, width:18, fillBlanks: false}
-                                    );
-                                    wordfind.print(puzzle);
-
-                                </script>
-
+                            <div id="DDL-sopa" style="width:100%" hidden>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <div id='puzzle'></div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12">
+                                        <div id='words'></div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div id="DDL-texto" style="width:100%;" hidden>
@@ -248,6 +238,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 </div>
 
+                            </div>
+
+                            <div id="DML-EscribePalabras" style="width:100%;" hidden>
+                                <div id="wrapper" class="wrapper">
+                                    <p style="font-size:200%; color:white;">Escribe todas las palabras que puedas antes que se acabe el tiempo!</p>
+                                    <button class="button-type">Iniciar</button>
+                                    <div class="outerWrap">
+                                        <div class="scoreWrap">
+                                            <p>Puntaje</p>
+                                            <span class="score">0</span>
+                                        </div>
+                                        <div class="timeWrap">
+                                            <p>Tiempo</p>
+                                            <span class="time">60</span>
+                                        </div>
+                                    </div>
+                                    <div class="wordsWrap">
+                                        <p class="words"></p>
+                                        <input class="inputwords" id="inputwords">
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="progress" >

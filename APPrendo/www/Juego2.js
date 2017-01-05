@@ -9,7 +9,8 @@ $(document).ready(function(){
         startDisenoRelaciones();
     }else if(leccion=="ddl"){
         startDDLSopa();
-
+    }else if(leccion=="dml"){
+        startEscribePalabras();
     }
 
     localStorage.setItem("usuario","admin");     

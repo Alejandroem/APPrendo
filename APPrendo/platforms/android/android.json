@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -23,12 +27,26 @@
         },
         "cordova-plugin-wkwebview-engine": {
             "PACKAGE_NAME": "com.APPrendo"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.APPrendo"
         }
     },
     "dependent_plugins": {},
-    "modules": [],
+    "modules": [
+        {
+            "id": "ionic-plugin-keyboard.keyboard",
+            "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+            "pluginId": "ionic-plugin-keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ],
+            "runs": true
+        }
+    ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.3.0",
-        "cordova-plugin-wkwebview-engine": "1.1.0"
+        "cordova-plugin-wkwebview-engine": "1.1.0",
+        "ionic-plugin-keyboard": "2.2.1"
     }
 }

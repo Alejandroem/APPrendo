@@ -13,7 +13,9 @@ $(document).ready(function(){
         //startDDL();
     }else if(leccion=="dml"){
         startDMLAdivinaPalabras();
-        
+    }
+    else if(leccion="consultas"){
+        startConsultaOrdena();
     }
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");

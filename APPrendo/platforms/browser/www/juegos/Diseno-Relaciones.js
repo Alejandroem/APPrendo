@@ -1,4 +1,4 @@
-niveles = {
+nivelesDisenoRelaciones = {
     0:{
         "Tderecha":"juegos/img/tabla-casa.PNG",
         "Tizquierda":"juegos/img/tabla-direccion.PNG",
@@ -6,7 +6,7 @@ niveles = {
     1:{}
 }
 var estado= false;
-var nivel = 0;
+var nivelDisenhoRelaciones = 0;
 function EstadoTablero (){
     this.well1 = "";
     this.well2 = "";
@@ -54,8 +54,8 @@ $("document").ready(function(){
 
 
 function startDisenoRelaciones(){
-    document.getElementById("tizquierda").src = niveles[nivel].Tizquierda;
-    document.getElementById("tderecha").src =  niveles[nivel].Tderecha;
+    document.getElementById("tizquierda").src = nivelesDisenoRelaciones[nivelDisenhoRelaciones].Tizquierda;
+    document.getElementById("tderecha").src =  nivelesDisenoRelaciones[nivelDisenhoRelaciones].Tderecha;
     
     document.getElementById("Diseno-relaciones").style.display = 'block';
     

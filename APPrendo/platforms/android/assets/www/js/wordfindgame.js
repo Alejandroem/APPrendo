@@ -5,7 +5,7 @@
 * For all details and documentation:
 *     http://github.com/bunkat/wordfind
 */
-
+var nextlevel=false;
 (function (document, $, wordfind) {
 
   'use strict';
@@ -26,6 +26,10 @@
 
     // List of words for this game
     var wordList;
+      
+      
+    //Variable para ver siguiente nivel
+    
 
     /**
     * Draws the puzzle by inserting rows of buttons into el.
@@ -224,6 +228,9 @@
 
         if (wordList.length === 0) {
           $('.puzzleSquare').addClass('complete');
+            //alert("Pan con pollo");
+            nextlevel = true;
+            //alert(nextlevel);
         }
       }
 
@@ -283,9 +290,9 @@
         // attach events to the buttons
         // optimistically add events for windows 8 touch
         if (window.navigator.msPointerEnabled) {
-          $('.puzzleSquare').on('MSPointerDown', startTurn);
-          $('.puzzleSquare').on('MSPointerOver', select);
-          $('.puzzleSquare').on('MSPointerUp', endTurn);
+          $('.puzzleSquare').on('onmousedown', startTurn);
+          $('.puzzleSquare').on('onmouseover', select);
+          $('.puzzleSquare').on('onmouseup', endTurn);
         }
         else {
           $('.puzzleSquare').mousedown(startTurn);

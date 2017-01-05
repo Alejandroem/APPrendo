@@ -11,6 +11,8 @@ $(document).ready(function(){
     }else if(leccion=="ddl"){
         startAdivinaDDL();
         //startDDL();
+    }else if(leccion=="dml"){
+        startDMLAdivinaPalabras();
     }
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");

@@ -35,6 +35,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         <script src="juegos/DMLDDL-Sopa.js"></script>
 
+        <link rel="stylesheet" href="css/dml-style-typing.css">
+        <script src="juegos/DML-EscribePalabras.js"></script>
+
+
         <script src="Juego2.js"></script>
         <link rel="stylesheet" href="animate.css">
         <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
@@ -190,7 +194,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </div>
-                            <div id="DDL-sopa" style="width:100%">
+                            <div id="DDL-sopa" style="width:100%" hidden>
                                 <div class="row">
                                     <div class="col-xs-12 col-md-12">
                                         <div id='puzzle'></div>
@@ -234,6 +238,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 </div>
 
+                            </div>
+
+                            <div id="DML-EscribePalabras" style="width:100%;" hidden>
+                                <div id="wrapper" class="wrapper">
+                                    <p style="font-size:200%; color:white;">Escribe todas las palabras que puedas antes que se acabe el tiempo!</p>
+                                    <button class="button-type">Iniciar</button>
+                                    <div class="outerWrap">
+                                        <div class="scoreWrap">
+                                            <p>Puntaje</p>
+                                            <span class="score">0</span>
+                                        </div>
+                                        <div class="timeWrap">
+                                            <p>Tiempo</p>
+                                            <span class="time">60</span>
+                                        </div>
+                                    </div>
+                                    <div class="wordsWrap">
+                                        <p class="words"></p>
+                                        <input class="inputwords" id="inputwords">
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="progress" >
