@@ -11,6 +11,8 @@ $(document).ready(function(){
         startDDLSopa();
     }else if(leccion=="dml"){
         startEscribePalabras();
+    }else if(leccion=="consultas"){
+        startConsultasMemoria();
     }
 
     localStorage.setItem("usuario","admin");     
