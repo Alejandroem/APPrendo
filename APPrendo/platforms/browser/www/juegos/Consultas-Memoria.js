@@ -1,5 +1,6 @@
 var images = [];
 function startConsultasMemoria(){
+    document.getElementById("consultas-memoria").style.display = 'block';
 
     // get images, place them in an array & randomize the order
     for (var i = 0; i < 8; i++) { 

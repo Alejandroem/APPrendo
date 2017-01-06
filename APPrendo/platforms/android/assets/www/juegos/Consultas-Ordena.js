@@ -1,6 +1,7 @@
 const palabrasOrdena = ["drop","alter","create database usuarios"];
 nivelPalabrasOrdena = 0;
 function startConsultaOrdena(){
+    document.getElementById("consultas-ordenaPalabras").style.display = 'block';
     document.getElementById("Nivel").textContent = nivelPalabrasOrdena+1;
     var palabras = palabrasOrdena[nivelPalabrasOrdena].split(" ");
     document.getElementById("Palabra-op").innerHTML ="";
