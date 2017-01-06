@@ -11,6 +11,7 @@ var palabras = [];
 var avance=0;
 var rect;
 function startGame() {
+    //document.getElementById("Nivel").textContent = nivel+1;
     botones = [];
     palabras = [];
     palabras = oraciones[nivel].split(' ');
@@ -40,13 +41,14 @@ function startGame() {
     score.text=avance;
     texto.text ="";
     myGameArea.start();
+    
 }
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
-
+ 
     // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
@@ -62,6 +64,7 @@ function shuffle(array) {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
+        
         this.canvas.width = document.getElementById("Introduccion-palabras").offsetWidth * 0.98;
         this.canvas.height = 300;
         this.context = this.canvas.getContext("2d");
@@ -163,9 +166,10 @@ function updateGameArea() {
     texto.update();
 
     if(avance==palabras.length){
-        alert("ganaste");
+        alert("Siguiente Nivel");
         avance = 0;
         nivel++;
+        document.getElementById("Nivel").textContent = nivelAdivinaPalabras+1;
         startGame();
     }
 }

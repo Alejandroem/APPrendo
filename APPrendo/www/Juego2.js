@@ -8,8 +8,11 @@ $(document).ready(function(){
     }else if(leccion=="disenio"){
         startDisenoRelaciones();
     }else if(leccion=="ddl"){
-        startDDL(1);
-
+        startDDLSopa();
+    }else if(leccion=="dml"){
+        startEscribePalabras();
+    }else if(leccion=="consultas"){
+        startConsultasMemoria();
     }
 
     localStorage.setItem("usuario","admin");     
