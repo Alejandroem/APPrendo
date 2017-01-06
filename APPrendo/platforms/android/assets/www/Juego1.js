@@ -2,12 +2,20 @@
 $(document).ready(function(){
     
     $("#sidenav").load("SideNavLeccion.html");
-    localStorage.setItem("leccion","introdusccion");  
+    //localStorage.setItem("leccion","ddl");  
     var leccion = localStorage.getItem("leccion");
     if(leccion=="introduccion"){
         startGame();
-    }else{
+    }else if(leccion=="disenio"){
         startDisenoTablas();
+    }else if(leccion=="ddl"){
+        startAdivinaDDL();
+        //startDDL();
+    }else if(leccion=="dml"){
+        startDMLAdivinaPalabras();
+    }
+    else if(leccion="consultas"){
+        startConsultaOrdena();
     }
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");

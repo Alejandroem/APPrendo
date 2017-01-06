@@ -21,8 +21,8 @@ Musico = {"nombret":"Musico",
           "id":"int",
           "nombre":"varchar",
           "instrumento":"varchar",
-          "lugarnacimiento":"varchar",
-          "fechanacimiento":"date",
+          "lugarNac":"varchar",
+          "fechaNac":"date",
           "fechamuerte":"date"
          }
 Complejo = {"nombret":"Complejo Deportivo",
@@ -49,7 +49,7 @@ var ratr =[]
 var rtipo =[]          
 var nivel=0;
 function startDisenoTablas(){
-    document.getElementById("Diseño-palabras").style.display = 'block';
+    document.getElementById("Diseno-palabras").style.display = 'block';
     document.getElementById("Nivel").textContent = nivel+1;
 
     var tabla = niveles[nivel];

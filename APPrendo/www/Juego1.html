@@ -26,7 +26,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="juegos/Introduccion-plabras.js"></script>
         <script src="juegos/Diseno-tablas.js"></script>
         <script src="juegos/DDL-texto.js"></script>
+        <script src="juegos/DDL-Adivinar.js"></script>
 
+        <script src="juegos/DML-AdivinaPalabras.js"></script>
+
+        <script src="juegos/Consultas-Ordena.js"></script>
+        
         <script src="js/bootstrap.min.js"></script>
         <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -51,6 +56,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 background-color: #CEECF5;
             }
         </style>
+
+
     </head>
     <body>
 
@@ -91,7 +98,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                     <div class="container" >
                         <div id="contenidoleccion" style="width: 100%;">
-                            Nivel <span id="Nivel" class="badge">0</span>
+                            <div id="nivelcont">Nivel <span id="Nivel" class="badge">0</span></div>
                             <div id="Introduccion-palabras"></div>
                             <div id="Diseno-palabras" style="width:100%;" hidden>
                                 <div class="row">
@@ -165,6 +172,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
 
                             </div>
+                            <div id="adivina-DDL" sytle="width:100%;" hidden>
+                                <label id="palabra" style="font-size:400%" for="male"></label>
+                                <br>Escribe una letra y presiona enter(Espacios en blanco guion medio '-':<br>
+                                <input id="letra" type="text" maxlength="1" size="1" name="bla">
+                                <br>
+                                Intentos restantes: 
+                                <label id="intentos" style="font-size:400%" for="male"></label>
+                                <br>
+                                Letras incorrectas:
+                                <br>
+                                <label id="incorrectas" style="font-size:400%" for="male"></label>
+                            </div>
                             <div id="DDL-texto" style="width:100%;" hidden>
                                 <div class ="row">
                                     <div class="col-md-offset-4 col-md-6">
@@ -198,6 +217,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 </div>
 
+                            </div>
+                            <div id="DML-AdivinaPalabras" style="width:100%;" hidden>
+                                Adivina la palabra y presiona enter: <br>
+                                <label id="pista" style="font-size:150%" for="pista"></label><br>
+
+                                <input id="palabraAdivina" type="text" name="bla"><br>
+
+                            </div>
+                            <div id="consultas-ordenaPalabras" style="width:100%" hidden>
+                                <br>
+                                <label style="">Ordena la palabra: </label><br><br>
+                                <label id="Palabra-op" style="font-size:20px"></label><br><br>
+                                <input id="respuesta-op">
                             </div>
                         </div>
                     </div>
