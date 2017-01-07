@@ -1,6 +1,17 @@
-palabrasAdivina = {
-    0:"insert",1:"delete",2:"select",3:"update",4:"manipulation",5:"data",6:"language",7:"value",8:"order",9:"trigger"
+var palabrasAdivina;
+
+var leccion = localStorage.getItem("leccion");
+
+if(leccion=="dml"){
+    palabrasAdivina = {
+        0:"insert",1:"delete",2:"select",3:"update",4:"manipulation",5:"data",6:"language",7:"value",8:"order",9:"trigger"
+    }
+}else if(leccion=="funciones"){
+    palabrasAdivina = {
+        0:"format",1:"now",2:"round",3:"len",4:"mid",5:"lcase",6:"ucase",7:"having",8:"funcion",9:"count"
+    }
 }
+
 var nivelAdivinaPalabras = 0;
 var intentosadivina =0;
 var hint=0;
@@ -40,7 +51,7 @@ $( document ).ready(function() {
                     intentosadivina=0;
                     nivelAdivinaPalabras++;
                     startDMLAdivinaPalabras();
-                    
+
                 }else{
                     alert("Ganaste!! ");
                 }

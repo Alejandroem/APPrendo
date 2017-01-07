@@ -52,8 +52,15 @@ function startEscribePalabras(){
     }
 
 
-    const list = ['QUERY','CONSULTA','SOLICITUD','INFORMACION','BASE','DATOS','SELECT','FROM','WHERE','COLUMN','VALUE','VALOR','COLUMNA','DISTINCT','AND','CONDICION','OR','RESULTADO','IN','CONJUNTO','BETWEEN','RANGO','LIKE','PATRON','WILDCARDS','CARACTERES','SUSTITUIR','ORDERBY','ORDENAR','ASCENDENTEMENTE','DESCENDENTEMENTE','ALIAS','AS','CAMBIO','NOMBRE','TEMPORALMENTE','TABLA','TABLE'];
+    var list;
+    
+    var leccion = localStorage.getItem("leccion");
 
+    if(leccion=="consultas"){
+        list =  ['QUERY','CONSULTA','SOLICITUD','INFORMACION','BASE','DATOS','SELECT','FROM','WHERE','COLUMN','VALUE','VALOR','COLUMNA','DISTINCT','AND','CONDICION','OR','RESULTADO','IN','CONJUNTO','BETWEEN','RANGO','LIKE','PATRON','WILDCARDS','CARACTERES','SUSTITUIR','ORDERBY','ORDENAR','ASCENDENTEMENTE','DESCENDENTEMENTE','ALIAS','AS','CAMBIO','NOMBRE','TEMPORALMENTE','TABLA','TABLE'];
+    }else if(leccion=="roles"){
+        list =  ['OWNER','SECURITYADMIN','ACCESSADMIN','BACKUPOPERATOR','DDLADMIN','DATAWRITER','DATAREADER','DENYDATAWRITER','DENYDATAREADER','CREATE','ROLE','MEMBER','CONTROL','ALTER','DELETE','EXECUTE','INSERT','RECEIVE','REFERENCES','TAKE','OWNERSHIP','TRACKING','DEFINITION','GRANT','REVOKE','DENY','ON','TO'];
+    }
 
 
     function typing(e) {
@@ -66,7 +73,7 @@ function startEscribePalabras(){
                     continue;
                 } else if (spans[i].classList.contains("bg") === false && spans[i-1] === undefined || spans[i-1].classList.contains("bg") !== false ) { // if it dont have class, if it is not first letter or if the letter before it dont have class (this is done to avoid marking the letters who are not in order for being checked, for example if you have two "A"s so to avoid marking both of them if the first one is at the index 0 and second at index 5 for example)
                     spans[i].classList.add("bg");
-                     break;
+                    break;
                 }
             }
         }
@@ -90,7 +97,7 @@ function startEscribePalabras(){
                     random(); // give another word
                     //cleaning input
                     document.getElementById("inputwords").value ="";
-                    
+
                     document.addEventListener("keyup", typing, false);
                 }, 400);
             }
@@ -111,7 +118,7 @@ function startEscribePalabras(){
             callback('Nothing to echo.');
         }, "Keyboard", "show", [str]);
         /*
-        
+
         if(cordova.plugins.Keyboard.isVisible){
             alert("pan con pollo");
         }else{

@@ -22,6 +22,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <meta name="keywords" content="Academic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
                                        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <!---->
         <script src="juegos/Introduccion-plabras.js"></script>
         <script src="juegos/Diseno-tablas.js"></script>
@@ -30,9 +34,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         <script src="juegos/DML-AdivinaPalabras.js"></script>
 
+        <script src="juegos/consultascomplejas-joins.js"></script>
+
         <script src="juegos/Consultas-Ordena.js"></script>
-        
-        <script src="js/bootstrap.min.js"></script>
+        <script src="juegos/concepto-definicion.js"></script>
+
         <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
@@ -91,16 +97,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div id="gallery" class="gallery">
                 <div class="container">
 
-                    <div class="gallery-top">
-                        <h2>Introduccion</h2>	
+                    <!--<div class="gallery-top">
+<h2>Introduccion</h2>	
 
-                    </div>
+</div>-->
 
                     <div class="container" >
                         <div id="contenidoleccion" style="width: 100%;">
-                            <div id="nivelcont">Nivel <span id="Nivel" class="badge">0</span></div>
-                            <div id="Introduccion-palabras"></div>
+                            <div id="nivelcont">
+                                Nivel <span id="Nivel" class="badge">0</span>
+                            </div>
+                            <div id="juegoIntroduccion-Palabras" hidden>
+                                <div class="gallery-top">
+                                    <h2>Introduccion</h2>	
+                                </div>
+                                <div id="Introduccion-palabras">
+                                </div>
+                            </div>
                             <div id="Diseno-palabras" style="width:100%;" hidden>
+                                <div class="gallery-top">
+                                    <h2>Diseño</h2>	
+                                </div>
                                 <div class="row">
                                     <div class="col-md-1 col-md-offset-4"><label id="tableName" class=""></label><br></div>
                                 </div>
@@ -173,6 +190,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div id="adivina-DDL" sytle="width:100%;" hidden>
+                                <div class="gallery-top">
+                                    <h2>DDL</h2>	
+                                </div>
                                 <label id="palabra" style="font-size:400%" for="male"></label>
                                 <br>Escribe una letra y presiona enter(Espacios en blanco guion medio '-':<br>
                                 <input id="letra" type="text" maxlength="1" size="1" name="bla">
@@ -219,6 +239,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div id="DML-AdivinaPalabras" style="width:100%;" hidden>
+                                <div class="gallery-top">
+                                    <h2>DML</h2>	
+                                </div>
                                 Adivina la palabra y presiona enter: <br>
                                 <label id="pista" style="font-size:150%" for="pista"></label><br>
 
@@ -226,10 +249,52 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div id="consultas-ordenaPalabras" style="width:100%" hidden>
+                                <div class="gallery-top">
+                                    <h2>Consultas</h2>	
+                                </div>
                                 <br>
                                 <label style="">Ordena la palabra: </label><br><br>
                                 <label id="Palabra-op" style="font-size:20px"></label><br><br>
                                 <input id="respuesta-op">
+                            </div>
+                            <div id="concepto-definicion" style="width:100%" hidden>
+
+                            </div>
+
+                            <div id="consultasComplejas-joins">
+                                <div class="row">
+                                    <div id="toolbar" class="col-xs-12 col-md-3">
+                                        <img id="inner" class="draggable"  src="juegos/img/4.png">
+                                        <img id="full" class="draggable" src="juegos/img/5.png">
+                                        <img id="right" class="draggable" src="juegos/img/6.png">
+                                        <img id="left" class="draggable" src="juegos/img/7.png">
+                                    </div>
+                                    <div id="panel" class="col-xs-12 col-md-9">
+
+                                        <div class="row">
+                                            <div class = "col-xs-0 col-md-2"></div>
+                                            <div style="float:left">
+                                                <div id="respuestacc" class="squaredotted col-xs-12 col-md-4" style="width:250px;">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div  class="col-xs-12 col-md-4">
+                                                <img id="tablaicc" class="img">
+                                            </div>
+                                            <div  class="col-xs-12 col-md-4">
+                                                <img id="tabladcc" class="img">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class = "col-xs-0 col-md-2"></div>
+                                            <div  class="col-xs-12 col-md-3">
+                                                <img id="tablarcc"class="img" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

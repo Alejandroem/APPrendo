@@ -32,7 +32,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="juegos/Introduccion-completar.js"></script>
         <script src="juegos/Diseno-Relaciones.js"></script>
         <script src="juegos/DDL-texto.js"></script>
+        
+        <script src="juegos/Introduccion-plabras.js"></script>
 
+        <script src="juegos/subquerys-querys.js"></script>
+        
         <script type="text/javascript" src="js/wordfind.js"></script> 
         <script type="text/javascript" src="js/wordfindgame.js"></script> 
 
@@ -98,9 +102,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div id="gallery" class="gallery">
                 <div class="container">
 
-                    <div class="gallery-top">
+                    <!--<div class="gallery-top">
                         <h2>Introduccion</h2>	
-                    </div>
+                    </div>-->
 
 
                     <!-- se cambio  el archivo bootstrap.css para eliminar el tamanho del container -->
@@ -108,6 +112,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div>Nivel <span id="Nivel" class="badge">0</span></div>
                         <div>
                             <div id="introduccion-completar" class="juego2" hidden>
+                                <div class="gallery-top">
+                                    <h2>Introduccion</h2>	
+                                </div>
                                 <div style="margin-left:5%;margin-top:5%;margin-right:5%;margin-bottom 5%;">
                                     <div class="animated infinite pulse">
                                         <div id="titulo"  class="bgClip">  
@@ -136,17 +143,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div id="Diseno-relaciones" style="width:100%" hidden>
+                                <div class="gallery-top">
+                                    <h2>Diseño</h2>	
+                                </div>
                                 <div class="row">
                                     <div id="herramientas" class="col-xs-3 col-md-2  text-center">
-                                        
+
                                     </div>
                                     <div id="panelJuego" class="col-md-offset-1 col-xs-12 col-md-8">
-                                        
+
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div id="DDL-sopa" style="width:100%" hidden>
+                                <div class="gallery-top">
+                                    <h2>DDL</h2>	
+                                </div>
                                 <div class="row">
                                     <div class="col-xs-12 col-md-12">
                                         <div id='puzzle'></div>
@@ -190,7 +203,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
 
                             </div>
+                            <!--Juego para DML -->
+                            <div id="juegoIntroduccion-Palabras" hidden>
+                                <div class="gallery-top">
+                                    <h2>Introduccion</h2>	
+                                </div>
+                                <div id="Introduccion-palabras">
+                                </div>
+                            </div>
+                            
+                            <!--Se cambio a consultas por las palabras-->
                             <div id="DML-EscribePalabras" style="width:100%;" hidden>
+                                <div class="gallery-top">
+                                    <h2>DML</h2>	
+                                </div>
                                 <div id="wrapper" class="wrapper">
                                     <p style="font-size:200%; color:white;">Escribe todas las palabras que puedas antes que se acabe el tiempo!</p>
                                     <button class="button-type">Iniciar</button>
@@ -210,9 +236,69 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </div>
                                 </div>
                             </div>
+                            <!--Cambio a consultas complejas-->
                             <div id="consultas-memoria"  style="width:100%" hidden>
+                                <div class="gallery-top">
+                                    <h2>Consultas</h2>	
+                                </div>
                                 <div class="row" id ="containerMemoria"></div>
                             </div>
+                            
+                            <div id="subquerys-querys" style="width:100%;" hidden>
+                                <div class="gallery-top">
+                                    <h2>Consultas complejas</h2>	
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1 col-md-offset-4"><label id="tableName" class=""></label><br></div>
+                                </div>
+                                <div class="row" >
+                                     <div class="col-xs-12 col-md-2">
+                                        <label id="enunciado-SS">Bla bla bla</label>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <img id="tabla-SS" >
+                                    </div>
+                                    <div class="col-xs-5 col-md-2">
+                                        <input id="r1" type="text" size="14" disabled ><br>
+                                        <input id="r2" type="text" size="14" disabled ><br>
+                                        <input id="r3" type="text" size="14" disabled ><br>
+                                        <input id="r4" type="text" size="14" disabled ><br>
+                                        <input id="r5" type="text" size="14" disabled ><br>
+                                        <input id="r6" type="text" size="14" disabled ><br>
+                                        <input id="r7" type="text" size="14" disabled ><br>
+                                        <input id="r8" type="text" size="14" disabled ><br>
+                                        <input id="r9" type="text" size="14" disabled ><br>
+                                        <input id="r10" type="text"size="14" disabled ><br>
+                                    </div>
+                                    <div class="col-xs-6 col-md-4 text-left">
+                                        <label id="rp1"></label><br>
+                                        <label id="rp2"></label><br>
+                                        <label id="rp3"></label><br>
+                                        <label id="rp4"></label><br>
+                                        <label id="rp5"></label><br>
+                                        <label id="rp6"></label><br>
+                                        <label id="rp7"></label><br>
+                                        <label id="rp8"></label><br>
+                                        <label id="rp9"></label><br>
+                                        <label id="rp10"></label><br>
+                                    </div>
+                                </div>
+                                <div class="row" >
+                                    <div class="col-xs-12 col-md-3 text-right">
+
+                                    </div>
+                                    <div class="col-xs-4 col-md-4 text-center">
+
+                                        <button id="enviarSS" class="btn btn-info " style="margin-left: 10%; margin-right:10%;">Enviar</button>
+                                        <button id="resetSS" class="btn btn-info ">Reiniciar</button>
+                                    </div>
+                                    <div class="col-xs-4 col-md-4 text-left">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            
                             <div class="progress" >
                                 <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%"><span class="sr-only">60% Complete</span></div>
                             </div> 
