@@ -2,6 +2,7 @@ palabras = {0:"create",1:"alter",2:"drop",3:"unique",4:"table",5:"database",6:"u
 nivel = 0;
 errores=0;
 function startAdivinaDDL(){
+    document.getElementById("Nivel").textContent = nivel+1;
     var palabra = palabras[nivel];
     errores = 0;
     document.getElementById('intentos').innerHTML = (13-nivel-errores)+"";
@@ -42,6 +43,7 @@ $( document ).ready(function() {
                     if(nivel<9){
                         alert("Exito, siguiente nivel!");
                         nivel++;
+                        document.getElementById("Nivel").textContent = nivel+1;
                         startAdivinaDDL();
                     }else{
                         alert("Ganaste!");

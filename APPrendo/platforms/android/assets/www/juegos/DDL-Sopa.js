@@ -1,5 +1,7 @@
-var nivel = ["create","alter","drop","table","database","unique","column","primarykey","foreignkey","varchar"];
+var nivel = ["create","alter","drop","table","database","unique","column","varchar","primary","foreing","key"];
+//var nivel = ["create","alter"];
 function startDDLSopa(){
+    document.getElementById("Nivel").textContent = 1;
     document.getElementById("DDL-sopa").style.display = 'block';
     // start a word find game
     var gamePuzzle = wordfindgame.create(nivel, '#puzzle', '#words');
