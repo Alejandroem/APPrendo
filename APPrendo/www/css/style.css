@@ -2180,6 +2180,7 @@ ul.con-icons li {
 }
 .gallery-top {
     margin-bottom: 1em;
+    margin-top: 2em;
 }
 .gallery {
     padding: 2em 0;
@@ -2563,7 +2564,7 @@ table {
 .especial{
      color: #04B4AE;
     font-family: Monoton;
-    font-size: 28px;
+    font-size: 20px;
     text-shadow: 0 0 3px ##0B615E;
    
 }
