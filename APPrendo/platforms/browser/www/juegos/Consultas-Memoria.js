@@ -1,9 +1,24 @@
 var images = [];
+var leccion = localStorage.getItem("leccion");
 function startConsultasMemoria(){
+    document.getElementById("Nivel").textContent = 1;
     document.getElementById("consultas-memoria").style.display = 'block';
+    
+    
+    var inicio =0;
+    var final = 8;
+    if(leccion=="consultas"){
+        inicio =0;
+        final =8;
+    }else if(leccion=="conexion"){
+        inicio =8;
+        final = 16;
+    }
 
+    /*alert(final);
+    alert(inicio);*/
     // get images, place them in an array & randomize the order
-    for (var i = 0; i < 8; i++) { 
+    for (var i = inicio; i < final; i++) {
         //var rand = Math.floor(Math.random() * (1200 - 900 + 1) + 900); 
         //var img = 'http://lolcat.com/images/lolcats/' + rand + '.jpg';
         var img = 'juegos/img/' + (i+1) + '.png';

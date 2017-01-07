@@ -840,7 +840,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <br>
                                             <span style="color:blue;">DELETE FROM</span> customers
                                             <br>
-                                            <span style="color:blue;">WHERE</span> CustomerName= <span style="color:red;">'Alfreds Futterkiste'</span> <span style="color:blue;">AND</span> ContactName=<span style="color:red;">'Maria Anders'</span>;
+                                            <span style="color:blue;">WHERE</span> CustomerName= <span style="color:red;">'Alfreds Futterkiste'</span> <span style="color:blue;">AND</span> ContactName=<span style="color:red;">'Maria Anders'</span>
                                             ;</p>
                                     </div>
                                     <p class="especial" style="text-align:justify;">
@@ -1219,10 +1219,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="col-xs-12 col-md-4">
                                     <span style="color:#6BEEE1; font-family: Consolas; font-size:20px; margin-left:5%;">Resultado</span>
                                     <ul class="especial" style="margin-left:5%; font-size: 20px;">
-                                        
+
                                         <li>1 Alfreds Futterkiste Berlin Germany</li>
                                         <li>4 Around the Horn London UK</li>
-                                        
+
                                     </ul>
                                 </div>
 
@@ -1230,14 +1230,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <div id="controles">
                             <div style="padding-left: 10%">
-                                <a href="#" id="regresarSelectEspecifico" class="linksAnterior"><<</a>
+                                <a href="#" id="regresarMultiplesCondiciones" class="linksAnterior"><<</a>
                             </div>
                             <div style="padding-left: 60%">
-                                <a href="#" id="irMultiplesCondiciones" class="linksSiguiente">>></a>                    
+                                <a href="#" id="irBetween" class="linksSiguiente">>></a>                    
                             </div>
                         </div>
                     </div>
-                         <div id="in" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                    <div id="between" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
                         <div class="animated infinite flipInX">
                             <div id="tituloBetween"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Between</h1>
@@ -1278,11 +1278,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="col-xs-12 col-md-4">
                                     <span style="color:#6BEEE1; font-family: Consolas; font-size:20px; margin-left:5%;">Resultado</span>
                                     <ul class="especial" style="margin-left:5%; font-size: 20px;">
-                                        
+
                                         <li>1 Alfreds Futterkiste Berlin Germany</li>
                                         <li>2 Emparedados y helados	México D.F. Mexico</li>
                                         <li>3 Taquería México D.F. Mexico</li>
-                                        
+
                                     </ul>
                                 </div>
 
@@ -1290,11 +1290,1759 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <div id="controles">
                             <div style="padding-left: 10%">
-                                <a href="#" id="regresarSelectEspecifico" class="linksAnterior"><<</a>
+                                <a href="#" id="regresarIn" class="linksAnterior"><<</a>
                             </div>
                             <div style="padding-left: 60%">
-                                <a href="#" id="irMultiplesCondiciones" class="linksSiguiente">>></a>                    
+                                <a href="#" id="irLike" class="linksSiguiente">>></a>                    
                             </div>
+                        </div>
+                    </div>
+                    <div id="like" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloLike"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Like</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                    <p class="especial" style="text-align: justify;">
+                                        Muestra los resultados que coinciden con cierto patron. Para ello se utilizan caracteres wildcards.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> * <span style="color:blue;">FROM</span> customers
+                                        <br>
+                                        <span style="color:blue;">WHERE </span>City LIKE <span style="color:red;">'%n'</span>;
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <span style="color:#6BEEE1; font-family: Consolas;">Tabla customers</span>
+                                    <div class="tabla"></div>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <span style="color:#6BEEE1; font-family: Consolas; font-size:20px; margin-left:5%;">Resultado</span>
+                                    <ul class="especial" style="margin-left:5%; font-size: 20px;">
+
+                                        <li>1 Alfreds Futterkiste Berli<span style="font-weight:bold;">n</span> Germany</li>
+                                        <li>4 Around the Horn Londo<span style="font-weight:bold;">n</span> UK</li>
+                                        Muestra resultados cuyas ciudades terminan en n
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h2 class="especial" style="font-weight:bold;">
+                                WildCards
+                            </h2>
+                            <div class="col-xs-12 col-md-7">
+                                <p class="especial">
+                                <p class="especial" style="text-align: justify;">
+                                    Se utilizan para sustituir un caracter
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-md-5">
+
+                                <table>
+                                    <tbody><tr>
+                                        <th style="width:15%">Wildcard</th>
+                                        <th>Descripcion</th>
+                                        </tr>
+                                        <tr>
+                                            <td>%</td>
+                                            <td>Sustituye 0 mas caracteres </td>
+                                        </tr>
+                                        <tr>
+                                            <td>_</td>
+                                            <td>Sustituye un solo caracter</td>
+                                        </tr>
+                                        <tr>
+                                            <td>[<em>abcdke</em>]</td>
+                                            <td>Coincide con un rango de caracteres especificado entre corchetes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>[^<em>ekwis</em>]<br>o<br>[!<em>jlkjiouklj</em>]</td>
+                                            <td>Coincide con todos los caracteres no especificados entre corchetes</td>
+                                        </tr>
+                                    </tbody></table>
+
+                            </div>
+                        </div>
+
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarBetween" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irOrderBy" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="orderBy" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloOrderBy"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Order By</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Ordena ascendentemente los resultados en base a una columna. Para ordenarlos descendentemente se debe especificar utilizando la palabra <span style="font-weight:bold;">DESC</span>     
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna, nombreColumna2</span>
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>
+                                        <br>
+                                        <span style="font-weight:bold;">ORDER BY</span> nombreColumna <span style="font-weight:bold;">ASC|DESC</span>, nombreColumna2 <span style="font-weight:bold;">ASC|DESC</span>
+                                        ;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> * <span style="color:blue;">FROM</span> customers
+                                        <span style="color:blue;">ORDER BY </span> city;
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-8">
+                                    <span style="color:#6BEEE1; font-family: Consolas;">Tabla customers</span>
+                                    <div class="tabla"></div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <span style="color:#6BEEE1; font-family: Consolas; font-size:20px; margin-left:5%;">Resultado</span>
+                                    <ul class="especial" style="margin-left:5%; font-size: 20px;">
+
+                                        <li>1 Alfreds Futterkiste Berlin Germany</li>
+                                        <li>4 Around the Horn London UK</li>
+                                        <li>5 Berglunds snabbköp Luleå Sweden</li>
+                                        <li>2 Emparedados y helados	México D.F. Mexico</li>
+                                        <li>3 Taquería México D.F. Mexico</li>
+                                        Se ordenan alfabeticamente por el nombre de la ciudad
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarLike" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irAlias" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="alias" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Alias</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Permite cambiar el nombre temporalmente a una tabla o columna.    
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna </span> <span style="font-weight:bold;"> AS </span><span style="font-style:italic;"> nombreAlias </span>
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> Name <span style="color:blue;">AS</span> cliente
+                                        <br><span style="color:blue;">FROM</span> customers;
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna </span> 
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span><span style="font-weight:bold;"> AS </span><span style="font-style:italic;"> nombreAlias </span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> * <span style="color:blue;">FROM</span> customers <span style="color:blue;">AS</span> c;
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarOrderBy" class="linksAnterior"><<</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-top" id="tituloJoins">
+                        <h2>Joins</h2>	
+                    </div>
+                    <div id="introJoins" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>¿Qué es un join?</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Sirven para combinar filas de dos o más tablas donde la condición se cumple, en base a campos en común entre ellos. Son las relaciones vistas en lecciones anteriores.    
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/join.png" alt="ddl">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left: 80%">
+                            <a href="#" id="irInner" class="linksSiguiente">>></a>       
+                        </div> 
+                    </div>
+                    <div id="innerJoin" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Inner Join</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Selecciona todas las filas de ambas tablas, mientras que haya una coincidencia entre las columnas en ambas tablas.   
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:70%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/inner.PNG" alt="ddl">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna(s) </span> 
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> tabla1</span><span style="font-weight:bold;"> INNER JOIN</span><span style="font-style:italic;"> tabla2</span><span style="font-style:italic;"> ON </span>tabla1.nombreColumnaCoincidir = tabla2.nombreColumnaCoincidir;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> Employee.Name, Employee.EmpId, DeptName <span style="color:blue;">FROM</span> Employee <span style="color:blue;">INNER JOIN</span> Dept <span style="color:blue;"> ON </span>Employee.DeptName=Dept.DeptName;
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/joins.png" alt="ddl">
+                                        La tabla users y la tabla orders está relacionada por la columna users.id y orders.user_id, en el ejemplo devuelve el nombre de usuario y el item a comprar de los usuarios cuyo id coincida con el order.user_id. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarIntroJoins" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irLeft" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="leftJoin" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Left Join</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Retorna todas las filas de la tabla de la izquierda con las que coinciden de la tabla de la derecha. El resultado es null del lado derecho cuando no hay coincidencia. 
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:70%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/left.PNG" alt="ddl">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna(s) </span> 
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> tabla1</span><span style="font-weight:bold;"> LEFT JOIN</span><span style="font-style:italic;"> tabla2</span><span style="font-style:italic;"> ON </span>tabla1.nombreColumnaCoincidir = tabla2.nombreColumnaCoincidir;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> users.Name, orders.item <span style="color:blue;">FROM</span> Users <span style="color:blue;">LEFT JOIN</span> Orders <span style="color:blue;"> ON </span>users.id=orders.user_id;
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/leftJoinExample.png" alt="ddl">
+                                        En el ejemplo devuelve todos los registros de la tabla users y los registros de la tabla orders que coincidan con los registros de la tabla users. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarInner" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irRight" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="rightJoin" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Right Join</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Retorna todas las filas de la tabla de la derecha con las que coinciden de la tabla de la izquierda. El resultado es null del lado izquierdo cuando no hay coincidencia. 
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:70%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/right.PNG" alt="ddl">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna(s) </span> 
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> tabla1</span><span style="font-weight:bold;"> RIGHT JOIN</span><span style="font-style:italic;"> tabla2</span><span style="font-style:italic;"> ON </span>tabla1.nombreColumnaCoincidir = tabla2.nombreColumnaCoincidir;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> users.Name, orders.item <span style="color:blue;">FROM</span> Users <span style="color:blue;">RIGHT JOIN</span> Orders <span style="color:blue;"> ON </span>users.id=orders.user_id;
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/rightJoinExample.png" alt="ddl">
+                                        En el ejemplo devuelve todos los registros de la tabla orders y los registros de la tabla users que coincidan con los registros de la tabla orders. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarLeft" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irFull" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fullJoin" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Full Outer Join</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Retorna todos los valores de ambas tablas. 
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:70%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/full.PNG" alt="ddl">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna(s) </span> 
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> tabla1</span><span style="font-weight:bold;"> FULL OUTER JOIN</span><span style="font-style:italic;"> tabla2</span><span style="font-style:italic;"> ON </span>tabla1.nombreColumnaCoincidir = tabla2.nombreColumnaCoincidir;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> users.Name, orders.item <span style="color:blue;">FROM</span> Users <span style="color:blue;">FULL OUTER JOIN</span> Orders <span style="color:blue;"> ON </span>users.id=orders.user_id;
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/fullExample.png" alt="ddl">
+                                        En el ejemplo devuelve todos los registros de la tabla users y todos los registros de la tabla orders. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarRight" class="linksAnterior"><<</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-top" id="tituloSubqueries">
+                        <h2>Subqueries</h2>	
+                    </div>
+                    <div id="introSubqueries" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>¿Qué es un subquery?</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Es un query dentro de otro query. Los registros que devuelve la subconsulta son utilizados por la consulta principal como una condición.    
+                                    </p>
+                                    <p class="especial" style="text-align: justify;">
+                                        Puede ser utilizada por las clausulas select, insert, update y delete. También puede utilizar los operadores &lt;, &gt;, =, &gt;=, &lt;=, etc.   
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/subqueryEj.jpg" alt="ddl">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left: 80%">
+                            <a href="#" id="irReglas" class="linksSiguiente">>></a>       
+                        </div> 
+                    </div>
+                    <div id="reglasSubqueries" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Reglas</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <ul class="especial" style="text-align: justify;">
+                                        <li>Deben ir encerradas entre parentesis</li> 
+                                        <li>Solo puede tener una columna en la clausula SELECT, a menos que hayan multiples columnas en el query principal para comparar los resultados.</li> 
+                                        <li>No se puede utilizar ORDER BY en una subquery, sin embargo el query principal sí puede utilizarlo. En lugar de ORDER BY se puede utilizar GROUP BY.</li> 
+                                        <li>Subqueries que devuelven multiples filas solo pueden ser utilizados por operadores que soportan multiples resultados como IN</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <ul class="especial" style="text-align: justify; margin-left:5%;">
+                                        <li>La lista del select no puede incluir referencias a valores de tipo BLOB, ARRAY, CLOB y NCLOB.</li> 
+                                        <li>Una subquery no puede ser utilizada directamente en una funcion set (update).</li> 
+                                        <li>No se puede utilizar BETWEEN con la subquery, pero sí se puede utilizar dentro de ella.</li> 
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarIntro" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irSintaxis" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sintaxisSubquery" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna(s) </span> 
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> tabla1</span><span style="font-weight:bold;"> WHERE</span><span style="font-style:italic;"> nombreColumna</span> = (<span style="font-weight:bold;">SELECT </span><span style="font-style:italic;"> nombreColumna(s) </span> 
+                                        <br>
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> tabla1</span><span style="font-weight:bold;"> WHERE</span><span style="font-style:italic;"> nombreColumna</span> = valorComparar);
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial" style="width:100%; height:100%;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT</span> * <span style="color:blue;">FROM</span> Customers <span style="color:blue;">WHERE </span> ID <span style="color:blue;"> IN </span>(<span style="color:blue;">SELECT</span> ID <span style="color:blue;">FROM</span> Customers <span style="color:blue;">WHERE </span> salary > 4500);
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/ejSubquery.png" alt="ddl">
+                                        En el ejemplo devuelve los registros de la tabla customers que tengan un salario > 4500. La subconsulta devuelve el ID del usuario verificando que el salario sea > 4500. Luego la consulta padre compara los IDs devueltos para retornar los registros. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarReglas" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irEjemplo1" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ejemplo1" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/ejSubquery2.PNG" alt="ddl">
+                                        Mostrar el nombre del pais cuya poblacion sea mas grande que la poblacion de Rusia
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial" style="width:100%; height:100%;">
+                                        <span style="color:blue;">SELECT</span> name <span style="color:blue;">FROM</span> world <span style="color:blue;">WHERE </span> population <span style="color:blue;"> > </span>(<span style="color:blue;">SELECT</span> population <span style="color:blue;">FROM</span> world <span style="color:blue;">WHERE </span> name = 'Russia');
+                                        <br>
+                                        La subconsulta devuelve la poblacion de Rusia. Luego la consulta padre compara la poblacion de los paises con la poblacion de Rusia. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarSintaxis" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irEjemplo2" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ejemplo2" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/ejSubquery2.PNG" alt="ddl">
+                                        Mostrar el nombre de paises europeos con un GDP per capita mayor al de United Kingdom
+                                        <br>
+                                        GDP per capita = gdp/population
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial" style="width:100%; height:100%;">
+                                        <span style="color:blue;">SELECT</span> name <span style="color:blue;">FROM</span> world <span style="color:blue;">WHERE </span> gdp/population <span style="color:blue;"> > </span>(<span style="color:blue;">SELECT</span> gdp/population <span style="color:blue;">FROM</span> world <span style="color:blue;">WHERE </span> name = 'United Kingdom') <span style="color:blue;">AND</span> continent = 'Europe';
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarEjemplo1" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irEjemplo3" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ejemplo3" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/ejSubquery2.PNG" alt="ddl">
+                                        ¿Qué países tienen una población mayor a la de Canada y menor a la de Poland?
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial" style="width:100%; height:100%;">
+                                        <span style="color:blue;">SELECT</span> name,population <span style="color:blue;">FROM</span> world <span style="color:blue;">WHERE </span> population <span style="color:blue;"> > </span>(<span style="color:blue;">SELECT</span> population <span style="color:blue;">FROM</span> world <span style="color:blue;">WHERE </span> name = 'Canada') <span style="color:blue;">AND</span> continent &lt; (<span style="color:blue;">SELECT</span> population <span style="color:blue;">FROM</span> world <span style="color:blue;">WHERE </span> name = 'Poland');
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarEjemplo2" class="linksAnterior"><<</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-top" id="tituloFunciones">
+                        <h2>Funciones</h2>	
+                    </div>
+                    <div id="introFunciones" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>¿Qué es una funcion?</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Son funciones predeterminadas que permiten realizar calculos en los datos.    
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/functions.png" alt="ddl">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left: 80%">
+                            <a href="#" id="irPromedio" class="linksSiguiente">>></a>       
+                        </div> 
+                    </div>
+                    <div id="promedio" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>AVG</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Retorna el promedio de una columna numerica  
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT AVG</span>(nombreColumna) 
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT AVG</span>(Price) <span style="color:blue;">FROM</span> products;
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarIntroFunciones" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irCount" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="count" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Count</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Retorna la cantidad de registros de determinada columna. Los valores nulos no son tomados en cuenta. </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT COUNT</span>(nombreColumna) 
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT COUNT</span>(*) <span style="color:blue;">FROM</span> products;
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarAVG" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irMAX" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="max" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>MAX</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Retorna el valor mas grande de la columna seleccionada. </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT MAX</span>(nombreColumna) 
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT MAX</span>(Price) <span style="color:blue;">FROM</span> products;
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarCount" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irMIN" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="min" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>MIN</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Retorna el valor mas pequeño de la columna seleccionada. </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT MIN</span>(nombreColumna) 
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT MIN</span>(Price) <span style="color:blue;">FROM</span> products;
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarMAX" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irSUM" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sum" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>SUM</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Retorna la suma total de una columna numerica. </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT SUM</span>(nombreColumna) 
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT SUM</span>(Price) <span style="color:blue;">FROM</span> products;
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarMIN" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irGroupBy" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="groupBy" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Group By</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Generalmente las funciones AVG, SUM o COUNT deben incluir una sentencia Group By. Sirve para agrupar el resultado por una o mas columnas. </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT SUM/AVG/COUNT</span>(nombreColumna) 
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>
+                                        <span style="font-weight:bold;">WHERE</span> nombreColumna = valor<span style="font-weight:bold;"> GROUP BY </span>nombreColumna;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT </span> dept_id, <span style="color:blue;">SUM</span>(salary)<span style="color:blue;">AS</span> total_salaries<span style="color:blue;"> FROM</span> employees <span style="color:blue;">GROUP BY</span> dept_id;
+                                        <br>
+                                        <img class="img-responsive" style="width:80%; height:80%; margin-left:20%; margin-bottom:5%;" src="images/ejGroupBy.PNG" alt="ddl">
+                                        <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/ejGroupBy2.PNG" alt="ddl">
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarSUM" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irHaving" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="having" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Having</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Equivalente a la clausula WHERE. Se utiliza cuando la condición contiene las funciones AVG, SUM o COUNT. </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT </span>nombreColumna
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>
+                                        <span style="font-weight:bold;">GROUP BY </span><span style="font-style:italic;"> nombreColumna</span><span style="font-weight:bold;"> HAVING SUM/AVG/COUNT</span>(nombreColumna) = valor;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT COUNT</span>(Id), country <span style="color:blue;">FROM</span> customer<span style="color:blue;"> GROUP BY</span> country <span style="color:blue;">HAVING COUNT</span>(Id)>10;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarGroupBy" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irUCase" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="UCase" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>UCASE</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Convierte el valor de la columna a mayúscula sostenida. SQL Server utiliza UPPER en lugar de UCASE.</p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT UCASE</span>(nombreColumna)
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT UCASE</span>(name)<span style="color:blue;">FROM</span> customer;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarHaving" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irLCase" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="LCase" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>LCASE</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial">
+                                    Convierte el valor de la columna a minúscula sostenida. SQL Server utiliza LOWER en lugar de LCASE.</p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT LCASE</span>(nombreColumna)
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT LCASE</span>(name)<span style="color:blue;">FROM</span> customer;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarUCase" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irMID" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="MID" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>MID</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial" style="text-align: justify;">
+                                    Extrae caracteres de una columna de texto. En SQL Server se utiliza SUBSTRING en su lugar y ORACLE utiliza SUBSTR. Se especifica el nombre de la columna a la que se aplicará la función, donde iniciará a sustraer caracteres y opcionalmente la cantidad de caracteres a devolver, si no se especifica retornará el resto del texto.
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT MID</span>(nombreColumna,inicio,[largo])
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT MID</span>(City,1,4)<span style="color:blue;"> AS</span> ShortCity<span style="color:blue;"> FROM</span> customer;
+                                        <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/ejMid.png" alt="ddl">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarLCase" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irLEN" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="LEN" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>LEN</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial" style="text-align: justify;">
+                                    Devuelve el largo de la cadena. 
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT LEN</span>(nombreColumna)
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT LEN</span>(Address)<span style="color:blue;"> AS</span> LengthOfAddress<span style="color:blue;"> FROM</span> customer;
+                                        <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/ejLen.png" alt="ddl">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarMID" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irRound" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Round" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Round</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial" style="text-align: justify;">
+                                    Redondea una columna numérica al número de decimales especificado.  
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT ROUND</span>(nombreColumna,decimals)
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT ROUND</span>(Price,0)<span style="color:blue;"> AS</span> RoundedPrice<span style="color:blue;"> FROM</span> products;
+                                        <img class="img-responsive" style="width:60%; height:60%; margin-left:20%; margin-bottom:5%;" src="images/ejRound.png" alt="ddl">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarLen" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irNow" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Now" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Now</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial" style="text-align: justify;">
+                                    Devuelve la fecha y hora actual del sistema.  
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT NOW</span>()
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT NOW</span>()<span style="color:blue;"> FROM</span> products;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarRound" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irFormat" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Format" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Format</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <p class="especial" style="text-align: justify;">
+                                    Sirve para darle formato al resultado.  
+                                </p>
+                                <div class="col-xs-12 col-md-7">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
+                                        <br>
+                                        <span style="font-weight:bold;">SELECT FORMAT</span>(nombreColumna,formato)
+                                        <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-5">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
+                                        <br>
+                                        <span style="color:blue;">SELECT FORMAT</span>(Now(),'YYYY-MM-DD')<span style="color:blue;"> FROM</span> products;
+                                        <br>
+                                        2017-01-04
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarNow" class="linksAnterior"><<</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-top" id="tituloRoles">
+                        <h2>Roles y Permisos</h2>	
+                    </div>
+                    <div id="introRoles" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>¿Qué es un rol?</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Se utilizan para administrar más fácilmente los permisos en las bases de datos. Un rol es una entidad que agrupa varios usuarios con determinados permisos. 
+                                        <br>
+                                        Existen dos tipos de roles en el nivel de base de datos: los roles fijos de base de datos que están predefinidos en la base de datos y los roles de base de datos definidos por el usuario que el usuario puede crear.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/rol2.jpg" alt="ddl">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left: 80%">
+                            <a href="#" id="irRolesNivel" class="linksSiguiente">>></a>       
+                        </div> 
+                    </div>
+                    <div id="rolesNivel" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Roles Fijos</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Son roles ya definidos en las bases de datos. Traen permisos ya definidos y no pueden ser cambiados. Los roles específicos de SQL Server 2008 en adelante se explican a continuación.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_owner</span>
+                                        <br>
+                                        pueden realizar todas las actividades de configuración y mantenimiento en la base de datos y también pueden quitar la base de datos en SQL Server. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarIntroRoles" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irRolesNivel2" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="rolesNivel2" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Roles Fijos</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_securityadmin</span>
+                                        <br>
+                                        pueden modificar la pertenencia a roles y administrar permisos.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_accessadmin</span>
+                                        <br>
+                                        pueden agregar o quitar el acceso a la base de datos 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_backupoperator</span>
+                                        <br>
+                                        pueden crear copias de seguridad de la base de datos.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_ddladmin</span>
+                                        <br>
+                                        pueden ejecutar cualquier comando del lenguaje de definición de datos (DDL) en una base de datos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarRolesNivel" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irRolesNivel3" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="rolesNivel3" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Roles Fijos</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_datawriter</span>
+                                        <br>
+                                        pueden agregar, eliminar o cambiar datos en todas las tablas de usuario.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_datareader</span>
+                                        <br>
+                                        pueden leer todos los datos de todas las tablas de usuario. 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_denydatawriter</span>
+                                        <br>
+                                        no pueden agregar, modificar ni eliminar datos de tablas de usuario de una base de datos.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">db_denydatareader</span>
+                                        <br>
+                                        no pueden leer datos de las tablas de usuario dentro de una base de datos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarRolesNivel2" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irRolesDefinidos" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="rolesDefinidos" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>roles definidos por el usuario</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <br>
+                                        Son roles que el usuario puede crear y asignarle permisos específicos.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Crear roles</span>
+                                        <br>
+                                        <span style="color:blue;">CREATE ROLE</span> nombreRol [<span style="color:blue;">AUTHORIZATION</span> nombreDueño];
+                                        <br>
+                                        <span style="font-size:20px; text-align: justify;">nombreDueño es el usuario o rol de la base de datos a quien pertenece el nuevo rol. Si no se especifica el usuario, se tomará como dueño a quien crea el rol</span>
+                                        <br>
+                                        <span style="color:blue;">CREATE ROLE</span> buyers <span style="color:blue;">AUTHORIZATION </span>BenMiller;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarRolesNivel3" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irAgregarMiembros" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="agregarMiembros" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>agregar y eliminar usuarios a rol</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Agregar usuarios</span>
+                                        <br>
+                                        <span style="color:blue;">ALTER ROLE</span> nombreRol <span style="color:blue;">ADD MEMBER</span> nombreUsuario;
+                                        <br>
+                                        <br>
+                                        <span style="color:blue;">ALTER ROLE</span> Sales <span style="color:blue;">ADD MEMBER</span> Barry;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Eliminar usuarios</span>
+                                        <br>
+                                        <span style="color:blue;">ALTER ROLE</span> nombreRol <span style="color:blue;">DROP MEMBER</span> nombreUsuario;
+                                        <br>
+                                        <br>
+                                        <span style="color:blue;">ALTER ROLE</span> Sales <span style="color:blue;">DROP MEMBER</span> Barry;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarRolesDefinidos" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irPermisos" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="permisos" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Permisos</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        Los permisos sirven para brindar seguridad a la base de datos. Para ello restringe el acceso a ciertas funcionalidades a ciertos grupos de usuarios (roles).
+                                        <br>
+                                        Los conjuntos de permisos asignados a roles los heredan todos los miembros del rol. Es más fácil agregar o quitar usuarios de un rol que volver a crear conjuntos de permisos distintos para cada usuario.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/permisos.png" alt="ddl">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarAgregarMiembros" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irTipoPermisos" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="Tipospermisos" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Tipos de Permisos</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">ALTER</span>
+                                        <br>
+                                        Permite cambiar las propiedades  de un elemento determinado. También permite  modificar, crear o quitar cualquier elemento protegible que esté contenido en ese ámbito. Por ejemplo, el permiso ALTER en un esquema incluye la posibilidad de crear, modificar y quitar objetos del esquema.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">CONTROL</span>
+                                        <br>
+                                        Dispone de todos los permisos definidos para el elemento protegible. 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">DELETE</span>
+                                        <br>
+                                        Permite eliminar datos de una tabla. 
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">EXECUTE</span>
+                                        <br>
+                                        Permite ejecutar scripts externos, procedimientos, funciones escalares y de agregado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarPermisos" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irTipoPermisos2" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="Tipospermisos2" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Tipos de Permisos</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">INSERT</span>
+                                        <br>
+                                        Permite cambiar las propiedades  de un elemento determinado. También permite  modificar, crear o quitar cualquier elemento protegible que esté contenido en ese ámbito. Por ejemplo, el permiso ALTER en un esquema incluye la posibilidad de crear, modificar y quitar objetos del esquema.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">RECEIVE</span>
+                                        <br>
+                                        Dispone de todos los permisos definidos para el elemento protegible. 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">REFERENCES</span>
+                                        <br>
+                                        Utilizado para colas de Service Broker
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">SELECT</span>
+                                        <br>
+                                        Permite seleccionar registros de una tabla.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarTipoPermisos" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irTipoPermisos3" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="Tipospermisos3" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Tipos de Permisos</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">TAKE OWNERSHIP</span>
+                                        <br>
+                                        Permite al receptor del permiso tomar propiedad del elemento protegible para el que se concede este permiso.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">UPDATE</span>
+                                        <br>
+                                        Permite actualizar datos de una tabla.  
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">VIEW CHANGE TRACKING</span>
+                                        <br>
+                                        Permite visualizar los cambios que se han realizado en las tablas a través del change tracking. 
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">VIEW DEFINITION</span>
+                                        <br>
+                                        Permite al receptor obtener acceso a los metadatos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarTipoPermisos2" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irInstrucciones" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="Instrucciones" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Instrucciones de Permiso</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoConsultas" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-8">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Grant</span>
+                                        <br>
+                                        Concede un permiso.
+                                        <br>
+                                        <br>
+                                        <span style="color:blue;">GRANT</span> tipoPermiso <span style="color:blue;">ON</span> elementoAObtenerPermiso <span style="color:blue;">TO</span> usuario/rol;
+                                        <br>
+                                        <br>
+                                        <span style="color:blue;">GRANT</span> SELECT <span style="color:blue;">ON</span> employees <span style="color:blue;">TO</span> Barry;
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Revoke</span>
+                                        <br>
+                                        Revoca un permiso.  
+                                        <br>
+                                        <br>
+                                        <span style="color:blue;">REVOKE</span> tipoPermiso <span style="color:blue;">ON</span> elementoAObtenerPermiso <span style="color:blue;">FROM</span> usuario/rol;
+                                        <br>
+                                        <br>
+                                        <span style="color:blue;">REVOKE</span> INSERT <span style="color:blue;">ON</span> employees <span style="color:blue;">FROM</span> Barry;
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12">
+                                    <p class="especial">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Deny</span>
+                                        <br>
+                                        DENY revoca un permiso de manera que no pueda ser heredado. 
+                                        <br>
+                                        <span style="color:blue;">REVOKE</span> tipoPermiso <span style="color:blue;">ON</span> elementoAObtenerPermiso <span style="color:blue;">TO</span> usuario/rol;
+                                        <br>
+                                        <span style="color:blue;">REVOKE</span> UPDATE <span style="color:blue;">ON</span> employees <span style="color:blue;">TO</span> Barry;
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarTipoPermisos3" class="linksAnterior"><<</a>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="gallery-top" id="tituloConexion">
+                        <h2>Conexión desde una aplicación externa</h2>	
+                    </div>
+                    <div id="introConexion" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Conectar SQL Server con una aplicación en C#</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-8">
+                                    <p class="especial" style="text-align: justify;">
+                                        La mayoría de los datos almacenados en las bases de datos, son obtenidos a través de aplicaciones. De igual manera los datos almacenados deben ser mostrados a los usuarios para su uso: reportes, gráficos, análisis, entre otros. 
+                                        <br>
+                                        Por ello es importante poder conectar nuestra aplicación a una base de datos. Para el ejemplo se realizará la conexión de una aplicación realizada en C# a una base de datos SQL Server mediante el Framework .NET.
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/conect.jpg" alt="ddl">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-left: 80%">
+                            <a href="#" id="irConectar" class="linksSiguiente">>></a>       
+                        </div> 
+                    </div>
+                    <div id="conectar" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Conectar SQL Server con una aplicación en C#</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12">
+                                    <p class="especial" style="text-align: justify;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Crear String de conexión y abrirla</span>
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/paso1.JPG" alt="ddl">
+                                        <span style="font-size:20px;">Server = Versión de SQL Server que se está utilizando. En este ejemplo se utilizó SQL Express.
+                                            <br>
+                                            Database = nombre de la base de datos.
+                                            <br>
+                                            Integrated Security = true (autenticación de Windows).</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarIntroConexion" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irSelectCon" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="selectCon" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Conectar SQL Server con una aplicación en C#</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12">
+                                    <p class="especial" style="text-align: justify; width:100%;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejecutar Consulta Select</span>
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/select.JPG" alt="ddl">
+                                        <span style="font-size:20px;">SQLCommand(Consulta,String de conexion)
+                                            <br>
+                                            ExecuteReader = realiza la consulta.
+                                            <br>
+                                            while(Reader.read()) = Mientras hayan resultados, devuelve los resultados de la consulta.
+                                            <br>
+                                            .getString(0) = el indice 0 significa que devuelve la primera columna. Si la consulta tuviera más de dos columnas, por ejemplo, SELECT ID,nombre; sería .getString(0) para ID y .getString(1) para el nombre.
+                                            <br>
+                                            reader.Close() = cierra el lector.
+                                            <br>
+                                            conn.Close() = cierra la conexión.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarConectar" class="linksAnterior"><<</a>
+                            </div>
+                            <div style="padding-left: 60%">
+                                <a href="#" id="irInsert" class="linksSiguiente">>></a>                    
+                            </div>
+                        </div>
+                    </div>
+                     <div id="insertCon" style="margin-bottom: 10%; width:80%;" class="hvr-backward">
+                        <div class="animated infinite flipInX">
+                            <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;">    
+                                <h1>Conectar SQL Server con una aplicación en C#</h1>
+                            </div>
+                        </div> 
+                        <div id="contenidoDDL" class="fluid-container">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12">
+                                    <p class="especial" style="text-align: justify; width:100%;">
+                                        <span style="color:#6BEEE1; font-family: Consolas;">Ejecutar Consulta Insert</span>
+                                        <br>
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/insert.JPG" alt="ddl">
+                                        <span style="font-size:20px;">SQLCommand(Consulta,String de conexion) = En lugar de colocar los valores a insertar se colocará @identificadorValorIngresar. Por ejemplo si se insertará el nombre de usuario se colocará @nombre o @nombreUsuario, etc.
+                                            <br>
+                                            .Parameters.AddWithValue(@identificadorValorInsertar,valorInsertar) = Donde @identificadorValorInsertar es el identificador que se colocó en la consulta. Y valorInsertar es el valor obtenido por el usuario, que es el que será insertado. 
+                                            <br>
+                                            ExecuteNonQuery() = Ejecuta la consulta.
+                                            <br>
+                                          conn.Close() = cierra la conexión.
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controles">
+                            <div style="padding-left: 10%">
+                                <a href="#" id="regresarSelect" class="linksAnterior"><<</a>
+                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -1304,42 +3052,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="progress" style="margin-left: 100px; margin-right: 100px; ">
             <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%"><span class="sr-only">60% Complete</span></div>
         </div> 
+
+        <!-- Include jQuery & Filterizr -->
+
+        <script src="js/jquery.filterizr.js"></script>
+        <script src="js/controls.js"></script>
+
+        <!-- Kick off Filterizr -->
+        <script type="text/javascript">
+            $(function() {
+                //Initialize filterizr with default options
+                $('.filtr-container').filterizr();
+            });
+        </script>
+        <!--//gallery-->
+
+
+
+
+
+        <!---->
+        <!--footer-->
+        <div class="footer">
+            <div class="container">
+
+
+
+                <p class="copy-right">© 2016 Academic. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+
+
+            </div>
         </div>
-    </div>
-
-<!-- Include jQuery & Filterizr -->
-
-<script src="js/jquery.filterizr.js"></script>
-<script src="js/controls.js"></script>
-
-<!-- Kick off Filterizr -->
-<script type="text/javascript">
-    $(function() {
-        //Initialize filterizr with default options
-        $('.filtr-container').filterizr();
-    });
-</script>
-<!--//gallery-->
+        <!--//footer-->
 
 
 
-
-
-<!---->
-<!--footer-->
-<div class="footer">
-    <div class="container">
-
-
-
-        <p class="copy-right">© 2016 Academic. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-
-
-    </div>
-</div>
-<!--//footer-->
-
-
-
-</body>
+    </body>
 </html>

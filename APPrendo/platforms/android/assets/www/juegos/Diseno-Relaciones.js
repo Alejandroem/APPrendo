@@ -1,16 +1,26 @@
 nivelesDisenoRelaciones = {
     0:{
-        "Tderecha":"juegos/img/tabla-casa.PNG",
-        "Tizquierda":"juegos/img/tabla-direccion.PNG",
+        "Tderecha":"juegos/img/tabla-estudiante.png",
+        "Tizquierda":"juegos/img/tabla-direccion.png",
         "Respuesta":"uno-uno"
     },
-    1:{"Tderecha":"juegos/img/tabla-casa.PNG",
-       "Tizquierda":"juegos/img/tabla-direccion.PNG",
+    1:{"Tderecha":"juegos/img/tabla-categoria.png",
+       "Tizquierda":"juegos/img/tabla-producto.png",
+       "Respuesta":"uno-muchos-i"
+      },
+    2:{"Tderecha":"juegos/img/tabla-estudiante.png",
+       "Tizquierda":"juegos/img/tabla-curso.png",
        "Respuesta":"muchos-muchos"
+      },
+    3:{"Tderecha":"juegos/img/tabla-telefono.png",
+       "Tizquierda":"juegos/img/tabla-usuario.png",
+       "Respuesta":"uno-muchos-d"
       }
 }
+
 var estado= false;
 var nivelDisenhoRelaciones = 0;
+
 function EstadoTablero (){
     this.well1 = "";
     this.well2 = "";
@@ -20,7 +30,9 @@ function EstadoTablero (){
 var estadoTablero = new EstadoTablero   ();
 
 function colocarDraggable(){
-    $('#uno-uno').draggable();
+    $('#uno-uno').draggable({
+          stack: ".well1"
+    });
     $('#uno-muchos-d').draggable();
     $('#uno-muchos-i').draggable();
     $('#muchos-muchos').draggable();
@@ -66,17 +78,9 @@ function colocarDraggable(){
 }
 
 function startDisenoRelaciones(){
+    document.getElementById("Nivel").textContent = nivelDisenhoRelaciones+1;
     document.getElementById("Diseno-relaciones").style.display = 'block';
     reiniciarTablero();
-
-
-    document.getElementById("enviardr").addEventListener("click", function(){
-
-    });
-    document.getElementById("resetdr").addEventListener("click", function(){
-
-        reiniciarTablero();
-    });
 
 }
 
@@ -93,38 +97,47 @@ function chequeaNivel(relacion){
                 nextLevel=true;
             }
             break;
-        case "unos-muchos-i":
+        case "uno-muchos-i":
             if(estadoTablero.well1 == "uno-muchos-i"){
                 nextLevel=true;
             }
             break;
         case "muchos-muchos":
-            if(estadoTablero.well2 == "uno-muchos-i"
+            if(estadoTablero.well2 == "uno-muchos-d"
                && estadoTablero.well3 == "tabla-intermedia"
-               && estadoTablero.well4 == "uno-muchos-d"){
+               && estadoTablero.well4 == "uno-muchos-i"){
                 nextLevel=true;
             }
             break;
+            
+        
     }
     if (nextLevel){
         nivelDisenhoRelaciones++;
+        if(nivelDisenhoRelaciones==4){
+            alert("Ganaste!!");
+            return;
+        }
+
+        document.getElementById("Nivel").textContent = nivelDisenhoRelaciones+1;
         alert("Correcto!! siguiente nivel!!");
         reiniciarTablero();
     }else if(relacion!="muchos-muchos"){
         alert("Error!!");
         reiniciarTablero();
     }else if(estadoTablero.well2.length >0
-               && estadoTablero.well3.length >0
-               && estadoTablero.well4.length >0){
+             && estadoTablero.well3.length >0
+             && estadoTablero.well4.length >0){
         reiniciarTablero();
         alert("Error!!");
-        
+
     }
-    
+
 
 }
 
 function reiniciarTablero(){
+    estadoTablero = new EstadoTablero();
     document.getElementById("herramientas").innerHTML="";
     document.getElementById("herramientas").innerHTML= `<div id="1well">
 <img id="uno-uno" class="ui-widget-content" style="width:100%; margin: 2%;" src="juegos/img/uno-uno.png">
@@ -141,21 +154,21 @@ function reiniciarTablero(){
 <img id="tizquierda" style="width:100%;" >
 </div>
 <div id="1wells" hidden>
-<div id="well1" class="col-xs-3 col-md-2 padding-0" style="height:50px; border: 1px solid black;">
+<div id="well1" class="col-xs-3 col-md-2 padding-0" style="height:150px; border: 1px solid black;">
 </div>
 </div>
 <div id="3wells" hidden>
 <div class="col-xs-4 col-md-5">
 <div class="row">
-<div id="well2" class="col-xs-4 col-md-4 padding-0" style="border: 1px solid black;">
+<div id="well2" class="col-xs-4 col-md-4 padding-0" style="height:150px;border: 1px solid black;">
 <br>
 
 </div>
-<div id="well3" class="col-xs-4 col-md-4 padding-0" style="border: 1px solid black;">
+<div id="well3" class="col-xs-4 col-md-4 padding-0" style="height:150px;border: 1px solid black;">
 <br>
 
 </div>
-<div id="well4" class="col-xs-4 col-md-4 padding-0" style="border: 1px solid black;">
+<div id="well4" class="col-xs-4 col-md-4 padding-0" style="height:150px;border: 1px solid black;">
 <br>
 
 </div>
@@ -187,18 +200,3 @@ function reiniciarTablero(){
     colocarDraggable();
 
 }
-/*
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    estado = true;
-    ev.target.appendChild(document.getElementById(data));
-}*/

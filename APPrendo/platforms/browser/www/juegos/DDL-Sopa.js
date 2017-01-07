@@ -1,8 +1,19 @@
-var nivel = ["create","alter","drop","table","database","unique","column","primarykey","foreignkey","varchar"];
+var palabrasNivelSOpa;
+//var nivel = ["create","alter"];
+
+var leccion = localStorage.getItem("leccion");
+
+if(leccion=="ddl"){
+    palabrasNivelSOpa = ["create","alter","drop","table","database","unique","column","varchar","primary","foreing","key"];
+}else if(leccion=="funciones"){
+    palabrasNivelSOpa = ["round","avg","count","max","min","sum","groupby","having","ucase","lcase","mid"];
+}
+
 function startDDLSopa(){
+    document.getElementById("Nivel").textContent = 1;
     document.getElementById("DDL-sopa").style.display = 'block';
     // start a word find game
-    var gamePuzzle = wordfindgame.create(nivel, '#puzzle', '#words');
+    var gamePuzzle = wordfindgame.create(palabrasNivelSOpa, '#puzzle', '#words');
     /*$('#solve').click( function() {
         wordfindgame.solve(gamePuzzle, words);
     });*/

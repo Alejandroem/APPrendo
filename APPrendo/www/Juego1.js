@@ -14,9 +14,22 @@ $(document).ready(function(){
     }else if(leccion=="dml"){
         startDMLAdivinaPalabras();
     }
-    else if(leccion="consultas"){
+    else if(leccion=="consultas"){
         startConsultaOrdena();
+    }else if(leccion=="joins"){
+        startConsultasJoins();
+    }else if(leccion =="subqueries"){
+        startConsultaOrdena();
+    }else if(leccion =="funciones"){
+        startDMLAdivinaPalabras();
+        
+    }else if(leccion=="roles"){
+        startConceptoDefinicion();
+    }else if(leccion=="conexion"){
+        startAdivinaDDL();
+        
     }
+    
     localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
        

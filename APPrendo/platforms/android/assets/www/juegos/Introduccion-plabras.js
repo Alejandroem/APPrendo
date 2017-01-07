@@ -1,20 +1,35 @@
 var texto;
 var score;
 var botones = [];
-var nivel=0;
-var oraciones=["SQL puede manipular informacion de una DB",
+var nivelIntroduccionPalabras=0;
+
+var leccion = localStorage.getItem("leccion");
+var oraciones;
+if(leccion=="introduccion"){
+    oraciones = ["SQL puede manipular informacion de una DB",
                 "Una tabla esta formada por filas y columnas",
                 "SQL significa lenguaje estructurado de consultas",
                 "SQL puede colocar permisos en tablas procesos y vistas",
                 "La informacion de un RDBMS se guarda en objetos llamados tablas"];
+}
+else if(leccion =="dml"){
+    oraciones =[
+                "DELETE FROM customers;",
+                "SELECT * FROM customers;",
+                "DELETE FROM customers WHERE CustomerName= Alfreds;",
+                "INSERT INTO Customers (CustomerName) VALUES ('Cardinal');",
+                "UPDATE Customers SET ContactName= Alfred WHERE CustomerID=1;"
+    ];
+}
 var palabras = [];
 var avance=0;
 var rect;
 function startGame() {
-    //document.getElementById("Nivel").textContent = nivel+1;
+    document.getElementById("juegoIntroduccion-Palabras").style.display = 'block';
+    document.getElementById("Nivel").textContent = nivelIntroduccionPalabras+1;
     botones = [];
     palabras = [];
-    palabras = oraciones[nivel].split(' ');
+    palabras = oraciones[nivelIntroduccionPalabras].split(' ');
     var pos = 10;
     var posY = 200;
     var i;
@@ -168,8 +183,8 @@ function updateGameArea() {
     if(avance==palabras.length){
         alert("Siguiente Nivel");
         avance = 0;
-        nivel++;
-        document.getElementById("Nivel").textContent = nivelAdivinaPalabras+1;
+        nivelIntroduccionPalabras++;
+        document.getElementById("Nivel").textContent = nivelIntroduccionPalabras+1;
         startGame();
     }
 }
