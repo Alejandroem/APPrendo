@@ -9,7 +9,11 @@ function closeNav() {
 }
 
 
-    $("#menu").on('click',function(){
-       localStorage.setItem("leccion","menu");   
-    });
-     
+$("#menu").on('click',function(){
+    localStorage.setItem("leccion","menu");   
+});
+
+$("#salir").on('click',function(){
+  localStorage.removeItem("usuario");
+    window.location.replace("index.html");
+});

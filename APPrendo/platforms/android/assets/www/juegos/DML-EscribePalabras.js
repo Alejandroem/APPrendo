@@ -6,6 +6,7 @@ nivelescribePalabra=0;
     //document.getElementById("DML-AdivinaPalabras").style.display = 'block';   //document.getElementById("linea1").innerHTML=palabrasEscribe[nivelescribePalabra];
 }*/
 function startEscribePalabras(){
+    document.getElementById("Nivel").textContent = 1;
     document.getElementById("DML-EscribePalabras").style.display = 'block';
     var temp = document.querySelector('.time');
     var button = document.querySelector(".button-type");
