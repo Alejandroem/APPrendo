@@ -1,4 +1,12 @@
-palabras = {0:"create",1:"alter",2:"drop",3:"unique",4:"table",5:"database",6:"unique",7:"column",8:"primary-key",9:"foreign-key"}
+var palabras;
+var leccion = localStorage.getItem("leccion");
+
+if(leccion=="ddl"){
+    palabras = {0:"create",1:"alter",2:"drop",3:"unique",4:"table",5:"database",6:"unique",7:"column",8:"primary-key",9:"foreign-key"}
+}else if(leccion=="conexion"){
+    palabras ={0:"string",1:"framework",2:"connection",3:"server",4:"database",5:"integrated",6:"security",7:"command",8:"execute",9:"reader"}
+}
+
 nivel = 0;
 errores=0;
 function startAdivinaDDL(){
@@ -25,20 +33,20 @@ $( document ).ready(function() {
     $("#letra").on('keyup', function (e) {
         if (e.keyCode == 13) {
             var palabra = palabras[nivel];
-            
+
             var letra = document.getElementById('letra').value;
             if(palabra.includes(letra)){
                 var i;
                 var input = document.getElementById('palabra').innerHTML;
-                
+
                 for(i=0; i< palabra.length;i++){
                     if(palabra.charAt(i)==letra){
-                        
+
                         input = input.substr(0, i*2)+letra+input.substr(i*2 + 1);
                     }
                 }
                 document.getElementById('palabra').innerHTML = input;
-                
+
                 if(!input.includes('_')){
                     if(nivel<9){
                         alert("Exito, siguiente nivel!");
@@ -53,7 +61,7 @@ $( document ).ready(function() {
                 errores++;
                 document.getElementById('intentos').innerHTML = (13-nivel-errores)+"";
                 document.getElementById('incorrectas').innerHTML = document.getElementById('incorrectas').innerHTML + letra+" ";
-                
+
                 if(13-nivel-errores==0){
                     alert(":( perdiste!");
                     errores=0;

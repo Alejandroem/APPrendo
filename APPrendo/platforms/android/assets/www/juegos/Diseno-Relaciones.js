@@ -17,8 +17,10 @@ nivelesDisenoRelaciones = {
        "Respuesta":"uno-muchos-d"
       }
 }
+
 var estado= false;
 var nivelDisenhoRelaciones = 0;
+
 function EstadoTablero (){
     this.well1 = "";
     this.well2 = "";
@@ -28,7 +30,9 @@ function EstadoTablero (){
 var estadoTablero = new EstadoTablero   ();
 
 function colocarDraggable(){
-    $('#uno-uno').draggable();
+    $('#uno-uno').draggable({
+          stack: ".well1"
+    });
     $('#uno-muchos-d').draggable();
     $('#uno-muchos-i').draggable();
     $('#muchos-muchos').draggable();
@@ -78,8 +82,6 @@ function startDisenoRelaciones(){
     document.getElementById("Diseno-relaciones").style.display = 'block';
     reiniciarTablero();
 
-
-
 }
 
 function chequeaNivel(relacion){
@@ -101,12 +103,14 @@ function chequeaNivel(relacion){
             }
             break;
         case "muchos-muchos":
-            if(estadoTablero.well2 == "uno-muchos-i"
+            if(estadoTablero.well2 == "uno-muchos-d"
                && estadoTablero.well3 == "tabla-intermedia"
-               && estadoTablero.well4 == "uno-muchos-d"){
+               && estadoTablero.well4 == "uno-muchos-i"){
                 nextLevel=true;
             }
             break;
+            
+        
     }
     if (nextLevel){
         nivelDisenhoRelaciones++;
@@ -114,7 +118,7 @@ function chequeaNivel(relacion){
             alert("Ganaste!!");
             return;
         }
-        
+
         document.getElementById("Nivel").textContent = nivelDisenhoRelaciones+1;
         alert("Correcto!! siguiente nivel!!");
         reiniciarTablero();
@@ -122,18 +126,18 @@ function chequeaNivel(relacion){
         alert("Error!!");
         reiniciarTablero();
     }else if(estadoTablero.well2.length >0
-               && estadoTablero.well3.length >0
-               && estadoTablero.well4.length >0){
+             && estadoTablero.well3.length >0
+             && estadoTablero.well4.length >0){
         reiniciarTablero();
         alert("Error!!");
-        
+
     }
-    
+
 
 }
 
 function reiniciarTablero(){
-    
+    estadoTablero = new EstadoTablero();
     document.getElementById("herramientas").innerHTML="";
     document.getElementById("herramientas").innerHTML= `<div id="1well">
 <img id="uno-uno" class="ui-widget-content" style="width:100%; margin: 2%;" src="juegos/img/uno-uno.png">
@@ -196,18 +200,3 @@ function reiniciarTablero(){
     colocarDraggable();
 
 }
-/*
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    estado = true;
-    ev.target.appendChild(document.getElementById(data));
-}*/
