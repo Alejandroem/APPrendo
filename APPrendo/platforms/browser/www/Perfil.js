@@ -2,7 +2,7 @@ $(document).ready(function(){
      $('#guardarDatos').on('submit', function () {
         if($("#inputPassword").val()==""){
             $.ajax({
-                url: 'http://192.168.1.15:8081/actualizarPerfil.php',
+                url: 'http://localhost:8081/actualizarPerfil.php',
                 data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val()},
                 type:'post',
                 success: function(response){
@@ -12,7 +12,7 @@ $(document).ready(function(){
         }else{
             if($("#inputPassword").val()==$("#inputPasswordConfirm").val()){
                 $.ajax({
-                    url: 'http://192.168.1.15:8081/actualizarPerfil.php',
+                    url: 'http://localhost:8081/actualizarPerfil.php',
                     data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val(),password:$("#inputPassword").val()},
                     type:'post',
                     success: function(response){

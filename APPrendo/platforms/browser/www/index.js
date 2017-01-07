@@ -14,9 +14,9 @@ $(document).ready(function(){
         //alert(contrasena);
         //alert("llamando a ws");
         $.ajax({
-            url: 'http://192.168.1.15:8081/login.php',
+            url: 'http://localhost:8081/login.php',
             data: {email:correo, password:contrasena},
-            type:'post',
+            type:'get',
             success: function(response){
                 //alert (response);
                 if(response == "exito"){
@@ -25,7 +25,29 @@ $(document).ready(function(){
                 }
             }
         });
-        
-       return false;
+
+        return false;
+    });
+
+    $('.Account').on('submit', function () {
+        var nombre = $("#NombreRegistro").val();
+        var apellido =$("#ApellidoRegistro").val();
+        var correo = $("#CorreoRegistro").val();
+        var carnet =$("#CarnetRegistro").val();
+        var contrasenia = $("#PasswordRegistro").val();
+        $.ajax({
+            url: 'http://localhost:8081/registro.php',
+            data: {n:nombre, a:apellido, co:correo, ca:carnet, con:contrasenia},
+            type:'get',
+            success: function(response){
+                    localStorage.setItem("usuario", carnet);
+                    window.location.replace("principal.html");
+               
+            },error: function(response){
+                alert("no sirve");
+            }
+        });
+
+        return false;
     });
 });
