@@ -56,14 +56,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 height: auto;
             }
         </style>
-        <style>
-            canvas {
-                border:1px solid ##086A87;
-                background-color: #CEECF5;
-            }
-        </style>
-
-
     </head>
     <body>
 
@@ -97,10 +89,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div id="gallery" class="gallery">
                 <div class="container">
 
-                    <!--<div class="gallery-top">
-<h2>Introduccion</h2>	
-
-</div>-->
+                    <div class="gallery-top">
+                        <h2 id="tituloJuego"></h2>	
+                    </div>
 
                     <div class="container" >
                         <div id="contenidoleccion" style="width: 100%;">
@@ -108,16 +99,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 Nivel <span id="Nivel" class="badge">0</span>
                             </div>
                             <div id="juegoIntroduccion-Palabras" hidden>
-                                <div class="gallery-top">
-                                    <h2>Introduccion</h2>	
-                                </div>
                                 <div id="Introduccion-palabras">
                                 </div>
                             </div>
                             <div id="Diseno-palabras" style="width:100%;" hidden>
-                                <div class="gallery-top">
-                                    <h2>Diseño</h2>	
-                                </div>
                                 <div class="row">
                                     <div class="col-md-1 col-md-offset-4"><label id="tableName" class=""></label><br></div>
                                 </div>
@@ -190,9 +175,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div id="adivina-DDL" sytle="width:100%;" hidden>
-                                <div class="gallery-top">
-                                    <h2>DDL</h2>	
-                                </div>
                                 <label id="palabra" style="font-size:400%" for="male"></label>
                                 <br>Escribe una letra y presiona enter(Espacios en blanco guion medio '-':<br>
                                 <input id="letra" type="text" maxlength="1" size="1" name="bla">
@@ -239,9 +221,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div id="DML-AdivinaPalabras" style="width:100%;" hidden>
-                                <div class="gallery-top">
-                                    <h2>DML</h2>	
-                                </div>
                                 Adivina la palabra y presiona enter: <br>
                                 <label id="pista" style="font-size:150%" for="pista"></label><br>
 
@@ -249,9 +228,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                             </div>
                             <div id="consultas-ordenaPalabras" style="width:100%" hidden>
-                                <div class="gallery-top">
-                                    <h2>Consultas</h2>	
-                                </div>
                                 <br>
                                 <label style="">Ordena la palabra: </label><br><br>
                                 <label id="Palabra-op" style="font-size:20px"></label><br><br>
@@ -260,8 +236,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div id="concepto-definicion" style="width:100%" hidden>
 
                             </div>
-
-                            <div id="consultasComplejas-joins">
+                            <div id="consultasComplejas-joins"  style="width:100%" hidden>
                                 <div class="row">
                                     <div id="toolbar" class="col-xs-12 col-md-3">
                                         <img id="inner" class="draggable"  src="juegos/img/4.png">
@@ -274,23 +249,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="row">
                                             <div class = "col-xs-0 col-md-2"></div>
                                             <div style="float:left">
-                                                <div id="respuestacc" class="squaredotted col-xs-12 col-md-4" style="width:250px;">
+                                                <div id="respuestacc" class="squaredotted col-xs-12 col-md-4" style="width:250px; background-color: rgba(225,246,249,0.5);">
 
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div  class="col-xs-12 col-md-4">
-                                                <img id="tablaicc" class="img">
+                                                <img id="tablaicc" class="img img-responsive" src="juegos/img/tabla-departamento.png">
                                             </div>
                                             <div  class="col-xs-12 col-md-4">
-                                                <img id="tabladcc" class="img">
+                                                <img id="tabladcc" class="img img-responsive" src="juegos/img/tabla-empleados.png">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class = "col-xs-0 col-md-2"></div>
                                             <div  class="col-xs-12 col-md-3">
-                                                <img id="tablarcc"class="img" >
+                                                <img id="tablarcc"class="img img-responsive" >
                                             </div>
                                         </div>
                                     </div>
