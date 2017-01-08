@@ -44,7 +44,7 @@ $( document ).ready(function() {
     //alert(Object.keys(palabrasAdivina).length);
     $("#palabraAdivina").on('keyup', function (e) {
         if (e.keyCode == 13) {
-            if(document.getElementById("palabraAdivina").value == palabrasAdivina[nivelAdivinaPalabras]){
+            if(document.getElementById("palabraAdivina").value.toUpperCase() == palabrasAdivina[nivelAdivinaPalabras].value.toUpperCase()){
                 if(nivelAdivinaPalabras<Object.keys(palabrasAdivina).length-1){
                     alert("Exito, Siguiente palabra!!");
                     hint=0;
