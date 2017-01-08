@@ -20,7 +20,7 @@ body a{
 	margin: 0;
 }
 h1,h2,h3,h4,h5,h6,label,p{
-	margin:0;	
+	margin:0px 10px 0px 10px;	
 }
 
 .logo h1{
@@ -1427,7 +1427,7 @@ background:#E8E8E8;
 	font-family: 'Montserrat', sans-serif;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-  padding: 8px;
+  padding: 6px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: none;
@@ -2468,13 +2468,13 @@ div#bs-example-navbar-collapse-1 {
 input[type=checkbox] + label {
   color: #55BFB2;
   font-style: normal;
-  font-size: 30px;
+  font-size: 18px;
     text-shadow: -7px 12px 4px rgba(26, 224, 142, 1);
 } 
 input[type=checkbox]:checked + label {
   color: #019F8D;
   font-style: italic;
-    font-size: 30px;
+    font-size: 31px;
     text-shadow: -7px 12px 4px rgba(26, 224, 142, 1);
 } 
 
@@ -2488,9 +2488,9 @@ input[type=checkbox]:checked + label {
 
 table {
   border-collapse: separate;
-  border-spacing: 20px 0;
+  border-spacing: 10px 0;
   color: #04B4AE;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .linksSiguiente{
@@ -2756,5 +2756,14 @@ span.text-content {
     float: left;
     background-color: lightblue;
     cursor: pointer;
+}
+
+.estiloBoton{
+    background-image:url(../images/button.jpg);
+    height: 60px;
+    width: 100px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 30px;
+     border-radius: 25px;
 }
  

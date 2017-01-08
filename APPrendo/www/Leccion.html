@@ -389,13 +389,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <p class="especial" style="text-align: justify;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
-                                            <span style="font-weight:bold;">CREATE DABATASE</span><span style="font-style:italic;"> nombreDB</span></p>
+                                            <span style="font-weight:bold;">CREATE DATABASE</span><span style="font-style:italic;"> nombreDB</span></p>
                                     </div>
                                     <div class="col-xs-6 col-md-6">
                                         <p class="especial" style="text-align: justify;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
-                                            CREATE DABATASE<span style="font-style:italic;"> Ejemplo</span></p>
+                                            CREATE DATABASE<span style="font-style:italic;"> Ejemplo</span></p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -549,7 +549,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         Agregar una columna
                                     </h2>
                                     <br>
-                                    <div class="col-xs-8 col-md-8">
+                                    <div class="col-xs-6 col-md-8">
                                         <p class="especial" style="text-align: justify;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
@@ -558,7 +558,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <span style="font-weight:bold;">ADD</span> <span style="font-style:italic;"> nombreColumna</span><span style="font-style:italic;"> Tipo</span>
                                         </p>
                                     </div>
-                                    <div class="col-xs-4 col-md-4">
+                                    <div class="col-xs-6 col-md-4">
                                         <p class="especial" style="font-size:22px;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
@@ -573,7 +573,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         Eliminar una columna
                                     </h2>
                                     <br>
-                                    <div class="col-xs-8 col-md-8">
+                                    <div class="col-xs-6 col-md-8">
                                         <p class="especial" style="text-align: justify;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
@@ -582,7 +582,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <span style="font-weight:bold;">DROP</span> <span style="font-style:italic;"> nombreColumna</span>
                                         </p>
                                     </div>
-                                    <div class="col-xs-4 col-md-4">
+                                    <div class="col-xs-6 col-md-4">
                                         <p class="especial" style="font-size:22px;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
@@ -597,7 +597,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         Modificar una columna
                                     </h2>
                                     <br>
-                                    <div class="col-xs-8 col-md-8">
+                                    <div class="col-xs-6 col-md-8">
                                         <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
@@ -606,7 +606,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <span style="font-weight:bold;">ALTER COLUMN</span> <span style="font-style:italic;"> nombreColumna</span> <span style="font-style:italic;"> tipoDato</span>
                                         </p>
                                     </div>
-                                    <div class="col-xs-4 col-md-4">
+                                    <div class="col-xs-6 col-md-4">
                                         <p class="especial" style="font-size:22px;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
@@ -621,16 +621,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         Agregar llave primaria
                                     </h2>
                                     <br>
-                                    <div class="col-xs-8 col-md-8">
+                                    <div class="col-xs-7 col-md-8">
                                         <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
                                             <span style="font-weight:bold;">ALTER TABLE</span><span style="font-style:italic;"> nombreTabla</span>
                                             <br>
-                                            <span style="font-weight:bold;">ADD PRIMARY KEY</span> (columnaLlavePrimaria)
+                                            <span style="font-weight:bold;">ADD PRIMARY KEY</span> (colLlavePrimaria)
                                         </p>
                                     </div>
-                                    <div class="col-xs-4 col-md-4">
+                                    <div class="col-xs-5 col-md-4">
                                         <p class="especial" style="font-size:22px;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
@@ -645,18 +645,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         Agregar llave foranea
                                     </h2>
                                     <br>
-                                    <div class="col-xs-8 col-md-8">
-                                        <p class="especial">
+                                    <div class="col-xs-6 col-md-8">
+                                        <p class="especial" style="font-size:18px;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
                                             <span style="font-weight:bold;">ALTER TABLE</span><span style="font-style:italic;"> nombreTabla</span>
                                             <br>
                                             <span style="font-weight:bold;">ADD FOREIGN KEY</span> (nombreColumna)
                                             <br>
-                                            <span style="font-weight:bold;">REFERENCES</span> TablaReferenciar(LlavePrimaria)
+                                            <span style="font-weight:bold;">REFERENCES</span> TablaForanea(PK)
                                     </div>
-                                    <div class="col-xs-4 col-md-4">
-                                        <p class="especial" style="font-size:22px;">
+                                    <div class="col-xs-6 col-md-4">
+                                        <p class="especial" style="font-size:18px;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
                                             ALTER TABLE Orders
@@ -779,7 +779,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </div> 
                             <div id="contenidoDDL" class="fluid-container">
                                 <div class="row">
-                                    <div class="col-xs-6 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
@@ -790,7 +790,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
                                     </div>
-                                    <div class="col-xs-6 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
@@ -833,13 +833,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <h2 class="especial" style="font-weight:bold;">
                                         Todos los datos
                                     </h2>
-                                    <div class="col-xs-6 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <p class="especial" style="text-align: justify;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
                                             <span style="font-weight:bold;">DELETE FROM</span><span style="font-style:italic;"> nombreTabla</span>;</p>
                                     </div>
-                                    <div class="col-xs-6 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <p class="especial" style="text-align: justify;">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
@@ -850,7 +850,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <h2 class="especial" style="font-weight:bold;">
                                         Datos específicos
                                     </h2>
-                                    <div class="col-xs-6 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
@@ -858,7 +858,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             <br>
                                             nombreColumna = algunValor;</p>
                                     </div>
-                                    <div class="col-xs-6 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
@@ -892,7 +892,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </div> 
                             <div id="contenidoDDL" class="fluid-container">
                                 <div class="row">
-                                    <div class="col-xs-6 col-md-6">
+                                    <div class="col-xs-12 col-md-6">
                                         <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
@@ -905,8 +905,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
                                     </div>
-                                    <div class="col-xs-6 col-md-6">
-                                        <p class="especial" style="text-align: justify;">
+                                    <div class="col-xs-12 col-md-6">
+                                        <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
                                             <span style="color:blue;">UPDATE</span> Customers
@@ -949,13 +949,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         Todos los datos
                                     </h2>
                                     <div class="col-xs-6 col-md-6">
-                                        <p class="especial" style="text-align: justify;">
+                                        <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
                                             <span style="font-weight:bold;">SELECT * FROM</span><span style="font-style:italic;"> nombreTabla</span>;</p>
                                     </div>
                                     <div class="col-xs-6 col-md-6">
-                                        <p class="especial" style="text-align: justify;">
+                                        <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
                                             <span style="color:blue;">SELECT</span> *  <span style="color:blue;">FROM</span> customers;</p>
@@ -1031,7 +1031,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div id="contenidoDDL" class="fluid-container">
                                 <div class="row">
                                     <div class="col-xs-12 col-md-6">
-                                        <p class="especial" style="text-align: justify;">
+                                        <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                             <br>
                                             <span style="font-weight:bold;">SELECT * FROM</span><span style="font-style:italic;"> nombreTabla</span>
@@ -1040,7 +1040,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             ;</p>
                                     </div>
                                     <div class="col-xs-12 col-md-6">
-                                        <p class="especial" style="text-align: justify;">
+                                        <p class="especial">
                                             <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                             <br>
                                             <span style="color:blue;">SELECT</span> * <span style="color:blue;">FROM</span> customers
@@ -1229,7 +1229,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div> 
                         <div id="contenidoDDL" class="fluid-container">
                             <div class="row">
-                                <p class="especial">
+                                <p class="especial" style="text-align: justify;">
                                     Permite especificar varios valores en el WHERE. Es decir permite colocar un conjunto de valores en la condición.         
                                 </p>
                                 <div class="col-xs-12 col-md-7">
@@ -1622,9 +1622,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <p class="especial">
                                         <span style="color:#6BEEE1; font-family: Consolas;">Ejemplo</span>
                                         <br>
-                                        <span style="color:blue;">SELECT</span> Employee.Name, Employee.EmpId, DeptName <span style="color:blue;">FROM</span> Employee <span style="color:blue;">INNER JOIN</span> Dept <span style="color:blue;"> ON </span>Employee.DeptName=Dept.DeptName;
+                                        <span style="font-size:19px;">
+                                            <span style="color:blue;">SELECT</span> Employee.Name, Employee.EmpId, DeptName <span style="color:blue;">FROM</span> Employee <span style="color:blue;">INNER JOIN</span> Dept <span style="color:blue;"> ON </span>Employee.DeptName=Dept.DeptName;
+
+                                        </span>
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/joins.png" alt="ddl">
+                                        <img class="img img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/joins.png" alt="ddl">
+                                    </p>
+                                    <p class="especial" style="text-align: justify;">
                                         La tabla users y la tabla orders está relacionada por la columna users.id y orders.user_id, en el ejemplo devuelve el nombre de usuario y el item a comprar de los usuarios cuyo id coincida con el order.user_id. 
                                     </p>
                                 </div>
@@ -1675,7 +1680,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <br>
                                         <span style="color:blue;">SELECT</span> users.Name, orders.item <span style="color:blue;">FROM</span> Users <span style="color:blue;">LEFT JOIN</span> Orders <span style="color:blue;"> ON </span>users.id=orders.user_id;
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/leftJoinExample.png" alt="ddl">
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/leftJoinExample.png" alt="ddl">
+
+                                    </p>
+                                    <p class="especial" style="text-align:justify;">
                                         En el ejemplo devuelve todos los registros de la tabla users y los registros de la tabla orders que coincidan con los registros de la tabla users. 
                                     </p>
                                 </div>
@@ -1725,8 +1733,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <br>
                                         <span style="color:blue;">SELECT</span> users.Name, orders.item <span style="color:blue;">FROM</span> Users <span style="color:blue;">RIGHT JOIN</span> Orders <span style="color:blue;"> ON </span>users.id=orders.user_id;
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/rightJoinExample.png" alt="ddl">
-                                        En el ejemplo devuelve todos los registros de la tabla orders y los registros de la tabla users que coincidan con los registros de la tabla orders. 
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/rightJoinExample.png" alt="ddl">
+
+                                    </p>
+                                    <p class="especial" style="text-align:justify;">
+                                        En el ejemplo devuelve todos los registros de la tabla orders y los registros de la tabla users que coincidan con los registros de la tabla orders.
                                     </p>
                                 </div>
                             </div>
@@ -1776,8 +1787,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <br>
                                         <span style="color:blue;">SELECT</span> users.Name, orders.item <span style="color:blue;">FROM</span> Users <span style="color:blue;">FULL OUTER JOIN</span> Orders <span style="color:blue;"> ON </span>users.id=orders.user_id;
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/fullExample.png" alt="ddl">
-                                        En el ejemplo devuelve todos los registros de la tabla users y todos los registros de la tabla orders. 
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/fullExample.png" alt="ddl">
+
+                                    </p>
+                                    <p class="especial" sytle="text-align:justify;">
+                                        En el ejemplo devuelve todos los registros de la tabla users y todos los registros de la tabla orders.
                                     </p>
                                 </div>
                             </div>
@@ -1831,7 +1845,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div id="contenidoConsultas" class="fluid-container">
                             <div class="row">
                                 <div class="col-xs-12 col-md-6">
-                                    <ul class="especial" style="text-align: justify;">
+                                    <ul class="especial" style="text-align: justify; margin-left:5%;">
                                         <li>Deben ir encerradas entre parentesis</li> 
                                         <li>Solo puede tener una columna en la clausula SELECT, a menos que hayan multiples columnas en el query principal para comparar los resultados.</li> 
                                         <li>No se puede utilizar ORDER BY en una subquery, sin embargo el query principal sí puede utilizarlo. En lugar de ORDER BY se puede utilizar GROUP BY.</li> 
@@ -1840,7 +1854,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                                 <div class="col-xs-12 col-md-6">
                                     <ul class="especial" style="text-align: justify; margin-left:5%;">
-                                        <li>La lista del select no puede incluir referencias a valores de tipo BLOB, ARRAY, CLOB y NCLOB.</li> 
+                                        <li>La lista del select no puede incluir referencias a valores de tipo BLOB, ARRAY, CLOB y NCLOB</li> 
                                         <li>Una subquery no puede ser utilizada directamente en una funcion set (update).</li> 
                                         <li>No se puede utilizar BETWEEN con la subquery, pero sí se puede utilizar dentro de ella.</li> 
                                     </ul>
@@ -1879,7 +1893,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <br>
                                         <span style="color:blue;">SELECT</span> * <span style="color:blue;">FROM</span> Customers <span style="color:blue;">WHERE </span> ID <span style="color:blue;"> IN </span>(<span style="color:blue;">SELECT</span> ID <span style="color:blue;">FROM</span> Customers <span style="color:blue;">WHERE </span> salary > 4500);
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/ejSubquery.png" alt="ddl">
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/ejSubquery.png" alt="ddl">
                                         En el ejemplo devuelve los registros de la tabla customers que tengan un salario > 4500. La subconsulta devuelve el ID del usuario verificando que el salario sea > 4500. Luego la consulta padre compara los IDs devueltos para retornar los registros. 
                                     </p>
                                 </div>
@@ -2007,11 +2021,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-md-6">
-                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/functions.png" alt="ddl">
+                                    <img class="img-responsive" style="width:100%; height:100%;  margin-bottom:5%;" src="images/functions.png" alt="ddl">
                                 </div>
                             </div>
                             <div class="row">
-                                <div style="padding-left: 80%">
+                                <div style="padding-left: 60%">
                                     <a href="#" id="irPromedio" class="linksSiguiente">>></a>       
                                 </div> 
 
@@ -2068,7 +2082,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div> 
                         <div id="contenidoDDL" class="fluid-container">
                             <div class="row">
-                                <p class="especial">
+                                <p class="especial" style="text-align:justify;">
                                     Retorna la cantidad de registros de determinada columna. Los valores nulos no son tomados en cuenta. </p>
                                 <div class="col-xs-12 col-md-7">
                                     <p class="especial">
@@ -2232,13 +2246,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div> 
                         <div id="contenidoDDL" class="fluid-container">
                             <div class="row">
-                                <p class="especial">
+                                <p class="especial" style="text-align:justify;">
                                     Generalmente las funciones AVG, SUM o COUNT deben incluir una sentencia Group By. Sirve para agrupar el resultado por una o mas columnas. </p>
                                 <div class="col-xs-12 col-md-7">
                                     <p class="especial">
                                         <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                         <br>
-                                        <span style="font-weight:bold;">SELECT SUM/AVG/COUNT</span>(nombreColumna) 
+                                        <span style="font-weight:bold;">SELECT FUNCION</span>(nombreColumna) 
                                         <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>
                                         <span style="font-weight:bold;">WHERE</span> nombreColumna = valor<span style="font-weight:bold;"> GROUP BY </span>nombreColumna;
                                     </p>
@@ -2283,7 +2297,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <br>
                                         <span style="font-weight:bold;">SELECT </span>nombreColumna
                                         <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>
-                                        <span style="font-weight:bold;">GROUP BY </span><span style="font-style:italic;"> nombreColumna</span><span style="font-weight:bold;"> HAVING SUM/AVG/COUNT</span>(nombreColumna) = valor;
+                                        <span style="font-weight:bold;">GROUP BY </span><span style="font-style:italic;"> nombreColumna</span><span style="font-weight:bold;"> HAVING FUNCION</span>(nombreColumna) = valor;
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-md-5">
@@ -2373,19 +2387,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                             </div>
                             <div class="row">
-                                  <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarUCase" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irMID" class="linksSiguiente">>></a>                    
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarUCase" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irMID" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                             </div>
-                      
+
                     </div>
-                    <div id="MID" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="MID" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>MID</h1>
@@ -2413,17 +2427,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarLCase" class="linksAnterior"><<</a>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarLCase" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irLEN" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
                             </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irLEN" class="linksSiguiente">>></a>                    
-                            </div>
                         </div>
+
                     </div>
-                    <div id="LEN" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="LEN" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>LEN</h1>
@@ -2451,17 +2468,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarMID" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irRound" class="linksSiguiente">>></a>                    
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarMID" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irRound" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div id="Round" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="Round" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Round</h1>
@@ -2489,17 +2509,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarLen" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irNow" class="linksSiguiente">>></a>                    
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarLen" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irNow" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div id="Now" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="Now" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Now</h1>
@@ -2526,17 +2549,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarRound" class="linksAnterior"><<</a>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarRound" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irFormat" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
                             </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irFormat" class="linksSiguiente">>></a>                    
-                            </div>
                         </div>
+
                     </div>
-                    <div id="Format" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="Format" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloAlias"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Format</h1>
@@ -2551,7 +2577,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <p class="especial">
                                         <span style="color:#6BEEE1; font-family: Consolas;">Sintaxis</span>
                                         <br>
-                                        <span style="font-weight:bold;">SELECT FORMAT</span>(nombreColumna,formato)
+                                        <span style="font-weight:bold;">SELECT FORMAT</span>(nombreCol,formato)
                                         <span style="font-weight:bold;">FROM</span><span style="font-style:italic;"> nombreTabla</span>;
                                     </p>
                                 </div>
@@ -2565,17 +2591,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarNow" class="linksAnterior"><<</a>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarNow" class="linksAnterior"><<</a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="gallery-top" id="tituloRoles" hidden>
                         <h2>Roles y Permisos</h2>	
                     </div>
-                    <div id="introRoles" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="introRoles" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>¿Qué es un rol?</h1>
@@ -2591,15 +2620,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-md-6">
-                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/rol2.jpg" alt="ddl">
+                                    <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/rol2.jpg" alt="ddl">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="padding-left: 60%">
+                                    <a href="#" id="irRolesNivel" class="linksSiguiente">>></a>       
                                 </div>
                             </div>
                         </div>
-                        <div style="padding-left: 80%">
-                            <a href="#" id="irRolesNivel" class="linksSiguiente">>></a>       
-                        </div> 
+
                     </div>
-                    <div id="rolesNivel" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="rolesNivel" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Roles Fijos</h1>
@@ -2620,17 +2652,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarIntroRoles" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irRolesNivel2" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarIntroRoles" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irRolesNivel2" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="rolesNivel2" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="rolesNivel2" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Roles Fijos</h1>
@@ -2669,17 +2704,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarRolesNivel" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irRolesNivel3" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarRolesNivel" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irRolesNivel3" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="rolesNivel3" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="rolesNivel3" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Roles Fijos</h1>
@@ -2718,17 +2756,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarRolesNivel2" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irRolesDefinidos" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarRolesNivel2" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irRolesDefinidos" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="rolesDefinidos" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="rolesDefinidos" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>roles definidos por el usuario</h1>
@@ -2754,17 +2795,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarRolesNivel3" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irAgregarMiembros" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarRolesNivel3" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irAgregarMiembros" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="agregarMiembros" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="agregarMiembros" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>agregar y eliminar usuarios a rol</h1>
@@ -2793,17 +2837,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarRolesDefinidos" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irPermisos" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarRolesDefinidos" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irPermisos" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="permisos" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="permisos" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Permisos</h1>
@@ -2819,20 +2866,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-md-6">
-                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/permisos.png" alt="ddl">
+                                    <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/permisos.png" alt="ddl">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarAgregarMiembros" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irTipoPermisos" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarAgregarMiembros" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irTipoPermisos" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="Tipospermisos" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="Tipospermisos" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Tipos de Permisos</h1>
@@ -2871,17 +2921,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarPermisos" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irTipoPermisos2" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarPermisos" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irTipoPermisos2" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="Tipospermisos2" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="Tipospermisos2" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Tipos de Permisos</h1>
@@ -2920,17 +2973,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarTipoPermisos" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irTipoPermisos3" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarTipoPermisos" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irTipoPermisos3" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="Tipospermisos3" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="Tipospermisos3" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Tipos de Permisos</h1>
@@ -2969,17 +3025,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarTipoPermisos2" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irInstrucciones" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div> 
+                            </div>
                         </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarTipoPermisos2" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irInstrucciones" class="linksSiguiente">>></a>                    
-                            </div>
-                        </div> 
+
                     </div>
-                    <div id="Instrucciones" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="Instrucciones" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloConsultas"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Instrucciones de Permiso</h1>
@@ -3028,17 +3087,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
 
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarTipoPermisos3" class="linksAnterior"><<</a>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarTipoPermisos3" class="linksAnterior"><<</a>
+                                    </div>
+                                </div> 
                             </div>
-                        </div> 
+                        </div>
+
                     </div>
                     <div class="gallery-top" id="tituloConexion" hidden>
                         <h2>Conexión desde una aplicación externa</h2>	
                     </div>
-                    <div id="introConexion" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="introConexion" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;" hidden>    
                                 <h1>Conectar SQL Server con una aplicación en C#</h1>
@@ -3054,15 +3116,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                                 <div class="col-xs-12 col-md-4">
-                                    <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/conect.jpg" alt="ddl">
+                                    <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/conect.jpg" alt="ddl">
                                 </div>
                             </div>
+                            <div class="row">
+                                <div style="padding-left: 60%">
+                                    <a href="#" id="irConectar" class="linksSiguiente">>></a>       
+                                </div> 
+                            </div>
                         </div>
-                        <div style="padding-left: 80%">
-                            <a href="#" id="irConectar" class="linksSiguiente">>></a>       
-                        </div> 
+
                     </div>
-                    <div id="conectar" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="conectar" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Conectar SQL Server con una aplicación en C#</h1>
@@ -3074,7 +3139,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <p class="especial" style="text-align: justify;">
                                         <span style="color:#6BEEE1; font-family: Consolas;">Crear String de conexión y abrirla</span>
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/paso1.JPG" alt="ddl">
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/paso1.JPG" alt="ddl">
                                         <span style="font-size:20px;">Server = Versión de SQL Server que se está utilizando. En este ejemplo se utilizó SQL Express.
                                             <br>
                                             Database = nombre de la base de datos.
@@ -3083,17 +3148,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarIntroConexion" class="linksAnterior"><<</a>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarIntroConexion" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irSelectCon" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
                             </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irSelectCon" class="linksSiguiente">>></a>                    
-                            </div>
                         </div>
+
                     </div>
-                    <div id="selectCon" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="selectCon" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Conectar SQL Server con una aplicación en C#</h1>
@@ -3105,7 +3173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <p class="especial" style="text-align: justify; width:100%;">
                                         <span style="color:#6BEEE1; font-family: Consolas;">Ejecutar Consulta Select</span>
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/select.JPG" alt="ddl">
+                                        <img class="img-responsive" style="width:100%; height:100%; margin-bottom:5%;" src="images/select.JPG" alt="ddl">
                                         <span style="font-size:20px;">SQLCommand(Consulta,String de conexion)
                                             <br>
                                             ExecuteReader = realiza la consulta.
@@ -3121,17 +3189,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarConectar" class="linksAnterior"><<</a>
-                            </div>
-                            <div style="padding-left: 60%">
-                                <a href="#" id="irInsert" class="linksSiguiente">>></a>                    
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarConectar" class="linksAnterior"><<</a>
+                                    </div>
+                                    <div style="padding-left: 60%">
+                                        <a href="#" id="irInsert" class="linksSiguiente">>></a>                    
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div id="insertCon" style="margin-bottom: 10%; width:80%;" class="hvr-backward" hidden>
+                    <div id="insertCon" style="margin-bottom: 10%; width:100%;" class="hvr-backward" hidden>
                         <div class="animated infinite flipInX">
                             <div id="tituloDDL"  class="bgClip" style="margin-bottom: 1%;">    
                                 <h1>Conectar SQL Server con una aplicación en C#</h1>
@@ -3140,28 +3211,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div id="contenidoDDL" class="fluid-container">
                             <div class="row">
                                 <div class="col-xs-12 col-md-12">
-                                    <p class="especial" style="text-align: justify; width:100%;">
+                                    <p class="especial">
                                         <span style="color:#6BEEE1; font-family: Consolas;">Ejecutar Consulta Insert</span>
                                         <br>
-                                        <img class="img-responsive" style="width:100%; height:100%; margin-left:20%; margin-bottom:5%;" src="images/insert.JPG" alt="ddl">
-                                        <span style="font-size:20px;">SQLCommand(Consulta,String de conexion) = En lugar de colocar los valores a insertar se colocará @identificadorValorIngresar. Por ejemplo si se insertará el nombre de usuario se colocará @nombre o @nombreUsuario, etc.
-                                            <br>
-                                            .Parameters.AddWithValue(@identificadorValorInsertar,valorInsertar) = Donde @identificadorValorInsertar es el identificador que se colocó en la consulta. Y valorInsertar es el valor obtenido por el usuario, que es el que será insertado. 
-                                            <br>
-                                            ExecuteNonQuery() = Ejecuta la consulta.
-                                            <br>
-                                            conn.Close() = cierra la conexión.
-                                        </span>
+                                        <img class="img-responsive" style="width:100%; height:100%;  margin-bottom:5%;" src="images/insert.JPG" alt="ddl">
+                                        SQLCommand(Consulta,String de conexion) = En lugar de colocar los valores a insertar se colocará @identificadorValorIngresar. Por ejemplo si se insertará el nombre de usuario se colocará @nombre o @nombreUsuario, etc.
+                                        <br>
+                                        <span style="font-size:13px;">.Parameters.AddWithValue(@idValInsertar,valInsertar)</span>  Donde @identificadorValorInsertar es el identificador que se colocó en la consulta. Y valorInsertar es el valor obtenido por el usuario, que es el que será insertado. 
+                                        <br>
+                                        ExecuteNonQuery() = Ejecuta la consulta.
+                                        <br>
+                                        conn.Close() = cierra la conexión.
+
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div id="controles">
-                            <div style="padding-left: 10%">
-                                <a href="#" id="regresarSelect" class="linksAnterior"><<</a>
-                            </div>
+                            <div class="row">
+                                <div id="controles">
+                                    <div style="padding-left: 10%">
+                                        <a href="#" id="regresarSelect" class="linksAnterior"><<</a>
+                                    </div>
 
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
