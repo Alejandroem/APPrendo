@@ -92,19 +92,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="gallery-top">
                         <h2 id="tituloJuego"></h2>	
                     </div>
-
+                    <div class="alert alert-info">
+                        <strong>Instrucciones:</strong><div id="instrucciones-juego"></div>
+                    </div>
                     <div class="container" >
                         <div id="contenidoleccion" style="width: 100%;">
                             <div id="nivelcont">
                                 Nivel <span id="Nivel" class="badge">0</span>
                             </div>
+
                             <div id="juegoIntroduccion-Palabras" hidden>
                                 <div id="Introduccion-palabras">
                                 </div>
                             </div>
                             <div id="Diseno-palabras" style="width:100%;" hidden>
                                 <div class="row">
-                                    <div class="col-md-1 col-md-offset-4"><label id="tableName" class=""></label><br></div>
+                                    <div class="col-md-1 col-md-offset-4">Tabla: <label id="tableName" class=""></label><br></div>
                                 </div>
                                 <div class="row" >
 
@@ -256,15 +259,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </div>
                                         <div class="row">
                                             <div  class="col-xs-12 col-md-4">
+                                                <h1><span class="label label-primary">Department</span></h1>
                                                 <img id="tablaicc" class="img img-responsive" src="juegos/img/tabla-departamento.png">
                                             </div>
                                             <div  class="col-xs-12 col-md-4">
+                                                <h1><span class="label label-primary">Employee</span></h1>
                                                 <img id="tabladcc" class="img img-responsive" src="juegos/img/tabla-empleados.png">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class = "col-xs-0 col-md-2"></div>
                                             <div  class="col-xs-12 col-md-3">
+                                                <h1><span class="label label-primary">Join Result</span></h1>
                                                 <img id="tablarcc"class="img img-responsive" >
                                             </div>
                                         </div>
@@ -287,7 +293,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <script src="js/jquery.filterizr.js"></script>
             <script src="js/controls.js"></script>
 
-            <!-- Kick off Filterizr -->
+<!--             Kick off Filterizr -->
             <script type="text/javascript">
                 $(function() {
                     //Initialize filterizr with default options

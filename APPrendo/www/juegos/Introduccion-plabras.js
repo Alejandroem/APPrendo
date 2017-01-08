@@ -166,7 +166,7 @@ function updateGameArea() {
                 score.text =avance +" " +botones[i].palabra+" "+palabras[avance];
 
             }
-        }
+        }   
         myGameArea.x =false;
         myGameArea.y = false;
 
