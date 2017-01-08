@@ -106,20 +106,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <h2 id="tituloJuego"></h2>	
                     </div>
 
-
+                    <div class="alert alert-info">
+                        <strong>Instrucciones:</strong><div id="instrucciones-juego"></div>
+                    </div>
                     <!-- se cambio  el archivo bootstrap.css para eliminar el tamanho del container -->
                     <div id="contenidoleccion" class="container" >
                         <div>Nivel <span id="Nivel" class="badge">0</span></div>
                         <div>
                             <div id="introduccion-completar" class="juego2" hidden>
                                 <div style="margin-left:5%;margin-top:5%;margin-right:5%;margin-bottom 5%;">
-                                    <div class="animated infinite pulse">
-                                        <div id="titulo"  class="bgClip">  
-                                            <h1>Completa el siguiente texto con las palabras correctas.</h1>
-                                        </div>
-                                    </div> 
 
-                                    <hr>
                                     <p class="contenidoJuego2">
                                         SQL puede ejecutar <input id="t1" type="text" maxlength="9" size="9" style="background-color:#168B5A;"> en una base de datos.<br><br>
                                         SQL puede obtener <input id="t2" type="text" maxlength="11" size="11" style="background-color:#168B5A;"> de una base de datos.<br><br>
@@ -139,13 +135,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
                             </div>
-                            <div id="Diseno-relaciones" style="width:100%" hidden>
+                            <div id="Diseno-relaciones" style="width:100%; margin:0px;" hidden>
                                 <div class="row">
-                                    <div id="herramientas" class="col-xs-3 col-md-2  text-center">
-
+                                    <div id="herramientas" class="col-xs-5 col-md-2  text-center">
+                                        <div id="1well">
+                                            <img id="uno-uno" class="img img-responsive" src="juegos/img/uno-uno.png">
+                                            <img id="uno-muchos-d"  class="img img-responsive" src="juegos/img/uno-muchos-d.png">
+                                            <img id="uno-muchos-i"  class="img img-responsive" src="juegos/img/uno-muchos-i.png">
+                                            <img id="muchos-muchos" class="img img-responsive"src="juegos/img/muchos-muchos.png">
+                                        </div>
+                                        <div id="3well">
+                                            <img id="tabla-intermedia" style="width:70%" class="img img-responsive" src="juegos/img/tabla-intermedia.png">
+                                        </div>
                                     </div>
                                     <div id="panelJuego" class="col-md-offset-1 col-xs-12 col-md-8">
-
+                                        <div class="row">
+                                            <div class="col-xs-4 col-md-3 " style="padding:0;">
+                                                <img id="tizquierda" class="img img-responsive"  >
+                                            </div>
+                                            <div id="1wells" class="col-xs-4 col-md-5" hidden>
+                                                <div id="well1" style="height:150px; border: 1px solid black;">
+                                                </div>
+                                            </div>
+                                            <div id="3wells" class="col-xs-4 col-md-5" hidden>
+                                                <div class="row">
+                                                    <div id="well2" class="col-xs-4 col-md-4" style="margin:0px; height:50px;border:1px solid black;">
+                                                    </div>
+                                                    <div id="well3" class="col-xs-4 col-md-4" style="margin:0px;height:50px;border:1px solid black;">
+                                                    </div>
+                                                    <div id="well4" class="col-xs-4 col-md-4" style="margin:0px;height:50px;border:1px solid black;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4 col-md-3" style="padding:0;">
+                                                <img id="tderecha" class="img img-responsive" >
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -203,7 +228,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <!--Se cambio a consultas por las palabras-->
                             <div id="DML-EscribePalabras" style="width:100%;" hidden>
                                 <div id="wrapper" class="wrapper">
-                                    <p style="font-size:200%; color:white;">Escribe todas las palabras que puedas antes que se acabe el tiempo!</p>
                                     <button class="button-type">Iniciar</button>
                                     <div class="outerWrap">
                                         <div class="scoreWrap">
@@ -291,7 +315,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <script src="js/jquery.filterizr.js"></script>
             <script src="js/controls.js"></script>
 
-            <!-- Kick off Filterizr -->
+            <!--              Kick off Filterizr -->
             <script type="text/javascript">
                 $(function() {
                     //Initialize filterizr with default options
@@ -319,6 +343,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <!--//footer-->
 
 
-
-            </body>
-        </html>
+        </div>
+    </body>
+</html>
