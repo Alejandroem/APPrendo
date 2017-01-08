@@ -4,7 +4,7 @@ var palabrasNivelSOpa;
 var leccion = localStorage.getItem("leccion");
 
 if(leccion=="ddl"){
-    palabrasNivelSOpa = ["create","alter","drop","table","database","unique","column","varchar","primary","foreing","key"];
+    palabrasNivelSOpa = ["create","alter","drop","table","database","unique","column","primary","foreing","key"];
 }else if(leccion=="funciones"){
     palabrasNivelSOpa = ["round","avg","count","max","min","sum","groupby","having","ucase","lcase","mid"];
 }
@@ -33,8 +33,3 @@ function startDDLSopa(){
 
 }
 
-
-$( document ).ready(function() {
-
-
-});

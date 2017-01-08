@@ -7,23 +7,24 @@ var leccion = localStorage.getItem("leccion");
 var oraciones;
 if(leccion=="introduccion"){
     oraciones = ["SQL puede manipular informacion de una DB",
-                "Una tabla esta formada por filas y columnas",
-                "SQL significa lenguaje estructurado de consultas",
-                "SQL puede colocar permisos en tablas procesos y vistas",
-                "La informacion de un RDBMS se guarda en objetos llamados tablas"];
+                 "Una tabla esta formada por filas y columnas",
+                 "SQL significa lenguaje estructurado de consultas",
+                 "SQL puede colocar permisos en tablas procesos y vistas",
+                 "La informacion de un RDBMS se guarda en objetos llamados tablas"];
 }
 else if(leccion =="dml"){
     oraciones =[
-                "DELETE FROM customers;",
-                "SELECT * FROM customers;",
-                "DELETE FROM customers WHERE CustomerName= Alfreds;",
-                "INSERT INTO Customers (CustomerName) VALUES ('Cardinal');",
-                "UPDATE Customers SET ContactName= Alfred WHERE CustomerID=1;"
+        "DELETE FROM customers;",
+        "SELECT * FROM customers;",
+        "DELETE FROM customers WHERE CustomerName= Alfreds;",
+        "INSERT INTO Customers (CustomerName) VALUES ('Cardinal');",
+        "UPDATE Customers SET ContactName= Alfred WHERE CustomerID=1;"
     ];
 }
 var palabras = [];
 var avance=0;
 var rect;
+var finish = false;
 function startGame() {
     document.getElementById("juegoIntroduccion-Palabras").style.display = 'block';
     document.getElementById("Nivel").textContent = nivelIntroduccionPalabras+1;
@@ -38,7 +39,7 @@ function startGame() {
         tPalabras.push(palabras[i]);
     }
     var tamanioX = document.getElementById("contenidoleccion").offsetWidth / 8;
-    tPalabras = shuffle(tPalabras);
+    //tPalabras = shuffle(tPalabras);
     for(i=0; i<tPalabras.length;i++){
         if(i == 7){
             pos = 10;
@@ -56,30 +57,30 @@ function startGame() {
     score.text=avance;
     texto.text ="";
     myGameArea.start();
-    
+
 }
 function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+    var currentIndex = array.length, temporaryValue, randomIndex;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
- 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
 
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-  return array;
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
 }
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        
+
         this.canvas.width = document.getElementById("Introduccion-palabras").offsetWidth * 0.98;
         this.canvas.height = 300;
         this.context = this.canvas.getContext("2d");
@@ -165,7 +166,7 @@ function updateGameArea() {
                 score.text =avance +" " +botones[i].palabra+" "+palabras[avance];
 
             }
-        }
+        }   
         myGameArea.x =false;
         myGameArea.y = false;
 
@@ -180,11 +181,16 @@ function updateGameArea() {
     //score.update();
     texto.update();
 
-    if(avance==palabras.length){
-        alert("Siguiente Nivel");
-        avance = 0;
+    if(avance==palabras.length &&!finish){
         nivelIntroduccionPalabras++;
-        document.getElementById("Nivel").textContent = nivelIntroduccionPalabras+1;
-        startGame();
+        if(nivelIntroduccionPalabras==5){
+            alert("Ganaste!!");
+            finish=true;
+        }else{
+            alert("Siguiente Nivel");
+            avance = 0;
+            document.getElementById("Nivel").textContent = nivelIntroduccionPalabras+1;
+            startGame();
+        }
     }
 }

@@ -11,25 +11,25 @@ var nivelessubquerysQuery = {
 WHERE population >
 (SELECT population FROM world
 WHERE name='Russia');`,
-        "tabla":"juegos/img/tabla-salarios.png",
+        "tabla":"juegos/img/tabla-ciudades.png",
         "resultados":["Brazil","Argentina","Russia","China","Pakistan","Nigeria","Bangladesh"],
         "respuesta":["Brazil","China"]
     },
     2:{
         "consulta":`SELECT name FROM employees WHERE DeptId IN (SELECT DeptId FROM departments WHERE DeptId='IT');`,
-        "tabla":"juegos/img/tabla-salarios.png",
+        "tabla":"juegos/img/tabla-emp-dept.png",
         "resultados":["Ben","Louisa","Alexander","Diana","Daniel","Irene","James"],
         "respuesta":["Ben","Daniel","James"]
     },
     3:{
         "consulta":`SELECT name, continent FROM world WHERE continent IN (SELECT continent FROM world WHERE name IN ('Chile', 'Japan'));`,
-        "tabla":"juegos/img/tabla-salarios.png",
+        "tabla":"juegos/img/tabla-continente.png",
         "resultados":["Francia|Europe","India|Asia","Paraguay|South America","Japan|Asia","Italy|Europe","Mexico|North America","Chile|South America","Brazil|South America","Fiji|Oceania","Burundi,Africa"],
         "respuesta":["Paraguay|South America","India|Asia","Japan|Asia","Chile|South America","Brazil|South America"]
     },
     4:{
         "consulta":`SELECT name FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);`,
-        "tabla":"juegos/img/tabla-salarios.png",
+        "tabla":"juegos/img/tabla-salarios2.png",
         "resultados":["Ben","Louisa","Alexander","Diana","Daniel","Irene","James"],
         "respuesta":["Louisa","Alexander","Irene"]
     }
@@ -38,17 +38,15 @@ var r =[]
 var nivelsubquerysQuery=0;
 function subquerysQuerys(){
     document.getElementById("Nivel").textContent = nivelsubquerysQuery+1;
-    var nivelSS = nivelessubquerysQuery[nivelsubquerysQuery]
+    var nivelSS = nivelessubquerysQuery[nivelsubquerysQuery];
     document.getElementById("subquerys-querys").style.display = 'block';
-    document.getElementById("enunciado-SS").innerHTML = nivelSS.consulta;
-    document.getElementById("tabla-SS").src = nivelSS.tabla;
+    
 
     iniciaTextoSS();
 
     for(i=0; i<10; i++){
-
         document.getElementById("rp"+(1+i)).addEventListener("click", function(){
-            if(r.length < nivelSS.respuesta.length){
+            if(r.length <  nivelessubquerysQuery[nivelsubquerysQuery].respuesta.length){
                 r.push(this.textContent);
                 this.style.visibility = 'hidden';
             }
@@ -68,6 +66,8 @@ function subquerysQuerys(){
 
 
 function iniciaTextoSS(){
+    document.getElementById("enunciado-SS").innerHTML =  nivelessubquerysQuery[nivelsubquerysQuery].consulta;
+    document.getElementById("tabla-SS").src =  nivelessubquerysQuery[nivelsubquerysQuery].tabla;
     r.splice(0,r.length);
     resultados = nivelessubquerysQuery[nivelsubquerysQuery].resultados;
     respuesta = nivelessubquerysQuery[nivelsubquerysQuery].respuesta;
