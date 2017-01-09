@@ -9,6 +9,7 @@ function cargaContenido(){
 
         $("#tema2").on('click',function(){ //de objetivos a paso1
             $("#tituloDisenio").show();
+            $("#contenidoPaso1").show();
             $("#objetivos").hide();
             $("#paso2").hide();
             $("#paso1").show();

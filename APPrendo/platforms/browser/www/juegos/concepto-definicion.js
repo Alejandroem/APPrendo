@@ -8,7 +8,7 @@ var nivelesConceptoDefinicion = {
         ],
         definiciones:[
             "pueden modificar la pertenencia a roles y administrar permisos.",
-            "pueden realizar todas las actividades de configuración y mantenimiento en la base de datos y también pueden quitar la base de datos en SQL Server.",
+            "pueden realizar todas las actividades de configuración y mantenimiento en la base de datos. Pueden quitar la base de datos.    ",
             "pueden ejecutar cualquier comando del lenguaje de definición de datos (DDL) en una base de datos."
         ],
         acept:[
@@ -129,7 +129,8 @@ function startConceptoDefinicion(){
         revert: "invalid",
         /*snap: ".squaredotted",
         snapMode: "inner",
-*/        drag: function (event, ui) {
+*/
+        drag: function (event, ui) {
             //alert("Error!!");
             //$("#info").html("<font color=red>This square will go back to it`s original position, unless it`s dropped in target zone.</font> ");
         }
@@ -139,25 +140,48 @@ function startConceptoDefinicion(){
         /*       alert("#def"+(i+1));
         alert(nivelActual.acept[i]);*/
         $("#def"+(i+1)).html(nivelActual.definiciones[i]);
+        $("#def"+(i+1)).removeClass("correct");
         $("#def"+(i+1)).droppable({
-            accept: nivelActual.acept[i],
+            accept: nivelActual.acept[i]
+            /*function(e){
+                //console.log("nivel actual: "+nivelActual);
+                console.log(i);
+                console.log("El que debe aceptar :"+nivelActual.acept[i]);
+                console.log("#+e.attr(id)+: "+ "#"+e.attr("id"));
+                if("#"+e.attr("id")==nivelActual.acept[i]){
+                    return true;
+                }
+                console.log(e.attr("id"));
+
+            }
+            */
+            ,
             drop: function (event, ui) {
                 $(this).css("background-color", "lightgreen")
-                avance++;
-                if(avance==3){
-                    if(nivel==4){
+                //                avance++;
+                    $(this).addClass("correct");
+                    console.log("correcto");
+
+                var y=0;
+                var avance = true;
+                for(y; y<3; y++){
+                    avance = avance && $("#def"+(y+1)).hasClass("correct");
+                }
+                if(avance){
+                    if(nivelConceptoDefinicion==4){
                         alert("Ganaste!!!");
                     }else{ 
                         alert("Siguiente Nivel");
                         nivelConceptoDefinicion++;
-                        avance =0;
+                        //                        avance =0;
                         startConceptoDefinicion();
                     }
                 }
             },
             out: function (event, ui) {
                 $(this).css("background-color", "")
-                avance--;
+                $(this).removeClass("correct");
+                //                avance--;
             }
         });
     }

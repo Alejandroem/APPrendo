@@ -1,10 +1,11 @@
 var images = [];
 var leccion = localStorage.getItem("leccion");
+var nivelMemoria =0;
 function startConsultasMemoria(){
     document.getElementById("Nivel").textContent = 1;
     document.getElementById("consultas-memoria").style.display = 'block';
-    
-    
+
+
     var inicio =0;
     var final = 8;
     if(leccion=="consultas"){
@@ -40,10 +41,15 @@ function startConsultasMemoria(){
 
     $(".imgMemoria").hide();
 
+
+
+    setOnClick();
+
+}
+function setOnClick(){
     var guess1 = "";
     var guess2 = "";
     var count = 0;
-
     $("li").click(function() {
         $(this).css("background","transparent");
         if ((count < 2) &&  ($(this).children("img").hasClass("face-up")) === false) {
@@ -64,18 +70,25 @@ function startConsultasMemoria(){
 
                 // since it's the 2nd guess check for match
                 if (guess1 === guess2) { 
-                    //alert("match");
+                    alert("Pareja!!");
+                    nivelMemoria++;
+
                     $("li").children("img[src='" + guess2 + "']").addClass("match");
+                    if(nivelMemoria==8){
+                        alert("Felicitaciones haz ganado!");
+                    }
                 } 
 
                 // else it's a miss
                 else { 
-                    //alert("miss");
+                    $('li').off('click');
                     setTimeout(function() {
+                        setOnClick();
                         $(".imgMemoria").not(".match").hide();
                         $(".imgMemoria").not(".match").removeClass("face-up");
                         $(".imgMemoria").not(".match").parent().css("background","#8FF1BF");
                     }, 1000);
+                    //alert("Error!");
                 }
 
                 // reset

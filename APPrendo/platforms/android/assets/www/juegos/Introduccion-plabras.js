@@ -41,7 +41,7 @@ function startGame() {
     }
     var tamanioX = document.getElementById("contenidoleccion").offsetWidth / 8;
     console.log("tamanioX "+tamanioX);
-    //tPalabras = shuffle(tPalabras);
+    tPalabras = shuffle(tPalabras);
     for(i=0; i<tPalabras.length;i++){
         if(i == 7){
             pos = 10;
