@@ -36,7 +36,7 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
-            $(this).css("width", "50%")
+//            $(this).css("width", "50%")
         }/*,
         stop: function(event, ui){
             $(this).css("width", "50%")
@@ -47,7 +47,7 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
-            $(this).css("width", "50%")
+//            $(this).css("width", "50%")
         }
     });
     $('#uno-muchos-i').draggable({
@@ -55,7 +55,7 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
-            $(this).css("width", "50%")
+//            $(this).css("width", "50%")
         }
     });
     $('#muchos-muchos').draggable({
@@ -63,7 +63,7 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
-            $(this).css("width", "50%")
+//            $(this).css("width", "50%")
         }
     });
     $('#tabla-intermedia').draggable({
@@ -71,7 +71,7 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
-            $(this).css("width", "50%")
+//            $(this).css("width", "50%")
         }
     });
     $( "#well1" ).droppable({
@@ -192,6 +192,8 @@ function reiniciarTablero(){
         if(!estado){
             document.getElementById("3wells").style.display = 'block';
             document.getElementById("1wells").style.display = 'none';
+            document.getElementById("uno-muchos-d").src = "juegos/img/uno-muchos-d-a.png";
+            document.getElementById("uno-muchos-i").src = "juegos/img/uno-muchos-i-a.png";
         }
 
     });
@@ -199,6 +201,8 @@ function reiniciarTablero(){
         if(!estado){
             document.getElementById("1wells").style.display = 'block';
             document.getElementById("3wells").style.display = 'none';
+            document.getElementById("uno-muchos-d").src = "juegos/img/uno-muchos-d.png";
+            document.getElementById("uno-muchos-i").src = "juegos/img/uno-muchos-i.png";
         }
     });
     estado = false;

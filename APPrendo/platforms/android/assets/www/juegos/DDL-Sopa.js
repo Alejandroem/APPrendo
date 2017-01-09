@@ -18,6 +18,27 @@ function startDDLSopa(){
         wordfindgame.solve(gamePuzzle, words);
     });*/
     //alert(nextlevel);
+
+    $(document).on("touchmove",function(e){
+        console.log(e.target.getAttribute("class"));
+        console.log(e.target.getAttribute("class"));
+        if(e.target.getAttribute("class")== "puzzleSquare selected"){
+            $("body").css("overflow","hidden");
+            $("body").css("position","relative");
+            $("html").css("overflow","hidden");    
+        }
+
+    });
+    $("#iniciarSopa").click(function(){
+        alert("Bla");
+        $("body").css("overflow","hidden");
+        $("body").css("position","relative");
+        $("html").css("overflow","hidden");
+        $(document).scrollTop($("#DDL-sopa").position().top);
+    });
+    $("#detenerSopa").click(function(){
+
+    });
     $("#puzzle").mouseup(function() {
 
         if(nextlevel ==true){

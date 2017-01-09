@@ -1,5 +1,6 @@
 var score =0;
 function startIntroduccionCompletar(){
+    document.getElementById("Nivel").textContent =1;
     document.getElementById("introduccion-completar").style.display = 'block';
 
     $('#t1').on('input',function(e){

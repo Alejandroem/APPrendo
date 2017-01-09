@@ -181,6 +181,7 @@ var nextlevel=false;
     };
     
     var touchMove = function(e) {
+      
       var xPos = e.originalEvent.touches[0].pageX;
       var yPos = e.originalEvent.touches[0].pageY;
       var targetElement = document.elementFromPoint(xPos, yPos);
@@ -290,6 +291,7 @@ var nextlevel=false;
         // attach events to the buttons
         // optimistically add events for windows 8 touch
         if (window.navigator.msPointerEnabled) {
+            alert("Bla");
           $('.puzzleSquare').on('onmousedown', startTurn);
           $('.puzzleSquare').on('onmouseover', select);
           $('.puzzleSquare').on('onmouseup', endTurn);
