@@ -29,6 +29,7 @@ function startGame() {
     document.getElementById("juegoIntroduccion-Palabras").style.display = 'block';
     document.getElementById("Nivel").textContent = nivelIntroduccionPalabras+1;
     botones = [];
+    console.log("Botones.lenght "+botones.length);
     palabras = [];
     palabras = oraciones[nivelIntroduccionPalabras].split(' ');
     var pos = 10;
@@ -39,12 +40,14 @@ function startGame() {
         tPalabras.push(palabras[i]);
     }
     var tamanioX = document.getElementById("contenidoleccion").offsetWidth / 8;
+    console.log("tamanioX "+tamanioX);
     tPalabras = shuffle(tPalabras);
     for(i=0; i<tPalabras.length;i++){
         if(i == 7){
             pos = 10;
             posY += 60;
         }
+        console.log("PosX "+ pos +"posy "+posY);
         botones.push(new component(tamanioX, 30, "#0B6138", pos, posY));
         botones[i].palabra = tPalabras[i];	
         pos+=tamanioX + tamanioX * 0.03;
@@ -86,7 +89,8 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         var contenido = document.getElementById("Introduccion-palabras");
         contenido.insertBefore(this.canvas,contenido.childNodes[0]);
-        rect = contenido.getBoundingClientRect();
+//        rect = contenido.getBoundingClientRect();
+        console.log(rect);
         //alert(rect.top+" "+rect.left);
         this.interval = setInterval(updateGameArea, 20);
         /*
@@ -98,10 +102,15 @@ var myGameArea = {
             myGameArea.x = false;
             myGameArea.y = false;
         })*/
+        var posi = $("#Introduccion-palabras").position();
+        
         window.addEventListener('click', function(e){
             //alert(e.pageX+ " "+e.pageY);
-            myGameArea.x = e.pageX-rect.left;
-            myGameArea.y = e.pageY-rect.top;
+            myGameArea.x = e.pageX-posi.left;
+            //myGameArea.x = e.pageX-rect.left;
+            myGameArea.y = e.pageY-posi.top;
+            console.log("click myGameArea.x "+myGameArea.x+" myGameArea.y "+myGameArea.y);
+            //myGameArea.y = e.pageY-rect.top;
         })
         /*
         window.addEventListener('touchstart', function (e) {

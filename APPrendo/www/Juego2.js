@@ -13,8 +13,10 @@ $(document).ready(function(){
         startDisenoRelaciones();
     }else if(leccion=="ddl"){
         document.getElementById("tituloJuego").textContent = "DDL(Data Definition Language)";
-        document.getElementById("instrucciones-juego").innerHTML = "Completa la sopa de letras:";
-        startDDLSopa();
+        /*document.getElementById("instrucciones-juego").innerHTML = "Completa la sopa de letras:";
+        startDDLSopa();*/
+        document.getElementById("instrucciones-juego").innerHTML = "Escribe todas las palabras que puedas antes que se acabe el tiempo:";
+        startEscribePalabras();
     }else if(leccion=="dml"){
         document.getElementById("instrucciones-juego").innerHTML = "Completa la oracion oculta detrás de los botones:";
         document.getElementById("tituloJuego").textContent = "DML(Data Manipulation Language)";
@@ -36,8 +38,12 @@ $(document).ready(function(){
         subquerysQuerys();
     }else if(leccion =="funciones"){
         document.getElementById("tituloJuego").textContent = "Funciones";
-        document.getElementById("instrucciones-juego").innerHTML = "Completa la sopa de letras:";
-        startDDLSopa();
+        /*document.getElementById("instrucciones-juego").innerHTML = "Completa la sopa de letras:";
+        startDDLSopa();*/
+        document.getElementById("instrucciones-juego").innerHTML = "Adivina la palabra oculta, una letra a la vez:";
+        startAdivinaDDL();
+
+        
     }else if(leccion=="roles"){
         document.getElementById("tituloJuego").textContent = "Roles y Permisos";
         document.getElementById("instrucciones-juego").innerHTML = "Escribe todas las palabras que puedas antes que se acabe el tiempo:";

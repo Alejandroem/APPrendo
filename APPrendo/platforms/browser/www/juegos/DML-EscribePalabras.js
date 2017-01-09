@@ -17,7 +17,7 @@ function startEscribePalabras(){
     var spans;
     var typed;
     var seconds = 60;
-    var spark = new Audio("../sonidos/spark.mp3");
+    var spark = new Audio("juegos/sonidos/spark.mp3");
 
     function countdown() {
         points = 0;
@@ -26,7 +26,7 @@ function startEscribePalabras(){
             seconds--;
             temp.innerHTML = seconds;
             if (seconds === 0) {
-                alert("Game over! Your score is " + points);
+                alert("Juego terminado! Su puntaje es " + points);
                 scoreDiv.innerHTML = "0";
                 words.innerHTML = "";
                 button.disabled = false;
@@ -57,7 +57,7 @@ function startEscribePalabras(){
     var leccion = localStorage.getItem("leccion");
 
     if(leccion=="consultas"){
-        list =  ['QUERY','CONSULTA','SOLICITUD','INFORMACION','BASE','DATOS','SELECT','FROM','WHERE','COLUMN','VALUE','VALOR','COLUMNA','DISTINCT','AND','CONDICION','OR','RESULTADO','IN','CONJUNTO','BETWEEN','RANGO','LIKE','PATRON','WILDCARDS','CARACTERES','SUSTITUIR','ORDERBY','ORDENAR','ASCENDENTEMENTE','DESCENDENTEMENTE','ALIAS','AS','CAMBIO','NOMBRE','TEMPORALMENTE','TABLA','TABLE'];
+        list =  ['QUERY','CONSULTA','SOLICITUD','INFORMACION','BASE','DATOS','SELECT','FROM','WHERE','COLUMN','VALUE','VALOR','COLUMNA','DISTINCT','AND','CONDICION','OR','RESULTADO','IN','CONJUNTO','BETWEEN','RANGO','LIKE','PATRON','WILDCARDS','CARACTERES','SUSTITUIR','ORDERBY','ORDENAR','AESC','DESC','ALIAS','AS','CAMBIO','NOMBRE','TEMPORALMENTE','TABLA','TABLE'];
     }else if(leccion=="roles"){
         list =  ['OWNER','SECURITYADMIN','ACCESSADMIN','BACKUPOPERATOR','DDLADMIN','DATAWRITER','DATAREADER','DENYDATAWRITER','DENYDATAREADER','CREATE','ROLE','MEMBER','CONTROL','ALTER','DELETE','EXECUTE','INSERT','RECEIVE','REFERENCES','TAKE','OWNERSHIP','TRACKING','DEFINITION','GRANT','REVOKE','DENY','ON','TO'];
     }
@@ -83,7 +83,7 @@ function startEscribePalabras(){
                 checker++;
             }
             if (checker === spans.length) { // if so, animate the words with animate.css class
-                alert("otra palabra");
+                console.log("otra palabra");
                 spark.pause();
                 spark.currentTime = 0;
                 spark.play();

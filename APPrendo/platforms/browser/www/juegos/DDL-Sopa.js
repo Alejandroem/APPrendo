@@ -4,7 +4,7 @@ var palabrasNivelSOpa;
 var leccion = localStorage.getItem("leccion");
 
 if(leccion=="ddl"){
-    palabrasNivelSOpa = ["create","alter","drop","table","database","unique","column","varchar","primary","foreing","key"];
+    palabrasNivelSOpa = ["create","alter","drop","table","database","unique","column","primary","foreing","key"];
 }else if(leccion=="funciones"){
     palabrasNivelSOpa = ["round","avg","count","max","min","sum","groupby","having","ucase","lcase","mid"];
 }
@@ -18,6 +18,16 @@ function startDDLSopa(){
         wordfindgame.solve(gamePuzzle, words);
     });*/
     //alert(nextlevel);
+    $("#iniciarSopa").click(function(){
+        alert("Bla");
+        $("body").css("overflow","hidden");
+        $("body").css("position","relative");
+        $("html").css("overflow","hidden");
+        $(document).scrollTop($("#DDL-sopa").position().top);
+    });
+    $("#detenerSopa").click(function(){
+        
+    });
     $("#puzzle").mouseup(function() {
 
         if(nextlevel ==true){
@@ -33,8 +43,3 @@ function startDDLSopa(){
 
 }
 
-
-$( document ).ready(function() {
-
-
-});

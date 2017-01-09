@@ -35,12 +35,13 @@ $( document ).ready(function() {
             var palabra = palabras[nivel];
 
             var letra = document.getElementById('letra').value;
-            if(palabra.includes(letra)){
+            if(palabra.toUpperCase().includes(letra.toUpperCase())){
                 var i;
                 var input = document.getElementById('palabra').innerHTML;
 
                 for(i=0; i< palabra.length;i++){
-                    if(palabra.charAt(i)==letra){
+                    console.log(palabra.charAt(i).toUpperCase()+" "+letra.toUpperCase());
+                    if(palabra.charAt(i).toUpperCase()==letra.toUpperCase()){
 
                         input = input.substr(0, i*2)+letra+input.substr(i*2 + 1);
                     }
