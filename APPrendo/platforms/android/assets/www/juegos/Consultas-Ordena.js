@@ -48,11 +48,17 @@ $( document ).ready(function() {
         if (e.keyCode == 13) {
             var palabra = palabrasOrdena[nivelPalabrasOrdena];
             var respuesta = document.getElementById("respuesta-op").value;
-            if(palabra==respuesta){
-                alert("Correcto");
+            if(palabra.toUpperCase()==respuesta.toUpperCase()){
                 nivelPalabrasOrdena++;
-                startConsultaOrdena();
-                document.getElementById("respuesta-op").value = "";
+                if(nivelPalabrasOrdena<5){
+                    alert("Correcto siguiente nvel!!");
+                    startConsultaOrdena();
+                    document.getElementById("respuesta-op").value = "";
+                }else{
+                    alert("Ganaste!!");
+                }
+            }else{
+                alert("Frase incorrecta intenta de nuevo");
             }
             document.getElementById("Nivel").textContent = nivelPalabrasOrdena+1;
         }
