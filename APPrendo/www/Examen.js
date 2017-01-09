@@ -30,7 +30,7 @@ $(document).ready(function(){
             return false;
         });
         $("#pregunta2").on("submit",function(){
-            if( $('#p2r1').prop('checked') ) {
+            if( $('#p2r4').prop('checked') ) {
                 alert('Correcto');
                 punteo++;
                 $("#pregunta2").hide();
@@ -794,7 +794,7 @@ $(document).ready(function(){
     $("#sidenav").load("SideNavLeccion.html");
     var usuario = localStorage.getItem("usuario");
     $.ajax({
-        url: 'http://localhost:8081/perfil.php',
+        url: 'https://apprendo.000webhostapp.com/perfil.php',
         data: {usuario:usuario},
         type:'post',
         success: function(response){
@@ -811,7 +811,7 @@ $(document).ready(function(){
 function almacenarNota(nota){
     localStorage.setItem("usuario","admin");
     $.ajax({
-        url: 'http://localhost:8081/guardarAvance.php',
+        url: 'https://apprendo.000webhostapp.com/guardarAvance.php',
         data: {usuario:localStorage.getItem("usuario"),leccion:localStorage.getItem("leccion"), notaObtenida: nota},
         type:'get',
         success: function(response){
