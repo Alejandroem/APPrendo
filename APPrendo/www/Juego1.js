@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     }
 
-    localStorage.setItem("usuario","admin");     
+    //localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
 
     $.ajax({

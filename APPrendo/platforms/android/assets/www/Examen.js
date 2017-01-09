@@ -809,7 +809,7 @@ $(document).ready(function(){
 });
 
 function almacenarNota(nota){
-    localStorage.setItem("usuario","admin");
+    //localStorage.setItem("usuario","admin");
     $.ajax({
         url: 'https://apprendo.000webhostapp.com/guardarAvance.php',
         data: {usuario:localStorage.getItem("usuario"),leccion:localStorage.getItem("leccion"), notaObtenida: nota},
