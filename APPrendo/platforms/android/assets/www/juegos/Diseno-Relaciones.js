@@ -30,25 +30,64 @@ function EstadoTablero (){
 var estadoTablero = new EstadoTablero   ();
 
 function colocarDraggable(){
+    stack: ".well1"
     $('#uno-uno').draggable({
-          stack: ".well1"
+        revert: "invalid",
+        /*snap: ".squaredotted",
+        snapMode: "inner",*/
+        drag: function (event, ui) {
+            $(this).css("width", "50%")
+        }/*,
+        stop: function(event, ui){
+            $(this).css("width", "50%")
+        }*/
     });
-    $('#uno-muchos-d').draggable();
-    $('#uno-muchos-i').draggable();
-    $('#muchos-muchos').draggable();
-    $('#tabla-intermedia').draggable();
+    $('#uno-muchos-d').draggable({
+        revert: "invalid",
+        /*snap: ".squaredotted",
+        snapMode: "inner",*/
+        drag: function (event, ui) {
+            $(this).css("width", "50%")
+        }
+    });
+    $('#uno-muchos-i').draggable({
+        revert: "invalid",
+        /*snap: ".squaredotted",
+        snapMode: "inner",*/
+        drag: function (event, ui) {
+            $(this).css("width", "50%")
+        }
+    });
+    $('#muchos-muchos').draggable({
+        revert: "invalid",
+        /*snap: ".squaredotted",
+        snapMode: "inner",*/
+        drag: function (event, ui) {
+            $(this).css("width", "50%")
+        }
+    });
+    $('#tabla-intermedia').draggable({
+        revert: "invalid",
+        /*snap: ".squaredotted",
+        snapMode: "inner",*/
+        drag: function (event, ui) {
+            $(this).css("width", "50%")
+        }
+    });
     $( "#well1" ).droppable({
         drop: function( event, ui ) {
             $( this )
                 .addClass( "isDropped" );
-            estado = true;
+            /*$(this).css("background-color", "lightgreen")*/
             //alert($(ui.draggable).attr("id"));
+            estado = true;
             estadoTablero.well1 = $(ui.draggable).attr("id");
             chequeaNivel(nivelesDisenoRelaciones[nivelDisenhoRelaciones].Respuesta);
 
         }
     });    
     $( "#well2" ).droppable({
+        //        accept:"#uno-uno" ,
         drop: function( event, ui ) {
             $( this )
                 .addClass( "isDropped" );
@@ -76,10 +115,13 @@ function colocarDraggable(){
         }
     });
 }
-
+var panelHerramientas ="";
+var panelJuego="";
 function startDisenoRelaciones(){
     document.getElementById("Nivel").textContent = nivelDisenhoRelaciones+1;
     document.getElementById("Diseno-relaciones").style.display = 'block';
+    panelHerramientas = document.getElementById("herramientas").innerHTML;
+    panelJuego = document.getElementById("panelJuego").innerHTML;
     reiniciarTablero();
 
 }
@@ -109,8 +151,8 @@ function chequeaNivel(relacion){
                 nextLevel=true;
             }
             break;
-            
-        
+
+
     }
     if (nextLevel){
         nivelDisenhoRelaciones++;
@@ -122,7 +164,8 @@ function chequeaNivel(relacion){
         document.getElementById("Nivel").textContent = nivelDisenhoRelaciones+1;
         alert("Correcto!! siguiente nivel!!");
         reiniciarTablero();
-    }else if(relacion!="muchos-muchos"){
+    }	
+    else if(relacion!="muchos-muchos"){
         alert("Error!!");
         reiniciarTablero();
     }else if(estadoTablero.well2.length >0
@@ -139,46 +182,9 @@ function chequeaNivel(relacion){
 function reiniciarTablero(){
     estadoTablero = new EstadoTablero();
     document.getElementById("herramientas").innerHTML="";
-    document.getElementById("herramientas").innerHTML= `<div id="1well">
-<img id="uno-uno" class="ui-widget-content" style="width:100%; margin: 2%;" src="juegos/img/uno-uno.png">
-<img id="uno-muchos-d" style="width:100%; margin: 2%;" class="ui-widget-content" src="juegos/img/uno-muchos-d.png">
-<img id="uno-muchos-i" style="width:100%; margin: 2%;" class="ui-widget-content" src="juegos/img/uno-muchos-i.png">
-<img id="muchos-muchos" style="width:100%; margin: 2%;" class="ui-widget-content"src="juegos/img/muchos-muchos.png">
-</div>
-<div id="3well">
-<img id="tabla-intermedia" style="width:100%; margin: 2%;" class="ui-widget-content" src="juegos/img/tabla-intermedia.png" style="padding:0.5%">
-</div>`;
+    document.getElementById("herramientas").innerHTML= panelHerramientas;
     document.getElementById("panelJuego").innerHTML ="";
-    document.getElementById("panelJuego").innerHTML =`<div class="row">
-<div class="col-xs-4 col-md-3 ">
-<img id="tizquierda" style="width:100%;" >
-</div>
-<div id="1wells" hidden>
-<div id="well1" class="col-xs-3 col-md-2 padding-0" style="height:150px; border: 1px solid black;">
-</div>
-</div>
-<div id="3wells" hidden>
-<div class="col-xs-4 col-md-5">
-<div class="row">
-<div id="well2" class="col-xs-4 col-md-4 padding-0" style="height:150px;border: 1px solid black;">
-<br>
-
-</div>
-<div id="well3" class="col-xs-4 col-md-4 padding-0" style="height:150px;border: 1px solid black;">
-<br>
-
-</div>
-<div id="well4" class="col-xs-4 col-md-4 padding-0" style="height:150px;border: 1px solid black;">
-<br>
-
-</div>
-</div>
-</div>
-</div>
-<div class="col-xs-4 col-md-3 ">
-<img id="tderecha" style="width:100%" >
-</div>
-</div>`;
+    document.getElementById("panelJuego").innerHTML =panelJuego;
 
     document.getElementById("tizquierda").src = nivelesDisenoRelaciones[nivelDisenhoRelaciones].Tizquierda;
     document.getElementById("tderecha").src =  nivelesDisenoRelaciones[nivelDisenhoRelaciones].Tderecha;
