@@ -14,7 +14,7 @@ $(document).ready(function(){
         //alert(contrasena);
         //alert("llamando a ws");
         $.ajax({
-            url: 'http://localhost:8081/login.php',
+            url: 'https://apprendo.000webhostapp.com/login.php',
             data: {email:correo, password:contrasena},
             type:'get',
             success: function(response){
@@ -36,13 +36,13 @@ $(document).ready(function(){
         var carnet =$("#CarnetRegistro").val();
         var contrasenia = $("#PasswordRegistro").val();
         $.ajax({
-            url: 'http://localhost:8081/registro.php',
+            url: 'https://apprendo.000webhostapp.com/registro.php',
             data: {n:nombre, a:apellido, co:correo, ca:carnet, con:contrasenia},
             type:'get',
             success: function(response){
-                    localStorage.setItem("usuario", carnet);
-                    window.location.replace("principal.html");
-               
+                localStorage.setItem("usuario", carnet);
+                window.location.replace("principal.html");
+
             },error: function(response){
                 alert("no sirve");
             }

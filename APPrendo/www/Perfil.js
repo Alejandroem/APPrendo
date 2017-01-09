@@ -2,7 +2,7 @@ $(document).ready(function(){
      $('#guardarDatos').on('submit', function () {
         if($("#inputPassword").val()==""){
             $.ajax({
-                url: 'http://localhost:8081/actualizarPerfil.php',
+                url: 'https://apprendo.000webhostapp.com/actualizarPerfil.php',
                 data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val()},
                 type:'post',
                 success: function(response){
@@ -12,7 +12,7 @@ $(document).ready(function(){
         }else{
             if($("#inputPassword").val()==$("#inputPasswordConfirm").val()){
                 $.ajax({
-                    url: 'http://localhost:8081/actualizarPerfil.php',
+                    url: 'https://apprendo.000webhostapp.com/actualizarPerfil.php',
                     data: {carnet:$("#NombreUsuario").text(),nombre:$("#inputNombre").val(), apellido: $("#inputApellido").val(), email:$("#inputEmail").val(),password:$("#inputPassword").val()},
                     type:'post',
                     success: function(response){
@@ -25,9 +25,6 @@ $(document).ready(function(){
             }
         }
          
-         
-         
-        window.location.replace("perfil.html");
         return false;
      });
     
@@ -37,7 +34,7 @@ $(document).ready(function(){
     var txusuario = localStorage.getItem("usuario");
     $.ajax({
 
-            url: 'http://192.168.1.15:8081/perfil.php',
+            url: 'https://apprendo.000webhostapp.com/perfil.php',
 
             data: {usuario:txusuario},
             type:'post',

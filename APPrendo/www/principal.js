@@ -33,7 +33,7 @@ $(document).ready(function(){
     var usuario = localStorage.getItem("usuario");
     $.ajax({
 
-        url: 'http://192.168.1.15:8081/obtenerAvance.php',
+        url: 'https://apprendo.000webhostapp.com/obtenerAvance.php',
 
         data: {user:usuario},
         type:'post',
@@ -73,7 +73,7 @@ $(document).ready(function(){
 
     $.ajax({
 
-        url: 'http://192.168.1.15:8081/perfil.php',
+        url: 'https://apprendo.000webhostapp.com/perfil.php',
 
         data: {usuario:usuario},
         type:'post',
