@@ -40,7 +40,10 @@ function startGame() {
         tPalabras.push(palabras[i]);
     }
     var tamanioX = document.getElementById("contenidoleccion").offsetWidth / 8;
+<<<<<<< HEAD
     console.log("tamanioX "+tamanioX);
+=======
+>>>>>>> master
     tPalabras = shuffle(tPalabras);
     for(i=0; i<tPalabras.length;i++){
         if(i == 7){

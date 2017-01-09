@@ -36,7 +36,11 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
+<<<<<<< HEAD
 //            $(this).css("width", "50%")
+=======
+            $(this).css("width", "50%")
+>>>>>>> master
         }/*,
         stop: function(event, ui){
             $(this).css("width", "50%")
@@ -47,7 +51,11 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
+<<<<<<< HEAD
 //            $(this).css("width", "50%")
+=======
+            $(this).css("width", "50%")
+>>>>>>> master
         }
     });
     $('#uno-muchos-i').draggable({
@@ -55,7 +63,11 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
+<<<<<<< HEAD
 //            $(this).css("width", "50%")
+=======
+            $(this).css("width", "50%")
+>>>>>>> master
         }
     });
     $('#muchos-muchos').draggable({
@@ -63,7 +75,11 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
+<<<<<<< HEAD
 //            $(this).css("width", "50%")
+=======
+            $(this).css("width", "50%")
+>>>>>>> master
         }
     });
     $('#tabla-intermedia').draggable({
@@ -71,7 +87,11 @@ function colocarDraggable(){
         /*snap: ".squaredotted",
         snapMode: "inner",*/
         drag: function (event, ui) {
+<<<<<<< HEAD
 //            $(this).css("width", "50%")
+=======
+            $(this).css("width", "50%")
+>>>>>>> master
         }
     });
     $( "#well1" ).droppable({

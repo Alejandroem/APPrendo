@@ -44,7 +44,10 @@ $( document ).ready(function() {
                 var input = document.getElementById('palabra').innerHTML;
 
                 for(i=0; i< palabra.length;i++){
+<<<<<<< HEAD
                     console.log(palabra.charAt(i).toUpperCase()+" "+letra.toUpperCase());
+=======
+>>>>>>> master
                     if(palabra.charAt(i).toUpperCase()==letra.toUpperCase()){
 
                         input = input.substr(0, i*2)+letra+input.substr(i*2 + 1);
