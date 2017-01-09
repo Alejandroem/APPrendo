@@ -1,6 +1,7 @@
 //JQuery
 // $(elemento a buscar). accion (accion a ejecutar)
 //cuando el documento este cargado por completo que ejecute la funcion
+var felizAniversario = "Feliz primer aniversario mi amada preciosa, te adoro gracias por todos los lindos momentos y te prometo que me voy a casar contigo, te amo mi cielo lindo me encantas, juntos por siempre y para siempre. Att. Tu novio lindo.";
 $(document).ready(function(){
     //cuando el formulario con class login, realice la accion submit ejecute la funcion.
     $('.LogIn').on('submit', function () {
