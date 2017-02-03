@@ -18,11 +18,18 @@ $(document).ready(function(){
             url: 'https://apprendo.000webhostapp.com/login.php',
             data: {email:correo, password:contrasena},
             type:'get',
+            beforeSend: function(){
+                window.plugins.spinnerDialog.show("Ingresando","Espere un momento mientras contactamos con los servidores", true);
+            },
             success: function(response){
                 //alert (response);
                 if(response == "exito"){
                     localStorage.setItem("usuario", correo);
+                    window.plugins.spinnerDialog.hide();
                     window.location.replace("principal.html");
+                }else{
+                    window.plugins.spinnerDialog.hide();
+                    alert("Error en el Nombre de Usuario o contreseña, por favor intente de nuevo");
                 }
             }
         });
@@ -40,12 +47,17 @@ $(document).ready(function(){
             url: 'https://apprendo.000webhostapp.com/registro.php',
             data: {n:nombre, a:apellido, co:correo, ca:carnet, con:contrasenia},
             type:'get',
+            beforeSend: function(){
+                window.plugins.spinnerDialog.show("Registrando","Espere un momento mientras contactamos con los servidores", true);
+            },
             success: function(response){
                 localStorage.setItem("usuario", carnet);
+                window.plugins.spinnerDialog.hide();
                 window.location.replace("principal.html");
 
             },error: function(response){
-                alert("no sirve");
+                window.plugins.spinnerDialog.hide();
+                alert("Error al registrar el usuario");
             }
         });
 

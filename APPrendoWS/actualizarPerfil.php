@@ -21,8 +21,7 @@ if ($conn->connect_error) {
 	}
 	echo($query);
 	$conn->query($query);
-	echo($resultado);
-	$resultado->close();
+	
 }
 
 

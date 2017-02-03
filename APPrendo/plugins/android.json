@@ -15,7 +15,23 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.APPrendo"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.APPrendo"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.APPrendo"
+        },
+        "cordova-plugin-spinner-dialog": {
+            "PACKAGE_NAME": "com.APPrendo"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.APPrendo"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.APPrendo"
+        }
+    }
 }

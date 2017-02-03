@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    
+    
      $('#guardarDatos').on('submit', function () {
         if($("#inputPassword").val()==""){
             $.ajax({
