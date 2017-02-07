@@ -14,6 +14,9 @@ $("#menu").on('click',function(){
 });
 
 $("#salir").on('click',function(){
-  localStorage.removeItem("usuario");
-    window.location.replace("index.html");
+    var r = confirm("¿Realmente desea salir?");
+    if(r==true){
+        localStorage.removeItem("usuario");
+        window.location.replace("index.html");
+    }
 });

@@ -11,6 +11,7 @@ function getImage() {
 
 function uploadPhoto(imageURI) {
     window.plugins.spinnerDialog.show("Cargando","Por favor espere mientras cargamos su imagen", true);
+    
     var options = new FileUploadOptions();
     options.fileKey = "file";
     options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);

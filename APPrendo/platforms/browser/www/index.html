@@ -27,9 +27,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="index.js"></script>
         <link href='//fonts.googleapis.com/css?family=Catamaran:400,100,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-
-        <script src="cordova.js"></script>
     </head>
     <body>
         <!--    <a href="principal.html">Principal</a><a href="Juego2.html">Principal</a>-->
@@ -62,7 +59,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <form action="#" class="LogIn" method="get">
                                         <h3>Ingresa </h3>
                                         <input id="Email" type="text" value="Ingresa tu No. carnet" name=" Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ingresa tu No. carnet';}" required=""><input id="Password" type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">	
-                                        <input type="submit" value="INGRESA" >
+                                        <input id="ingresaBtn" type="submit" value="INGRESA" >
+                                        <div id="ingresando" class="text-center" hidden>
+                                            <br><br>
+                                            <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+                                            Ingresando
+                                        </div>
                                     </form>
                                 </div>
 
@@ -90,7 +92,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <input type="text" id="CorreoRegistro" value="Correo" name="Email id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Correo';}" required="">	
                                         <input type="text" id="CarnetRegistro" value="Carnet" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Carnet';}" required="">	
                                         <input type="password" id="PasswordRegistro" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                        <input type="submit" value="CREA TU CUENTA" >
+                                        <input id="registrarBtn" type="submit" value="CREA TU CUENTA" >
+                                        <div id="registrando" class="text-center" hidden>
+                                            <br><br>
+                                            <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+                                            Registrando
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -123,7 +130,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-md-6 footer-right">
                     <h3>Contáctanos</h3>
                     <ul class="con-icons">
-                        <li><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+502 58580101</li>
+                        <li><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+502 56971771</li>
                         <li><a href="mailto:info@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>201113841@ingenieria.usac.edu.gt</a></li>
                     </ul>
                     <p class="copy-right">© 2016 Academic. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>

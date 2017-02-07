@@ -51,9 +51,13 @@ $(document).ready(function(){
                 window.plugins.spinnerDialog.show("Registrando","Espere un momento mientras contactamos con los servidores", true);
             },
             success: function(response){
-                localStorage.setItem("usuario", carnet);
-                window.plugins.spinnerDialog.hide();
-                window.location.replace("principal.html");
+                if(response == "Exito"){
+                    localStorage.setItem("usuario", carnet);
+                    window.location.replace("principal.html");
+                }else{
+                    alert("No se pudo registrar,El usuario ya existe");
+                }
+                    window.plugins.spinnerDialog.hide();
 
             },error: function(response){
                 window.plugins.spinnerDialog.hide();
