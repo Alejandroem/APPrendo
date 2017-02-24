@@ -54,10 +54,12 @@ $(document).ready(function(){
                 if(response == "Exito"){
                     localStorage.setItem("usuario", carnet);
                     window.location.replace("principal.html");
+                    window.plugins.spinnerDialog.hide();
                 }else{
+                    window.plugins.spinnerDialog.hide();
                     alert("No se pudo registrar,El usuario ya existe");
                 }
-                    window.plugins.spinnerDialog.hide();
+
 
             },error: function(response){
                 window.plugins.spinnerDialog.hide();
