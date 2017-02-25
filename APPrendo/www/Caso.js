@@ -7,7 +7,7 @@ $(document).ready(function(){
     var selector ="."+leccion; 
     $(selector).show();
 
-    $(selector).click(function(){
+    $(".enviarRespuesta").click(function(){
         var resp = prompt("Por favor ingrese el enlace", "http://sqlfiddle.com/#!9/dcb16/1");
 
         if (resp != null) {
