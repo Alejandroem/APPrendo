@@ -1,19 +1,18 @@
 <?php
-echo "hola";
-$email = strval($_POST['email']);
-$password = strval($_POST['password']);
+$email = strval($_GET['email']);
+$password = strval($_GET['password']);
 
-$conn = new mysqli("localhost", "root", "admin", "prueba");
+$conn = new mysqli("localhost", "id496900_root", "marielozo", "id496900_tesisdb");
 // Check connection
 if ($conn->connect_error) {
     die("Connection fallida: " . $conn->connect_error);
 }else
 {
-	$query = "SELECT * FROM usuarios WHERE email='$email' AND password='$password';";
+	$query = "SELECT * FROM usuario WHERE carnet='$email' AND password='$password';";
 	$resultado = $conn->query($query);
 	$row = $resultado->fetch_array(MYSQLI_ASSOC);
 	
-	if(!empty($row['email'])){
+	if(!empty($row['carnet'])){
         echo "exito";
     }else{
         echo "fallo";
@@ -23,4 +22,5 @@ if ($conn->connect_error) {
 	$resultado->close();
 }
 $conn->close();
+
 ?>

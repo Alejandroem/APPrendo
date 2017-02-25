@@ -1472,11 +1472,11 @@ $(document).ready(function(){
     }
 
     cargaContenido();
-    localStorage.setItem("usuario","admin");     
+    //localStorage.setItem("usuario","admin");     
     var usuario = localStorage.getItem("usuario");
 
     $.ajax({
-        url: 'http://localhost:8081/perfil.php',
+        url: 'https://apprendo.000webhostapp.com/perfil.php',
         data: {usuario:usuario},
         type:'post',
         success: function(response){

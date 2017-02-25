@@ -1,13 +1,13 @@
 <?php
 $usuario = strval($_POST['usuario']);
 
-$conn = new mysqli("192.168.1.15", "root", "marielozo", "tesisdb");
+$conn = new mysqli("localhost", "id496900_root", "marielozo", "id496900_tesisdb");
 // Check connection
 if ($conn->connect_error) {
     die("Connection fallida: " . $conn->connect_error);
 }else
 {
-	$query = "SELECT * FROM tesisdb.usuario where tesisdb.usuario.carnet ='$usuario';";
+	$query = "SELECT * FROM id496900_tesisdb.usuario where id496900_tesisdb.usuario.carnet ='$usuario';";
 	$resultado = $conn->query($query);
 	$row = $resultado->fetch_array(MYSQLI_ASSOC);
 	

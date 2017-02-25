@@ -10,7 +10,7 @@ if(leccion=="consultas"){
         "select distinct city from customers;",
         "select name from customers where Country= 'Germany' and City= 'Berlin';",
         "select name from customers where City= 'London' or City= 'Berlin';",
-        "select name from customers; where City in ('Berlin','London');",
+        "select name from customers where City in ('Berlin', 'London');",
         "select name from customers where City like '%n'"
     ];
 }else if(leccion=="subqueries"){

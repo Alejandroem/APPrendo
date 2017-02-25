@@ -1,6 +1,7 @@
 //JQuery
 // $(elemento a buscar). accion (accion a ejecutar)
 //cuando el documento este cargado por completo que ejecute la funcion
+var felizAniversario = "Feliz primer aniversario mi amada preciosa, te adoro gracias por todos los lindos momentos y te prometo que me voy a casar contigo, te amo mi cielo lindo me encantas, juntos por siempre y para siempre. Att. Tu novio lindo.";
 $(document).ready(function(){
     //cuando el formulario con class login, realice la accion submit ejecute la funcion.
     $('.LogIn').on('submit', function () {
@@ -14,14 +15,21 @@ $(document).ready(function(){
         //alert(contrasena);
         //alert("llamando a ws");
         $.ajax({
-            url: 'http://localhost:8081/login.php',
+            url: 'https://apprendo.000webhostapp.com/login.php',
             data: {email:correo, password:contrasena},
             type:'get',
+            beforeSend: function(){
+                window.plugins.spinnerDialog.show("Ingresando","Espere un momento mientras contactamos con los servidores", true);
+            },
             success: function(response){
                 //alert (response);
                 if(response == "exito"){
                     localStorage.setItem("usuario", correo);
+                    window.plugins.spinnerDialog.hide();
                     window.location.replace("principal.html");
+                }else{
+                    window.plugins.spinnerDialog.hide();
+                    alert("Error en el Nombre de Usuario o contreseña, por favor intente de nuevo");
                 }
             }
         });
@@ -36,15 +44,26 @@ $(document).ready(function(){
         var carnet =$("#CarnetRegistro").val();
         var contrasenia = $("#PasswordRegistro").val();
         $.ajax({
-            url: 'http://localhost:8081/registro.php',
+            url: 'https://apprendo.000webhostapp.com/registro.php',
             data: {n:nombre, a:apellido, co:correo, ca:carnet, con:contrasenia},
             type:'get',
+            beforeSend: function(){
+                window.plugins.spinnerDialog.show("Registrando","Espere un momento mientras contactamos con los servidores", true);
+            },
             success: function(response){
+                if(response == "Exito"){
                     localStorage.setItem("usuario", carnet);
                     window.location.replace("principal.html");
-               
+                    window.plugins.spinnerDialog.hide();
+                }else{
+                    window.plugins.spinnerDialog.hide();
+                    alert("No se pudo registrar,El usuario ya existe");
+                }
+
+
             },error: function(response){
-                alert("no sirve");
+                window.plugins.spinnerDialog.hide();
+                alert("Error al registrar el usuario");
             }
         });
 

@@ -33,47 +33,54 @@ $(document).ready(function(){
     var usuario = localStorage.getItem("usuario");
     $.ajax({
 
-        url: 'http://192.168.1.15:8081/obtenerAvance.php',
+        url: 'https://apprendo.000webhostapp.com/obtenerAvance.php',
 
         data: {user:usuario},
         type:'post',
         success: function(response){
-            var obj = JSON.parse(response);
-            var i = 0;
-            var experiencia = 0;
-            for(i = 0; i < 10; i++){
-                $("#barra"+(i+1)).css({"width":+obj.avances[i].avance+"%"});
-                experiencia += parseInt(obj.avances[i].avance);    
-            }
-            var promedioExperiencia = experiencia/10;
-            if(promedioExperiencia < 10)
+            var obj =null;
+            try{
+                obj = JSON.parse(response);
+
+                var i = 0;
+                var experiencia = 0;
+                for(i = 0; i < 10; i++){
+                    $("#barra"+(i+1)).css({"width":+obj.avances[i].avance+"%"});
+                    experiencia += parseInt(obj.avances[i].avance);    
+                }
+                var promedioExperiencia = experiencia/10;
+                if(promedioExperiencia < 10)
+                    $("#experiencia").attr("src","images/badge0.png");
+                else if(promedioExperiencia < 20)
+                    $("#experiencia").attr("src","images/badge10.png");
+                else if(promedioExperiencia < 30)
+                    $("#experiencia").attr("src","images/badge20.png");
+                else if(promedioExperiencia < 40)
+                    $("#experiencia").attr("src","images/badge30.png");
+                else if(promedioExperiencia < 50)
+                    $("#experiencia").attr("src","images/badge40.png");
+                else if(promedioExperiencia < 60)
+                    $("#experiencia").attr("src","images/badge50.png");
+                else if(promedioExperiencia < 70)
+                    $("#experiencia").attr("src","images/badge60.png");
+                else if(promedioExperiencia < 80)
+                    $("#experiencia").attr("src","images/badge70.png");
+                else if(promedioExperiencia < 90)
+                    $("#experiencia").attr("src","images/badge80.png");
+                else if(promedioExperiencia < 100)
+                    $("#experiencia").attr("src","images/badge90.png");
+                else
+                    $("#experiencia").attr("src","images/badge100.png");
+            }catch(err){
+                console.log("no hay experiencia")
                 $("#experiencia").attr("src","images/badge0.png");
-            else if(promedioExperiencia < 20)
-                $("#experiencia").attr("src","images/badge10.png");
-            else if(promedioExperiencia < 30)
-                $("#experiencia").attr("src","images/badge20.png");
-            else if(promedioExperiencia < 40)
-                $("#experiencia").attr("src","images/badge30.png");
-            else if(promedioExperiencia < 50)
-                $("#experiencia").attr("src","images/badge40.png");
-            else if(promedioExperiencia < 60)
-                $("#experiencia").attr("src","images/badge50.png");
-            else if(promedioExperiencia < 70)
-                $("#experiencia").attr("src","images/badge60.png");
-            else if(promedioExperiencia < 80)
-                $("#experiencia").attr("src","images/badge70.png");
-            else if(promedioExperiencia < 90)
-                $("#experiencia").attr("src","images/badge80.png");
-            else if(promedioExperiencia < 100)
-                $("#experiencia").attr("src","images/badge90.png");
-            else
-                $("#experiencia").attr("src","images/badge100.png");
+            }
         }
     });
 
     $.ajax({
 
-        url: 'http://192.168.1.15:8081/perfil.php',
+        url: 'https://apprendo.000webhostapp.com/perfil.php',
 
         data: {usuario:usuario},
         type:'post',

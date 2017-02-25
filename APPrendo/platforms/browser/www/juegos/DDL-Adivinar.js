@@ -5,6 +5,10 @@ if(leccion=="ddl"){
     palabras = {0:"create",1:"alter",2:"drop",3:"unique",4:"table",5:"database",6:"unique",7:"column",8:"primary-key",9:"foreign-key"}
 }else if(leccion=="conexion"){
     palabras ={0:"string",1:"framework",2:"connection",3:"server",4:"database",5:"integrated",6:"security",7:"command",8:"execute",9:"reader"}
+}else if (leccion =="funciones"){
+    palabras = {
+         0:"round",1:"avg",2:"count",3:"max",4:"min",5:"sum",6:"group by",7:"having",8:"ucase",9:"lcase"
+    }
 }
 
 nivel = 0;

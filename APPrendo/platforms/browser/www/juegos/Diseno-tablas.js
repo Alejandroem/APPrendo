@@ -26,16 +26,16 @@ Musico = {"nombret":"Musico",
           "edad":"int"
          }
 Complejo = {"nombret":"Complejo Deportivo",
-            "tipo":[{"tipo":"int"},{"tipo":"bigint"},{"tipo":"varchar"},{"tipo":"real"},{"tipo":"double"},{"tipo":"real"},{"tipo":"varchar"},{"tipo":"binary"}],
+            "tipo":[{"tipo":"int"},{"tipo":"bigint"},{"tipo":"varchar"},{"tipo":"int"},{"tipo":"double"},{"tipo":"real"},{"tipo":"varchar"},{"tipo":"binary"}],
             "atr":[{"atr":"estado"},{"atr":"Codigo"},{"atr":"telefono"},{"atr":"nombre"},{"atr":"detalle"},{"atr":"area"},{"atr":"real"},{"atr":"direccion"}],
             "size":4,
+            "Codigo":"int",
             "direccion":"varchar",
-            "telefono":"int",
-            "area":"double",
-            "estado":"varchar"}
+            "nombre":"varchar",
+            "telefono":"int"}
 Cine = {"nombret":"Cine",
         "tipo":[{"tipo":"int"},{"tipo":"varchar"},{"tipo":"double"},{"tipo":"real"},{"tipo":"int"},{"tipo":"varchar"},{"tipo":"real"},{"tipo":"datetime"},{"tipo":"binary"}],
-        "atr":[{"atr":"ubicacion"},{"atr":"Codigo"},{"atr":"salas"},{"atr":"telefono"},{"atr":"varchar"},{"atr":"nombre"},{"atr":"horario"},{"atr":"varchar"},{"atr":"horainicio"}],
+        "atr":[{"atr":"ubicacion"},{"atr":"int"},{"atr":"salas"},{"atr":"telefono"},{"atr":"varchar"},{"atr":"nombre"},{"atr":"horario"},{"atr":"varchar"},{"atr":"horainicio"}],
         "size":5,
         "ubicacion":"varchar",
         "salas":"int",
